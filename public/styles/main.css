@@ -874,7 +874,7 @@ hr {
   text-transform: none;
   font-size: 18px;
   line-height: 1.2;
-  background-image: url("/public/images/icon-pointer.png");
+  background-image: url("/public/govuk/images/icon-pointer.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
   padding: 0.36842em 2.15789em 0.21053em 0.84211em;
@@ -889,7 +889,7 @@ hr {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .button-start,
   .button-get-started {
-    background-image: url("/public/images/icon-pointer-2x.png");
+    background-image: url("/public/govuk/images/icon-pointer-2x.png");
     background-size: 30px 19px;
   }
 }
@@ -903,11 +903,11 @@ hr {
 .icon-calendar {
   width: 27px;
   height: 27px;
-  background-image: url("/public/images/icon-calendar.png");
+  background-image: url("/public/govuk/images/icon-calendar.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-calendar {
-    background-image: url("/public/images/icon-calendar-2x.png");
+    background-image: url("/public/govuk/images/icon-calendar-2x.png");
     background-size: 100%;
   }
 }
@@ -915,11 +915,11 @@ hr {
 .icon-file-download {
   width: 30px;
   height: 39px;
-  background-image: url("/public/images/icon-file-download.png");
+  background-image: url("/public/govuk/images/icon-file-download.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-file-download {
-    background-image: url("/public/images/icon-file-download-2x.png");
+    background-image: url("/public/govuk/images/icon-file-download-2x.png");
     background-size: 100%;
   }
 }
@@ -927,11 +927,11 @@ hr {
 .icon-important {
   width: 35px;
   height: 35px;
-  background-image: url("/public/images/icon-important.png");
+  background-image: url("/public/govuk/images/icon-important.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-important {
-    background-image: url("/public/images/icon-important-2x.png");
+    background-image: url("/public/govuk/images/icon-important-2x.png");
     background-size: 100%;
   }
 }
@@ -939,11 +939,11 @@ hr {
 .icon-information {
   width: 27px;
   height: 27px;
-  background-image: url("/public/images/icon-information.png");
+  background-image: url("/public/govuk/images/icon-information.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-information {
-    background-image: url("/public/images/icon-information-2x.png");
+    background-image: url("/public/govuk/images/icon-information-2x.png");
     background-size: 100%;
   }
 }
@@ -951,11 +951,11 @@ hr {
 .icon-locator {
   width: 26px;
   height: 36px;
-  background-image: url("/public/images/icon-locator.png");
+  background-image: url("/public/govuk/images/icon-locator.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-locator {
-    background-image: url("/public/images/icon-locator-2x.png");
+    background-image: url("/public/govuk/images/icon-locator-2x.png");
     background-size: 100%;
   }
 }
@@ -963,11 +963,11 @@ hr {
 .icon-pointer {
   width: 30px;
   height: 19px;
-  background-image: url("/public/images/icon-pointer.png");
+  background-image: url("/public/govuk/images/icon-pointer.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-pointer {
-    background-image: url("/public/images/icon-pointer-2x.png");
+    background-image: url("/public/govuk/images/icon-pointer-2x.png");
     background-size: 100%;
   }
 }
@@ -975,11 +975,11 @@ hr {
 .icon-pointer-black {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-pointer-black.png");
+  background-image: url("/public/govuk/images/icon-pointer-black.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-pointer-black {
-    background-image: url("/public/images/icon-pointer-black-2x.png");
+    background-image: url("/public/govuk/images/icon-pointer-black-2x.png");
     background-size: 100%;
   }
 }
@@ -987,11 +987,11 @@ hr {
 .icon-search {
   width: 30px;
   height: 22px;
-  background-image: url("/public/images/icon-search.png");
+  background-image: url("/public/govuk/images/icon-search.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-search {
-    background-image: url("/public/images/icon-search-2x.png");
+    background-image: url("/public/govuk/images/icon-search-2x.png");
     background-size: 100%;
   }
 }
@@ -999,11 +999,11 @@ hr {
 .icon-step-1 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-1.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-1.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-1 {
-    background-image: url("/public/images/icon-steps/icon-step-1-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-1-2x.png");
     background-size: 100%;
   }
 }
@@ -1011,11 +1011,11 @@ hr {
 .icon-step-2 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-2.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-2.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-2 {
-    background-image: url("/public/images/icon-steps/icon-step-2-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-2-2x.png");
     background-size: 100%;
   }
 }
@@ -1023,11 +1023,11 @@ hr {
 .icon-step-3 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-3.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-3.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-3 {
-    background-image: url("/public/images/icon-steps/icon-step-3-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-3-2x.png");
     background-size: 100%;
   }
 }
@@ -1035,11 +1035,11 @@ hr {
 .icon-step-4 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-4.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-4.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-4 {
-    background-image: url("/public/images/icon-steps/icon-step-4-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-4-2x.png");
     background-size: 100%;
   }
 }
@@ -1047,11 +1047,11 @@ hr {
 .icon-step-5 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-5.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-5.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-5 {
-    background-image: url("/public/images/icon-steps/icon-step-5-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-5-2x.png");
     background-size: 100%;
   }
 }
@@ -1059,11 +1059,11 @@ hr {
 .icon-step-6 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-6.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-6.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-6 {
-    background-image: url("/public/images/icon-steps/icon-step-6-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-6-2x.png");
     background-size: 100%;
   }
 }
@@ -1071,11 +1071,11 @@ hr {
 .icon-step-7 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-7.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-7.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-7 {
-    background-image: url("/public/images/icon-steps/icon-step-7-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-7-2x.png");
     background-size: 100%;
   }
 }
@@ -1083,11 +1083,11 @@ hr {
 .icon-step-8 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-8.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-8.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-8 {
-    background-image: url("/public/images/icon-steps/icon-step-8-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-8-2x.png");
     background-size: 100%;
   }
 }
@@ -1095,11 +1095,11 @@ hr {
 .icon-step-9 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-9.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-9.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-9 {
-    background-image: url("/public/images/icon-steps/icon-step-9-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-9-2x.png");
     background-size: 100%;
   }
 }
@@ -1107,11 +1107,11 @@ hr {
 .icon-step-10 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-10.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-10.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-10 {
-    background-image: url("/public/images/icon-steps/icon-step-10-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-10-2x.png");
     background-size: 100%;
   }
 }
@@ -1119,11 +1119,11 @@ hr {
 .icon-step-11 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-11.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-11.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-11 {
-    background-image: url("/public/images/icon-steps/icon-step-11-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-11-2x.png");
     background-size: 100%;
   }
 }
@@ -1131,11 +1131,11 @@ hr {
 .icon-step-12 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-12.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-12.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-12 {
-    background-image: url("/public/images/icon-steps/icon-step-12-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-12-2x.png");
     background-size: 100%;
   }
 }
@@ -1143,11 +1143,11 @@ hr {
 .icon-step-13 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-13.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-13.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-13 {
-    background-image: url("/public/images/icon-steps/icon-step-13-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-13-2x.png");
     background-size: 100%;
   }
 }
@@ -1155,11 +1155,11 @@ hr {
 .icon-step-14 {
   width: 23px;
   height: 23px;
-  background-image: url("/public/images/icon-steps/icon-step-14.png");
+  background-image: url("/public/govuk/images/icon-steps/icon-step-14.png");
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .icon-step-14 {
-    background-image: url("/public/images/icon-steps/icon-step-14-2x.png");
+    background-image: url("/public/govuk/images/icon-steps/icon-step-14-2x.png");
     background-size: 100%;
   }
 }
@@ -1818,7 +1818,7 @@ input[type=number] {
   font-size: 14px;
   line-height: 1.14286;
   float: left;
-  background-image: url("/public/images/separator.png");
+  background-image: url("/public/govuk/images/separator.png");
   background-position: 0% 50%;
   background-repeat: no-repeat;
   list-style: none;
@@ -1834,7 +1834,7 @@ input[type=number] {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .breadcrumbs li {
-    background-image: url("/public/images/separator-2x.png");
+    background-image: url("/public/govuk/images/separator-2x.png");
     background-size: 6px 11px;
   }
 }
@@ -1972,3 +1972,24 @@ input[type=number] {
     display: revert;
   }
 }
+/*
+Settings - used with preprocessors and contain font, colors definitions, etc.
+*/
+/*
+Tools - globally used mixins and functions. It's important not to output any CSS in the first 2 layers.
+*/
+/*
+Generic - reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+*/
+/*
+Elements - styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we can redefine them here.
+*/
+/*
+Objects - class-based selectors which define undecorated design patterns, for example media object known from OOCSS.
+*/
+/*
+Components - specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components.
+*/
+/*
+Utilities - utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class.
+*/

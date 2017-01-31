@@ -1,15 +1,42 @@
 var express = require('express');
 var router = express.Router();
 
-// routes
-router.all('/', function(req, res) {
 
-  data = {
-    title: 'Home'
-  }
+// home
+router.route('/')
 
-  res.render('index', data);
+  .get(function(req, res) {
+    data = {
+      title: 'Make a plea'
+    }
+    res.render('index', data);
+  });
 
-});
+
+// your case
+router.route('/your-case')
+
+  .get(function(req, res) {
+    data = {
+      title: 'Your case'
+    }
+    res.render('your-case/index', data);
+  })
+
+  .post(function(req, res) {
+    res.redirect('/your-details');
+  });
+
+
+// your details
+router.route('/your-details')
+
+  .get(function(req, res) {
+    data = {
+      title: 'Your details'
+    }
+    res.render('your-details/index', data);
+  });
+
 
 module.exports = router

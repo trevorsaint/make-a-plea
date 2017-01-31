@@ -1,0 +1,195 @@
+
+    <a class="link-back" href="/">Back</a>
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <p class="lede">We may need to contact you about your plea.</p>
+
+        <form class="form" method="post">
+
+          <h2 class="heading-medium">Check your name and address</h2>
+
+          <div class="panel panel-border-narrow">
+            <p>
+              Mr Mike Mouse <br>
+              38A Baker Street <br>
+              London <br>
+              W1 7SX
+            </p>
+          </div>
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label">Are these details correct?</span>
+            </legend>
+
+            <div class="form-group">
+
+              <label class="block-label selection-button-radio">
+                <input type="radio" name="areTheseDetailsCorrect" value="Yes"> Yes<span class="visually-hidden">, these details are correct</span>
+              </label>
+
+              <label class="block-label selection-button-radio" data-target="are-these-details-correct-no">
+                <input type="radio" name="areTheseDetailsCorrect" value="No"> No<span class="visually-hidden">, these details are incorrect</span>
+              </label>
+
+              <div class="panel panel-border-narrow" id="are-these-details-correct-no">
+
+                <div class="form-group">
+                  <label for="full-name">
+                    <span class="form-label">Full name</span>
+                  </label>
+                  <input class="form-control form-control-3-4" id="full-name" name="fullName" type="text">
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Address</span>
+                    </legend>
+
+                    <div class="form-group form-group-compound">
+                      <label class="visually-hidden" for="address-line-1">Address line 1</label>
+                      <input class="form-control form-control-3-4" id="address-line-1" name="addressLine1">
+                    </div>
+
+                    <div class="form-group form-group-compound">
+                      <label class="visually-hidden" for="address-line-2">Address line 2</label>
+                      <input class="form-control form-control-3-4" id="address-line-2" name="addressLine2">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="visually-hidden" for="address-line-3">Address line 3</label>
+                      <input class="form-control form-control-3-4" id="address-line-3" name="addressLine3">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="town-or-city">
+                        <span class="form-label">Town or city</span>
+                      </label>
+                      <input class="form-control" id="town-or-city" name="townOrCity" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="country">
+                        <span class="form-label">Country (optional)</span>
+                      </label>
+                      <input class="form-control" id="country" name="country" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="postcode">
+                        <span class="form-label">Postcode</span>
+                      </label>
+                      <input class="form-control form-control-1-4" id="postcode" name="postcode" type="text">
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </fieldset>
+
+          <h2 class="heading-medium">Enter other details</h2>
+
+          <div class="form-group">
+            <label for="contact-number">
+              <span class="form-label">Contact number</span>
+            </label>
+            <input class="form-control" id="contact-number" name="contactNumber" type="tel">
+          </div>
+
+          <div class="form-group">
+            <label for="email-address">
+              <span class="form-label">Email address</span>
+              <span class="form-hint">We&rsquo;ll automatically email you a copy of your plea</span>
+            </label>
+            <input class="form-control form-control-3-4" id="email-address" name="emailAddress" type="email">
+          </div>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend>
+                <span class="form-label">Your date of birth</span>
+                <span class="form-hint">For example, 31 3 1980</span>
+              </legend>
+
+              <div class="form-date">
+
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dob-day">Day</label>
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                </div>
+
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dob-month">Month</label>
+                  <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dob-year">Year</label>
+                  <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label">Do you have a National Insurance number?</span>
+              </legend>
+
+              <div class="form-group">
+
+                <label class="block-label selection-button-radio" data-target="national-insurance-number-yes">
+                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="Yes"> Yes<span class="visually-hidden">, I have a National Insurance number</span>
+                </label>
+
+                <label class="block-label selection-button-radio">
+                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="No"> No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span>
+                </label>
+
+                <div class="panel panel-border-narrow" id="national-insurance-number-yes">
+                  <label for="national-insurance-number">
+                    <span class="form-label">National Insurance number
+                    <span class="form-hint">It&rsquo;s on your National Insurance card, benefit letter, payslip or P60.<br>For example, V0 12 34 56 D</span>
+                  </label>
+                  <input class="form-control" id="national-insurance-number" name="nationalInsuranceNumber" type="text">
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group form-group-related">
+            <button class="button" type="submit">Save and continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+    </div>

@@ -3,13 +3,16 @@
 
 // Path to assets for use with the file-url function
 // in the govuk frontend toolkit's url-helpers partial
-$path: "/public/images/";
+$path: "/public/govuk/images/";
 
 // GDS styles
 @import "../govuk/sass/govuk-elements";
 
-// SJP styles
-//@import "modules/manifest";
-//@import "partials/manifest";
-//@import "blocks/manifest";
-//@import "elements/manifest";
+// Our styles (ITCSS - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture)
+@import "settings/_settings";
+@import "tools/_tools";
+@import "generic/_generic";
+@import "elements/_elements";
+@import "objects/_objects";
+@import "components/_components";
+@import "utilities/_utilities";
