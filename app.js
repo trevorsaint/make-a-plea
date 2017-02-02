@@ -27,6 +27,7 @@ app.locals = {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(validator());
 
 /*
  * Helpers
