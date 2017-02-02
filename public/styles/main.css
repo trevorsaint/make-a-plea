@@ -1991,5 +1991,15 @@ Objects - class-based selectors which define undecorated design patterns, for ex
 Components - specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components.
 */
 /*
+Dividers
+*/
+@media (min-width: 769px) {
+  .divider-gutter-large {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+/*
 Utilities - utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class.
 */

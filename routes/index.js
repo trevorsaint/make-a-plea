@@ -36,6 +36,21 @@ router.route('/your-details')
       title: 'Your details'
     }
     res.render('your-details/index', data);
+  })
+
+  .post(function(req, res) {
+    res.redirect('/your-plea');
+  })
+
+
+// your plea
+router.route('/your-plea')
+
+  .get(function(req, res) {
+    data = {
+      title: 'Your plea'
+    }
+    res.render('your-plea/index', data);
   });
 
 

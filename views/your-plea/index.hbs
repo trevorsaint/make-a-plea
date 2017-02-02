@@ -1,0 +1,106 @@
+
+    <a class="link-back" href="/your-details">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <div class="panel  panel-border-narrow">
+          <p>This is your opportunity to respond to the court.</p>
+          <ul class="list list-bullet">
+            <li>the charge details and witness statements are in the documentation sent to you</li>
+            <li>each offence may carry a fine</li>
+            <li>if you plead guilty you may get a reduction on any fine imposed</li>
+          </ul>
+        </div>
+
+        <hr class="divider  divider-gutter-large" aria-hidden="true">
+
+        <h2 class="heading-large">Details of charge</h2>
+
+        <p class="bold-small">Public service vehicle &ndash; passenger failing to produce a ticket</p>
+
+        <details>
+          <summary><span class="summary">View charge information</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </details>
+
+        <hr class="divider  divider-gutter-large" aria-hidden="true">
+
+        <h2 class="heading-large">Enter your plea</h2>
+
+        <form class="form" method="post">
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label-bold">How do you plead?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="pleadGuilty">
+                <input type="radio" name="howDoYouPlead" value="Guilty"><span class="visually-hidden"> I plead</span> Guilty
+              </label>
+
+              <label class="block-label  selection-button-radio" data-target="pleadNotGuilty">
+                <input type="radio" name="howDoYouPlead" value="Not guilty"><span class="visually-hidden"> I plead</span> Not guilty
+              </label>
+
+            </fieldset>
+
+            <!-- Guilty -->
+            <div class="panel  panel-border-narrow  js-hidden" id="pleadGuilty">
+
+              <p>Pleading <strong>guilty</strong> is an admission that you commited the offence and will be convicted and sentanced based on the submission of your guilty plea.</p>
+
+              <p>You have three options for how you can plead guilty to this offence:</p>
+
+              <div class="form-group">
+
+                <fieldset class="inline">
+
+                  <legend class="visually-hidden">How do you plead guilty to this offence?</legend>
+
+                  <div class="form-group  form-group-compound">
+                    <label class="block-label selection-button-radio">
+                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Accept an automated standard penalty"> Accept an automated standard penalty
+                    </label>
+                  </div>
+
+                  <div class="form-group  form-group-compound">
+                    <label class="block-label selection-button-radio">
+                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Plead guilty (no need to attend court)"> Plead guilty (no need to attend court)
+                    </label>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="block-label  selection-button-radio">
+                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Attend court to plead guilty"> Attend court to plead guilty
+                    </label>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Save and continue</button>
+          </div>
+
+          <p><a href="/your-details">Back</a></p>
+
+        </form>
+
+      </div>
+
+    </div>

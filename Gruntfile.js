@@ -37,7 +37,7 @@ module.exports = function (grunt) {
               expand: true,
               cwd: 'node_modules/govuk_template_jinja/assets/stylesheets',
               src: '**',
-              dest: 'public/govuk/stylesheets/'
+              dest: 'public/govuk/stylesheets'
             },
 
             {
