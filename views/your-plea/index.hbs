@@ -44,104 +44,146 @@
                 <span class="form-label-bold">How do you plead?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="pleadGuilty">
+              <label class="block-label  selection-button-radio" data-target="plead-guilty">
                 <input type="radio" name="howDoYouPlead" value="Guilty"><span class="visually-hidden"> I plead</span> Guilty
               </label>
 
-              <label class="block-label  selection-button-radio" data-target="pleadNotGuilty">
+              <label class="block-label  selection-button-radio" data-target="plead-not-guilty">
                 <input type="radio" name="howDoYouPlead" value="Not guilty"><span class="visually-hidden"> I plead</span> Not guilty
               </label>
 
-            </fieldset>
+              <!-- Guilty -->
+              <div class="panel  panel-border-narrow  js-hidden" id="plead-guilty">
 
-            <!-- Guilty -->
-            <div class="panel  panel-border-narrow  js-hidden" id="pleadGuilty">
+                <p>Pleading <strong>guilty</strong> is an admission that you commited the offence and will be convicted and sentanced based on the submission of your guilty plea.</p>
 
-              <p>Pleading <strong>guilty</strong> is an admission that you commited the offence and will be convicted and sentanced based on the submission of your guilty plea.</p>
+                <p>You have three options for how you can plead guilty to this offence:</p>
 
-              <p>You have three options for how you can plead guilty to this offence:</p>
+                <div class="form-group">
 
-              <div class="form-group">
+                  <fieldset class="inline">
 
-                <fieldset class="inline">
+                    <legend class="visually-hidden">How do you plead guilty to this offence?</legend>
 
-                  <legend class="visually-hidden">How do you plead guilty to this offence?</legend>
+                    <div class="form-group  form-group-compound">
+                      <label class="block-label selection-button-radio" data-target="accept-an-automated-standard-penalty">
+                        <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Accept an automated standard penalty"> Accept an automated standard penalty
+                      </label>
 
-                  <div class="form-group  form-group-compound">
-                    <label class="block-label selection-button-radio" data-target="accept-an-automated-standard-penalty">
-                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Accept an automated standard penalty"> Accept an automated standard penalty
-                    </label>
+                      <div class="panel  panel-border-narrow  js-hidden" id="accept-an-automated-standard-penalty">
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="accept-an-automated-standard-penalty">
+                        <p>If you accept this standard penalty:</p>
 
-                      <p>If you accept this standard penalty:</p>
+                        <ul class="list  list-bullet">
+                          <li>you will not be required to attend court and no magistrate will be involved in your case</li>
+                          <li>you will be convicted of the offences as charged</li>
+                          <li>your sentence will be a standard financial penalty that you can:
+                            <ul class="list  list-bullet">
+                              <li>pay immediately or</li>
+                              <li>by payment terms agreed with the court by providing information about your financial means</li>
+                            </ul>
+                          </li>
+                          <li>you accept that the standard financial penalty may be less than or greater than that imposed at the discretion of a magistrate having considered your financial means</li>
+                          <li>the court will have automatic powers to enforce payment of the penalty imposed</li>
+                          <li>you will be willingly waiving your right to a trial by the court (as granted to you by Article 6 of the European Convention of Human Rights)</li>
+                          <li>the court is required to disclose details of all convictions</li>
+                        </ul>
 
-                      <ul class="list  list-bullet">
-                        <li>you will not be required to attend court and no magistrate will be involved in your case</li>
-                        <li>you will be convicted of the offences as charged</li>
-                        <li>your sentence will be a standard financial penalty that you can:
-                          <ul class="list  list-bullet">
-                            <li>pay immediately or</li>
-                            <li>by payment terms agreed with the court by providing information about your financial means</li>
-                          </ul>
-                        </li>
-                        <li>you accept that the standard financial penalty may be less than or greater than that imposed at the discretion of a magistrate having considered your financial means</li>
-                        <li>the court will have automatic powers to enforce payment of the penalty imposed</li>
-                        <li>you will be willingly waiving your right to a trial by the court (as granted to you by Article 6 of the European Convention of Human Rights)</li>
-                        <li>the court is required to disclose details of all convictions</li>
-                      </ul>
+                        <div class="form-group">
+                          <fieldset>
+                            <legend>
+                              <span class="form-label-bold">In your case, there&rsquo;s a statutory fixed penalty of &pound;141.50</span>
+                            </legend>
+                            <div class="form-group">
+                              <label class="block-label  selection-button-checkbox" for="waste-type-1"><input id="waste-type-1" name="waste-types" value="waste-animal" type="checkbox"> I understand<span class="visually-hidden"> there&rsquo;s a statutory fixed penalty of &pound;141.50</span></label>
+                            </div>
+                          </fieldset>
+                        </div>
 
-                      <div class="form-group">
-                        <fieldset>
-                          <legend>
-                            <span class="form-label-bold">In your case, there&rsquo;s a statutory fixed penalty of &pound;141.50</span>
-                          </legend>
-                          <div class="form-group">
-                            <label class="block-label  selection-button-checkbox" for="waste-type-1"><input id="waste-type-1" name="waste-types" value="waste-animal" type="checkbox"> I understand<span class="visually-hidden"> there&rsquo;s a statutory fixed penalty of &pound;141.50</span></label>
-                          </div>
-                        </fieldset>
                       </div>
 
                     </div>
 
-                  </div>
+                    <div class="form-group  form-group-compound">
 
-                  <div class="form-group  form-group-compound">
+                      <label class="block-label selection-button-radio" data-target="plead-guilty-no-need-to-attend-court">
+                        <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Plead guilty (no need to attend court)"> Plead guilty (no need to attend court)
+                      </label>
 
-                    <label class="block-label selection-button-radio" data-target="plead-guilty-no-need-to-attend-court">
-                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Plead guilty (no need to attend court)"> Plead guilty (no need to attend court)
-                    </label>
-
-                    <div class="panel  panel-border-narrow  js-hidden" id="plead-guilty-no-need-to-attend-court">
-                      <p>Text about what this means is to be confirmed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
-
-                  </div>
-
-                  <div class="form-group">
-
-                    <label class="block-label  selection-button-radio" data-target="attend-court-to-plead-guilty">
-                      <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="attend-court-to-plead-guilty"> Attend court to plead guilty
-                    </label>
-
-                    <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
-                      <p>Text about what this means is to be confirmed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                      <div class="form-group">
-                        <label for="attend-court-to-plead-guilty-mitigation">
-                          <span class="form-label">Mitigation (optional)</span>
-                          <span class="form-hint">Include anything you&rsquo;d like the court to consider when making a decision about your guilty plea.</span>
-                        </label>
-                        <textarea class="form-control  form-control-3-4" id="attend-court-to-plead-guilty-mitigation" name="attendCourtToPleadGuiltyMitigation" cols="60" rows="3"></textarea>
+                      <div class="panel  panel-border-narrow  js-hidden" id="plead-guilty-no-need-to-attend-court">
+                        <p>Text about what this means is to be confirmed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                       </div>
+
                     </div>
 
-                  </div>
+                    <div class="form-group">
 
-                </fieldset>
+                      <label class="block-label  selection-button-radio" data-target="attend-court-to-plead-guilty">
+                        <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="attend-court-to-plead-guilty"> Attend court to plead guilty
+                      </label>
+
+                      <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
+                        <p>Text about what this means is to be confirmed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <div class="form-group">
+                          <label for="attend-court-to-plead-guilty-mitigation">
+                            <span class="form-label">Mitigation (optional)</span>
+                            <span class="form-hint">Include anything you&rsquo;d like the court to consider when making a decision about your guilty plea.</span>
+                          </label>
+                          <textarea class="form-control  form-control-3-4" id="attend-court-to-plead-guilty-mitigation" name="attendCourtToPleadGuiltyMitigation" cols="60" rows="3"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </fieldset>
+
+                </div>
 
               </div>
 
-            </div>
+              <!-- Not guilty -->
+              <div class="panel  panel-border-narrow  js-hidden" id="plead-not-guilty">
+
+                <p>Pleading <strong>guilty</strong> is an admission that you commited the offence and will be convicted and sentanced based on the submission of your guilty plea.</p>
+
+                <div class="form-group">
+                  <label for="why-do-you-believe-you-are-not-guilty">
+                    <span class="form-label">Why do you believe your not guilty?</span>
+                  </label>
+                  <textarea class="form-control  form-control-3-4" id="why-do-you-believe-you-are-not-guilty" name="whyDoYouBelieveYouAreNotGuilty" cols="60" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Do you need an interpreter in court?</span>
+                    </legend>
+
+                    <label class="block-label  selection-button-radio" data-target="do-you-need-an-interpreter-in-court-yes">
+                      <input type="radio" name="doYouNeedAnInterpreterInCourt" value="Yes"> Yes<span class="visually-hidden">, I need an interpreter in court</span>
+                    </label>
+
+                    <label class="block-label  selection-button-radio">
+                      <input type="radio" name="doYouNeedAnInterpreterInCourt" value="No"> No<span class="visually-hidden">, I don&rsquo;t need an interpreter in court</span>
+                    </label>
+
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-need-an-interpreter-in-court-yes">
+                      <label for="interpreter-in-court-language">
+                        <span class="form-label">Which language?</span>
+                        <span class="form-hint">You can include sign language</span>
+                      </label>
+                      <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage">
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+              </div>
+
+            </fieldset>
 
           </div>
 
