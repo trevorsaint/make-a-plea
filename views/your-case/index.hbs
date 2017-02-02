@@ -8,38 +8,21 @@
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
-        {{#if errors}}
-        <div class="error-summary" tabindex="-1" role="group" aria-labelledby="error-summary-heading">
-
-          <h1 class="heading-medium  error-summary-heading" id="error-summary-heading">Message to alert the user to a problem goes here</h1>
-
-          <p>Optional description of the errors and how to correct them</p>
-
-          <ul class="error-summary-list">
-            {{#unless caseOrUniqueReferenceNumber}}<li><a href="#error-case-or-unique-reference-number">Enter case or unique reference number</a></li>{{/unless}}
-            {{#unless postcodeAsShownOnYourNotice}}<li><a href="#error-postcode-as-shown-on-your-notice">Enter your postcode as shown on your notice</a></li>{{/unless}}
-          </ul>
-
-        </div>
-        {{/if}}
-
         <form class="form" method="post" novalidate>
 
-          <div class="form-group{{#if errors}}{{#unless caseOrUniqueReferenceNumber}} error" id="error-case-or-unique-reference-number{{/unless}}{{/if}}">
+          <div class="form-group">
             <label for="case-or-unique-reference-number">
-              <span class="form-label-bold">Case or Unique Reference Number</span>
+              <span class="form-label">Case or Unique Reference Number</span>
               <span class="form-hint">Find this on your notice</span>
-              {{#if errors}}{{#unless caseOrUniqueReferenceNumber}}<span class="error-message" id="error-message-case-or-unique-reference-number">Custom error message goes here</span>{{/unless}}{{/if}}
             </label>
-            <input class="form-control" id="case-or-unique-reference-number" name="caseOrUniqueReferenceNumber" type="text" value="{{caseOrUniqueReferenceNumbe}}"{{#if errors}}{{#unless caseOrUniqueReferenceNumber}} aria-describedby="error-message-case-or-unique-reference-number"{{/unless}}{{/if}}>
+            <input class="form-control" id="case-or-unique-reference-number" name="caseOrUniqueReferenceNumber" type="text" value="">
           </div>
 
-          <div class="form-group{{#if errors}}{{#unless postcodeAsShownOnYourNotice}} error" id="error-postcode-as-shown-on-your-notice{{/unless}}{{/if}}">
+          <div class="form-group">
             <label for="postcode-as-shown-on-your-notice">
-              <span class="form-label-bold">Your postcode as shown on your notice</span>
-              {{#if errors}}{{#unless postcodeAsShownOnYourNotice}}<span class="error-message" id="error-message-postcode-as-shown-on-your-notice">Custom error message goes here</span>{{/unless}}{{/if}}
+              <span class="form-label">Your postcode as shown on your notice</span>
             </label>
-            <input class="form-control" id="postcode-as-shown-on-your-notice" name="postcodeAsShownOnYourNotice" type="text" value="{{postcodeAsShownOnYourNotice}}"{{#if errors}}{{#unless caseOrUniqueReferenceNumber}} aria-describedby="error-message-postcode-as-shown-on-your-notice"{{/unless}}{{/if}}>
+            <input class="form-control" id="postcode-as-shown-on-your-notice" name="postcodeAsShownOnYourNotice" type="text" value="">
           </div>
 
           <div class="form-group  form-group-related">
@@ -50,6 +33,10 @@
 
         </form>
 
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
       </div>
 
     </div>

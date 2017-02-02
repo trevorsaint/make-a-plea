@@ -24,30 +24,7 @@ router.route('/your-case')
   })
 
   .post(function(req, res, next) {
-
-    var errors = true;
-    var caseOrUniqueReferenceNumber = req.body.caseOrUniqueReferenceNumber;
-    var postcodeAsShownOnYourNotice = req.body.postcodeAsShownOnYourNotice;
-
-    if (caseOrUniqueReferenceNumber && postcodeAsShownOnYourNotice) {
-
-      errors = false
-
-      res.render('your-details/index', data);
-
-    } else {
-
-      errors = true
-
-      res.render('your-case/index', {
-        title: 'Your case',
-        errors: errors,
-        caseOrUniqueReferenceNumber: caseOrUniqueReferenceNumber,
-        postcodeAsShownOnYourNotice: postcodeAsShownOnYourNotice
-      });
-
-    }
-
+    res.redirect('/your-details');
   })
 
 
