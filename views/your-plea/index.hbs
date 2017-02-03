@@ -10,7 +10,7 @@
 
         <div class="panel  panel-border-narrow">
           <p>This is your opportunity to respond to the court.</p>
-          <ul class="list list-bullet">
+          <ul class="list  list-bullet">
             <li>the charge details and witness statements are in the documentation sent to you</li>
             <li>each offence may carry a fine</li>
             <li>if you plead guilty you may get a reduction on any fine imposed</li>
@@ -25,7 +25,7 @@
 
         <details>
           <summary><span class="summary">View charge information</span></summary>
-          <div class="panel panel-border-narrow">
+          <div class="panel  panel-border-narrow">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </details>
@@ -66,7 +66,7 @@
                     <legend class="visually-hidden">How do you plead guilty to this offence?</legend>
 
                     <div class="form-group  form-group-compound">
-                      <label class="block-label selection-button-radio" data-target="accept-an-automated-standard-penalty">
+                      <label class="block-label  selection-button-radio" data-target="accept-an-automated-standard-penalty">
                         <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Accept an automated standard penalty"> Accept an automated standard penalty
                       </label>
 
@@ -106,7 +106,7 @@
 
                     <div class="form-group  form-group-compound">
 
-                      <label class="block-label selection-button-radio" data-target="plead-guilty-no-need-to-attend-court">
+                      <label class="block-label  selection-button-radio" data-target="plead-guilty-no-need-to-attend-court">
                         <input type="radio" name="howDoYouPleadGuiltyToThisOffence" value="Plead guilty (no need to attend court)"> Plead guilty (no need to attend court)
                       </label>
 
@@ -175,6 +175,89 @@
                         <span class="form-hint">You can include sign language</span>
                       </label>
                       <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage">
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Do you disagree with the evidence in a witness statement sent to you?</span>
+                    </legend>
+
+                    <label class="block-label  selection-button-radio" data-target="do-you-disagree-with-the-evidence-in-a-witness-statement-sent-to-you-yes">
+                      <input type="radio" name="doYouDisagreeWithTheEvidenceInAWitnessStatementSentToYou" value="Yes"> Yes<span class="visually-hidden">, I disagree with the evidence in the witness statement</span>
+                    </label>
+
+                    <label class="block-label  selection-button-radio">
+                      <input type="radio" name="doYouDisagreeWithTheEvidenceInAWitnessStatementSentToYou" value="No"> No<span class="visually-hidden">, I don&rsquo;t disagree with the evidence in the witness statement</span>
+                    </label>
+
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-disagree-with-the-evidence-in-a-witness-statement-sent-to-you-yes">
+                      <label for="enter-the-name-of-the-witness-you-disagree-with">
+                        <span class="form-label">Enter the name of the witness you disagree with</span>
+                      </label>
+                      <textarea class="form-control  form-control-3-4" id="enter-the-name-of-the-witness-you-disagree-with" name="enterTheNameOfTheWitnessYouDisagreeWith" cols="60" rows="3"></textarea>
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Do you want to call a witness?</span>
+                      <span class="form-hint">Someone who can give evidence in court supporting your case</span>
+                    </legend>
+
+                    <label class="block-label  selection-button-radio" data-target="do-you-want-to-call-a-witness-yes">
+                      <input type="radio" name="doYouWantToCallAWitness" value="Yes"> Yes<span class="visually-hidden">, I want to call a witness</span>
+                    </label>
+
+                    <label class="block-label  selection-button-radio">
+                      <input type="radio" name="doYouWantToCallAWitness" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call a witness</span>
+                    </label>
+
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-a-witness-yes">
+                      <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
+                        <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
+                      </label>
+                      <textarea class="form-control  form-control-3-4" id="enter-the-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Does your witness need an interpreter in court?</span>
+                    </legend>
+
+                    <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court-yes">
+                      <input type="radio" name="doesYourWitnessNeedAnInterpreterInCourt" value="Yes"> Yes<span class="visually-hidden">, my witness needs an interpreter in court</span>
+                    </label>
+
+                    <label class="block-label  selection-button-radio">
+                      <input type="radio" name="doesYourWitnessNeedAnInterpreterInCourt" value="No"> No<span class="visually-hidden">, my witness does not need an interpreter in court</span>
+                    </label>
+
+                    <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court-yes">
+                      <label for="your-witness-interpreter-language">
+                        <span class="form-label">Which language?</span>
+                        <span class="form-hint">You can include sign language</span>
+                      </label>
+                      <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage">
                     </div>
 
                   </fieldset>
