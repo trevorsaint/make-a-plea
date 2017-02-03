@@ -1,0 +1,63 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <h2 class="heading-medium">What would you like to do?</h2>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">What would you like to do?</legend>
+
+              <label class="block-label  selection-button-radio" data-target="pay-the-standard-fine-now">
+                <input type="radio" name="whatWouldYouLikeToDo" value="Pay the standard fine now"> Pay the standard fine now
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="pay-the-standard-fine-now">
+
+                <label class="block-label  selection-button-radio">
+                  <input type="radio" name="howWouldYouLikeToPayTheStandardFine" value="Pay online by debit or credit card"> Pay online by debit or credit card
+                </label>
+
+                <label class="block-label  selection-button-radio">
+                  <input type="radio" name="howWouldYouLikeToPayTheStandardFine" value="Pay by telephone"> Pay by telephone
+                </label>
+
+              </div>
+
+              <label class="block-label  selection-button-radio" data-target="pay-the-standard-fine-later">
+                <input type="radio" name="whatWouldYouLikeToDo" value="Pay the standard fine later"> Pay the standard fine later
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="pay-the-standard-fine-later">
+                <p>You must provide additional financial information.</p>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button">Save and continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

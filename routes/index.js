@@ -54,4 +54,15 @@ router.route('/your-plea')
   });
 
 
+  // your plea
+  router.route('/pay-your-penalty')
+
+    .get(function(req, res, next) {
+      data = {
+        title: 'Pay your penalty'
+      }
+      res.render('pay-your-penalty/index', data);
+    });
+
+
 module.exports = router
