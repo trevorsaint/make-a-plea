@@ -131,6 +131,17 @@ router.route('/your-benefits')
   });
 
 
+// Helping you plead online
+router.route('/helping-you-plead-online')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Helping you plead online'
+    }
+    res.render('helping-you-plead-online/index', data);
+  });
+
+
 // Your plea has been submitted
 router.route('/your-plea-has-been-submitted')
 
