@@ -98,7 +98,7 @@ router.route('/your-pension-credit')
   });
 
 
-// Your pension credit
+// Your expenses
 router.route('/your-expenses')
 
   .get(function(req, res, next) {
@@ -106,6 +106,28 @@ router.route('/your-expenses')
       title: 'Your expenses'
     }
     res.render('your-expenses/index', data);
+  });
+
+
+// Other expenses
+router.route('/your-expenses/other-expenses')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your expenses'
+    }
+    res.render('your-expenses/other-expenses/index', data);
+  });
+
+
+// Your benefits
+router.route('/your-benefits')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your benefits'
+    }
+    res.render('your-benefits/index', data);
   });
 
 
