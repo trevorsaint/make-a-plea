@@ -2044,5 +2044,25 @@ Related
 }
 
 /*
+Alerts
+*/
+.alert {
+  margin-top: 2.10526em;
+  padding: 2em 0 1em;
+  text-align: center;
+}
+.alert--submitted {
+  background-color: #28a197;
+  color: #fff;
+}
+
+/*
+Buttons
+*/
+.button-actions {
+  margin-top: 30px;
+}
+
+/*
 Utilities - utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class.
 */
