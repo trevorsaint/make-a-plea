@@ -98,6 +98,17 @@ router.route('/your-pension-credit')
   });
 
 
+// Your pension credit
+router.route('/your-expenses')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your expenses'
+    }
+    res.render('your-expenses/index', data);
+  });
+
+
 // Your plea has been submitted
 router.route('/your-plea-has-been-submitted')
 

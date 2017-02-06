@@ -21,7 +21,7 @@
 
         <h2 class="heading-large">Details of charge</h2>
 
-        <p class="bold-small">Public service vehicle &ndash; passenger failing to produce a ticket</p>
+        <h3 class="heading-medium">Passenger failing to produce a ticket</h3>
 
         <details>
           <summary><span class="summary">View charge information</span></summary>
@@ -34,15 +34,15 @@
 
         <h2 class="heading-large">Enter your plea</h2>
 
-        <form class="form" method="post">
+        <form class="form" method="post" novalidate>
+
+          <h3 class="heading-medium">How do you plead?</h3>
 
           <div class="form-group">
 
             <fieldset class="inline">
 
-              <legend>
-                <span class="form-label-bold">How do you plead?</span>
-              </legend>
+              <legend class="visually-hidden">How do you plead?</legend>
 
               <label class="block-label  selection-button-radio" data-target="plead-guilty">
                 <input type="radio" name="howDoYouPlead" value="Guilty"><span class="visually-hidden"> I plead</span> Guilty
@@ -95,7 +95,9 @@
                               <span class="form-label-bold">In your case, there&rsquo;s a statutory fixed penalty of &pound;141.50</span>
                             </legend>
                             <div class="form-group">
-                              <label class="block-label  selection-button-checkbox" for="waste-type-1"><input id="waste-type-1" name="waste-types" value="waste-animal" type="checkbox"> I understand<span class="visually-hidden"> there&rsquo;s a statutory fixed penalty of &pound;141.50</span></label>
+                              <label class="block-label  selection-button-checkbox">
+                                <input name="statutoryFixedPenalty" value="I understand there&rsquo;s a statutory fixed penalty" type="checkbox"> I understand<span class="visually-hidden"> there&rsquo;s a statutory fixed penalty of &pound;141.50</span>
+                              </label>
                             </div>
                           </fieldset>
                         </div>
