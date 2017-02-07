@@ -1,0 +1,168 @@
+
+    <a class="link-back" href="/your-details">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <p class="lede">Review your information before making your plea.</p>
+
+        <!-- summary -->
+        <div class="summary">
+
+          <h2 class="heading-medium">Your plea and mitigation</h2>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="summary-title">Your plea</th>
+                <td class="summary-body"><a href="/">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="summary-title">Plea</th>
+                <td class="summary-body">Guilty</td>
+              </tr>
+              <tr>
+                <th class="summary-title">Plead guilty in court</th>
+                <td class="summary-body">Yes</td>
+              </tr>
+              <tr>
+                <th class="summary-title">Mitigation</th>
+                <td class="summary-body">I did it!</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- end summary -->
+
+        <hr>
+
+        <!-- summary -->
+        <div class="summary">
+
+          <h2 class="heading-medium">Your employment and income</h2>
+
+          <table class="table">
+            <thead>
+              <th class="summary-title">Your employment</th>
+              <td class="summary-body"><a href="/">Change<span class="visually-hidden"> answers for &ldquo;Your employment&rdquo;.</span></a></td>
+            </thead>
+            <tr>
+              <th class="summary-title">You are</th>
+              <td class="summary-body">Employed</td>
+            </tr>
+            <tr>
+              <th class="summary-title">You get paid</th>
+              <td class="summary-body">Weekly</td>
+            </tr>
+            <tr>
+              <th class="summary-title">Total amount (after tax)</th>
+              <td class="summary-body">&pound;1000.00</td>
+            </tr>
+          </table>
+
+        </div>
+        <!-- end summary -->
+
+        <hr>
+
+        <!-- summary -->
+        <div class="summary">
+
+          <h2 class="heading-medium">Special financial circumstances</h2>
+
+          <table class="table">
+            <thead>
+              <th class="summary-title">Household expenses</th>
+              <td class="summary-body"><a href="/">Change<span class="visually-hidden"> answers for &ldquo;Household expenses&rdquo;.</span></a></td>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="summary-title">Other contributors to household bills</th>
+                <td class="summary-body">Yes</td>
+              </tr>
+              <tr>
+                <th class="summary-title">Total amount<span class="visually-hidden"> for &ldquo;Household expenses&rdquo;.</span></th>
+                <td class="summary-body">&pound;40.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table">
+            <thead>
+              <th class="summary-title">Other expenses</th>
+              <td class="summary-body"><a href="/">Change<span class="visually-hidden"> answers for &ldquo;Other expenses&rdquo;.</span></a></td>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="summary-title">Other expenses (not listed)</th>
+                <td class="summary-body">None</td>
+              </tr>
+              <tr>
+                <th class="summary-title">Amount<span class="visually-hidden"> for &ldquo;Other expenses&rdquo;.</span></th>
+                <td class="summary-body">&pound;70.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="table">
+            <thead>
+              <th class="summary-title" colspan="2">Total income</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="summary-title">Amount<span class="visually-hidden"> for &ldquo;Household expenses&rdquo; and &ldquo;Other expenses&rdquo;.</span></th>
+                <td class="summary-body">&pound;110.00</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- end summary -->
+
+        <hr>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-large">Declaration</h2>
+
+          <span>I confirm that:</span>
+
+          <ul class="list  list-bullet">
+            <li>I&rsquo;ve read and understand the charges agaist me</li>
+            <li>I&rsquo;m the person named in the Single Justice Procedure notice</li>
+            <li>the facts I&rsquo;ve given are correct as far as I know</li>
+          </ul>
+
+          <p class="notice">
+            <i class="icon  icon-important"><span class="visually-hidden">Warning</span></i>
+            <strong class="bold-small">It is a offence to make a false statement or to deliberately fail to disclose any relevant facts.</strong>
+          </p>
+
+          <div class="form-group">
+            <label class="block-label  selection-button-checkbox">
+              <input name="confirmDeclaration" value="" type="checkbox"> I confirm<span class="visually-hidden">, I have read and understand the charges against me</span>
+            </label>
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Accept and continue</button>
+          </div>
+
+          <p><a href="/your-details">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

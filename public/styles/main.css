@@ -2006,6 +2006,35 @@ Dividers
 }
 
 /*
+Summary
+*/
+.summary {
+  position: relative;
+}
+.summary-subsection {
+  position: relative;
+}
+.summary-title, .summary-body {
+  border: 0 none;
+  vertical-align: top;
+}
+.summary tbody .summary-title {
+  font-weight: 400;
+}
+.summary-body {
+  padding-right: 0;
+  text-align: right;
+}
+.summary-action {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*
+Tables
+*/
+/*
 Related
 */
 .related {

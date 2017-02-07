@@ -153,4 +153,26 @@ router.route('/your-plea-has-been-submitted')
   });
 
 
+// Confirm your answers
+router.route('/confirm-your-answers')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Confirm your answers'
+    }
+    res.render('confirm-your-answers/index', data);
+  });
+
+
+// Confirm plea and acceptance of penalty
+router.route('/confirm-plea-and-acceptance-of-penalty')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Confirm plea and acceptance of penalty'
+    }
+    res.render('confirm-plea-and-acceptance-of-penalty/index', data);
+  });
+
+
 module.exports = router
