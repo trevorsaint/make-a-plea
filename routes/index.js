@@ -7,7 +7,7 @@ router.route('/')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Make a plea'
+      title: 'Make a plea for an offence'
     }
     res.render('index', data);
   });
