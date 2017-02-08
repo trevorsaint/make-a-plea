@@ -2030,9 +2030,6 @@ Summary
 }
 
 /*
-Tables
-*/
-/*
 Related
 */
 .related {
@@ -2086,6 +2083,14 @@ Alerts
 .alert--submitted {
   background-color: #28a197;
   color: #fff;
+}
+
+/*
+Details
+*/
+.details {
+  margin-top: 0.26316em;
+  margin-bottom: 1.05263em;
 }
 
 /*
