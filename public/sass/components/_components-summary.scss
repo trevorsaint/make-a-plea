@@ -7,30 +7,23 @@ $module: "summary";
 .#{$module} {
   position: relative;
 
-  // Nested sub sections
-  &-subsection {
-    position: relative;
+  &-title {
+    float: left;
+  }
+
+  &-body {
+    overflow: hidden;
+    text-align: right;
   }
 
   &-title,
   &-body {
-    border: 0 none;
-    vertical-align: top;
-  }
-
-  // Only if the title sits inside table body
-  tbody {
-    .#{$module}-title {
-      font-weight: 400;
-    }
-  }
-
-  &-body {
-    padding-right: 0;
-    text-align: right;
+    padding-top: em(10);
+    padding-bottom: em(10);
   }
 
   &-action {
+    margin: 0;
     position: absolute;
     right: 0; top: 0;
   }

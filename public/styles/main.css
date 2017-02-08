@@ -2011,21 +2011,19 @@ Summary
 .summary {
   position: relative;
 }
-.summary-subsection {
-  position: relative;
-}
-.summary-title, .summary-body {
-  border: 0 none;
-  vertical-align: top;
-}
-.summary tbody .summary-title {
-  font-weight: 400;
+.summary-title {
+  float: left;
 }
 .summary-body {
-  padding-right: 0;
+  overflow: hidden;
   text-align: right;
 }
+.summary-title, .summary-body {
+  padding-top: 0.52632em;
+  padding-bottom: 0.52632em;
+}
 .summary-action {
+  margin: 0;
   position: absolute;
   right: 0;
   top: 0;
