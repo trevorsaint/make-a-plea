@@ -51,7 +51,19 @@ router.route('/your-plea')
       title: 'Your plea'
     }
     res.render('your-plea/index', data);
-  });
+  })
+
+  .post(function(req, res, next) {
+
+    sPlea = 'Guilty';
+
+    if (sPlea === 'Guilty') {
+      res.redirect('/check-your-answers');
+    } else {
+      res.redirect('/confirm-plea-and-acceptance-of-penalty');
+    }
+
+  })
 
 
 // Pay your penalty
@@ -153,14 +165,14 @@ router.route('/your-plea-has-been-submitted')
   });
 
 
-// Confirm your answers
-router.route('/confirm-your-answers')
+// Check your answers
+router.route('/check-your-answers')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Confirm your answers'
+      title: 'Check your answers'
     }
-    res.render('confirm-your-answers/index', data);
+    res.render('check-your-answers/index', data);
   });
 
 
@@ -172,6 +184,17 @@ router.route('/confirm-plea-and-acceptance-of-penalty')
       title: 'Confirm plea and acceptance of penalty'
     }
     res.render('confirm-plea-and-acceptance-of-penalty/index', data);
+  });
+
+
+// Declaration
+router.route('/declaration')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Declaration'
+    }
+    res.render('declaration/index', data);
   });
 
 

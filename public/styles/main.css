@@ -2094,6 +2094,13 @@ Details
 }
 
 /*
+Typography
+*/
+.leadin {
+  margin: 0;
+}
+
+/*
 Buttons
 */
 .button-actions {
