@@ -7,7 +7,8 @@ router.route('/')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Make a plea for an offence'
+      title: 'Make a plea for an offence',
+      phase_banner: false
     }
     res.render('index', data);
   });
@@ -18,7 +19,8 @@ router.route('/your-case')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your case'
+      title: 'Your case',
+      phase_banner: true
     }
     res.render('your-case/index', data);
   })
@@ -33,7 +35,8 @@ router.route('/your-details')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your details'
+      title: 'Your details',
+      phase_banner: true
     }
     res.render('your-details/index', data);
   })
@@ -48,7 +51,8 @@ router.route('/your-plea')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your plea'
+      title: 'Your plea',
+      phase_banner: true
     }
     res.render('your-plea/index', data);
   })
@@ -71,7 +75,8 @@ router.route('/pay-your-penalty')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Pay your penalty'
+      title: 'Pay your penalty',
+      phase_banner: true
     }
     res.render('pay-your-penalty/index', data);
   });
@@ -82,7 +87,8 @@ router.route('/your-employment')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your employment'
+      title: 'Your employment',
+      phase_banner: true
     }
     res.render('your-employment/index', data);
   });
@@ -93,7 +99,8 @@ router.route('/your-finances')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your finances'
+      title: 'Your finances',
+      phase_banner: true
     }
     res.render('your-finances/index', data);
   });
@@ -104,7 +111,8 @@ router.route('/your-pension-credit')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your pension credit'
+      title: 'Your pension credit',
+      phase_banner: true
     }
     res.render('your-pension-credit/index', data);
   });
@@ -115,7 +123,8 @@ router.route('/your-expenses')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your expenses'
+      title: 'Your expenses',
+      phase_banner: true
     }
     res.render('your-expenses/index', data);
   });
@@ -126,7 +135,8 @@ router.route('/your-expenses/other-expenses')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your expenses'
+      title: 'Your expenses',
+      phase_banner: true
     }
     res.render('your-expenses/other-expenses/index', data);
   });
@@ -137,7 +147,8 @@ router.route('/your-benefits')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your benefits'
+      title: 'Your benefits',
+      phase_banner: true
     }
     res.render('your-benefits/index', data);
   });
@@ -148,7 +159,8 @@ router.route('/helping-you-plead-online')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Helping you plead online'
+      title: 'Helping you plead online',
+      phase_banner: true
     }
     res.render('helping-you-plead-online/index', data);
   });
@@ -159,7 +171,8 @@ router.route('/your-plea-has-been-submitted')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your plea has been submitted'
+      title: 'Your plea has been submitted',
+      phase_banner: true
     }
     res.render('your-plea-has-been-submitted/index', data);
   });
@@ -170,7 +183,8 @@ router.route('/check-your-answers')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Check your answers'
+      title: 'Check your answers',
+      phase_banner: true
     }
     res.render('check-your-answers/index', data);
   });
@@ -181,7 +195,8 @@ router.route('/confirm-plea-and-acceptance-of-penalty')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Confirm plea and acceptance of penalty'
+      title: 'Confirm plea and acceptance of penalty',
+      phase_banner: true
     }
     res.render('confirm-plea-and-acceptance-of-penalty/index', data);
   });
@@ -192,7 +207,8 @@ router.route('/declaration')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Declaration'
+      title: 'Declaration',
+      phase_banner: true
     }
     res.render('declaration/index', data);
   });
