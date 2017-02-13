@@ -12,7 +12,7 @@
           <p>This is your opportunity to respond to the court. Please remember:</p>
           <ul class="list  list-bullet">
             <li>each offence may carry a fine</li>
-            <li>if you plead guilty you may get a reduction on any fine imposed</li>
+            <li>if you plead guilty, we may reduce your fine</li>
           </ul>
         </div>
 
@@ -22,7 +22,7 @@
 
         <h3 class="heading-medium">Passenger failing to produce a ticket</h3>
 
-        <details class="etails">
+        <details class="details">
           <summary><span class="summary">View charge information</span></summary>
           <div class="panel  panel-border-narrow">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -81,11 +81,11 @@
                       </label>
 
                       <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
-                        <label for="information-for-magistrates">
-                          <span class="form-label">Information for magistrates (optional)</span>
+                        <label for="provide-advance-information-for-magistrates">
+                          <span class="form-label">Provide advance information for magistrates (optional)</span>
                           <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. You can explain why you committed the offence or give background details, for example.</span>
                         </label>
-                        <textarea class="form-control  form-control-3-4" id="information-for-magistrates" name="informationForMagistrates" rows="3" cols="60"></textarea>
+                        <textarea class="form-control  form-control-3-4" id="provide-advance-information-for-magistrates" name="provideAdvanceInformationForMagistrates" rows="3" cols="60"></textarea>
                       </div>
 
                     </div>
@@ -101,13 +101,13 @@
 
                 <h3 class="heading-medium">You&rsquo;ll need to attend court</h3>
 
-                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence &ndash; so you&rsquo;ll need to present your evidence in court.</p>
+                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence so you&rsquo;ll need to presentyour evidence in court.</p>
 
                 <div class="form-group">
-                  <label for="in-advance-why-do-you-believe-you-are-not-guilty">
-                    <span class="form-label">In advance, why do you believe you&rsquo;re not guilty?</span>
+                  <label for="why-do-you-believe-you-are-not-guilty">
+                    <span class="form-label">Why do you believe you&rsquo;re not guilty?</span>
                   </label>
-                  <textarea class="form-control  form-control-3-4" id="in-advance-why-do-you-believe-you-are-not-guilty" name="inAdvanceWhyDoYouBelieveYouAreNotGuilty" cols="60" rows="3"></textarea>
+                  <textarea class="form-control  form-control-3-4" id="why-do-you-believe-you-are-not-guilty" name="whyDoYouBelieveYouAreNotGuilty" cols="60" rows="3"></textarea>
                 </div>
 
                 <div class="form-group">
@@ -118,7 +118,7 @@
                       <span class="form-label">Do you need an interpreter in court?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-need-an-interpreter-in-court-yes">
+                    <label class="block-label  selection-button-radio" data-target="do-you-need-an-interpreter-in-court">
                       <input name="doYouNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, I need an interpreter in court</span>
                     </label>
 
@@ -126,10 +126,10 @@
                       <input name="doYouNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t need an interpreter in court</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-need-an-interpreter-in-court-yes">
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-need-an-interpreter-in-court">
                       <label for="interpreter-in-court-language">
-                        <span class="form-label">Which language?</span>
-                        <span class="form-hint">You can include sign language</span>
+                        <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter</span>?</span>
+                        <span class="form-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
                       </label>
                       <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage">
                     </div>
@@ -145,22 +145,22 @@
                   <fieldset>
 
                     <legend>
-                      <span class="form-label">Do you disagree with the evidence in a witness statement sent to you?</span>
+                      <span class="form-label">Do you disagree with any evidence in any witness statements sent in your notice?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-disagree-with-the-evidence-in-a-witness-statement-sent-to-you-yes">
-                      <input name="doYouDisagreeWithTheEvidenceInAWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I disagree with the evidence in the witness statement</span>
+                    <label class="block-label  selection-button-radio" data-target="do-you-disagree-with-any-evidence-in-any-witness-statement-sent-to-you">
+                      <input name="doYouDisagreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
                     </label>
 
                     <label class="block-label  selection-button-radio">
-                      <input name="doYouDisagreeWithTheEvidenceInAWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t disagree with the evidence in the witness statement</span>
+                      <input name="doYouDisagreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t disagree with the evidence in the witness statement sent to me</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-disagree-with-the-evidence-in-a-witness-statement-sent-to-you-yes">
-                      <label for="enter-the-name-of-the-witness-you-disagree-with">
-                        <span class="form-label">Enter the name of the witness you disagree with</span>
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-disagree-with-any-evidence-in-any-witness-statement-sent-to-you">
+                      <label for="enter-the-name-of-the-witness-and-what-you-disagree-with">
+                        <span class="form-label">Enter the name of the witness and what you disagree with</span>
                       </label>
-                      <textarea class="form-control  form-control-3-4" id="enter-the-name-of-the-witness-you-disagree-with" name="enterTheNameOfTheWitnessYouDisagreeWith" cols="60" rows="3"></textarea>
+                      <textarea class="form-control  form-control-3-4" id="enter-the-name-of-the-witness-and-what-you-disagree-with" name="enterTheNameOfTheWitnessAndWhatYouDisagreeWith" cols="60" rows="3"></textarea>
                     </div>
 
                   </fieldset>
@@ -172,19 +172,19 @@
                   <fieldset>
 
                     <legend>
-                      <span class="form-label">Do you want to call a witness?</span>
+                      <span class="form-label">Do you want to call your own witness?</span>
                       <span class="form-hint">Someone who can give evidence in court supporting your case</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-want-to-call-a-witness-yes">
-                      <input type="radio" name="doYouWantToCallAWitness" value="Yes"> Yes<span class="visually-hidden">, I want to call a witness</span>
+                    <label class="block-label  selection-button-radio" data-target="do-you-want-to-call-your-own-witness">
+                      <input type="radio" name="doYouWantToCallYourOwnWitness" value="Yes"> Yes<span class="visually-hidden">, I want to call my own witness</span>
                     </label>
 
                     <label class="block-label  selection-button-radio">
-                      <input type="radio" name="doYouWantToCallAWitness" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call a witness</span>
+                      <input type="radio" name="doYouWantToCallYourOwnWitness" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call my own witness</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-a-witness-yes">
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-your-own-witness">
                       <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
                         <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
                       </label>
@@ -203,7 +203,7 @@
                       <span class="form-label">Does your witness need an interpreter in court?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court-yes">
+                    <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court">
                       <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, my witness needs an interpreter in court</span>
                     </label>
 
@@ -211,10 +211,10 @@
                       <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, my witness does not need an interpreter in court</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court-yes">
+                    <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court">
                       <label for="your-witness-interpreter-language">
-                        <span class="form-label">Which language?</span>
-                        <span class="form-hint">You can include sign language</span>
+                        <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
+                        <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
                       </label>
                       <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage">
                     </div>
