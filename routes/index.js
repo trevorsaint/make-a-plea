@@ -83,14 +83,14 @@ router.route('/pay-your-penalty')
 
 
 // Your employment
-router.route('/your-employment')
+router.route('/your-employment-status')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Your employment',
+      title: 'Your employment status',
       phase_banner: true
     }
-    res.render('your-employment/index', data);
+    res.render('your-employment-status/index', data);
   });
 
 
