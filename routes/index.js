@@ -59,12 +59,12 @@ router.route('/your-plea')
 
   .post(function(req, res, next) {
 
-    sPlea = 'Guilty';
+    var how_do_you_plead = req.body.howDoYouPlead;
 
-    if (sPlea === 'Guilty') {
-      res.redirect('/check-your-answers');
+    if (how_do_you_plead === 'Guilty') {
+      res.redirect('/check-your-answers/guilty');
     } else {
-      res.redirect('/confirm-plea-and-acceptance-of-penalty');
+      res.redirect('/check-your-answers/not-guilty');
     }
 
   })
@@ -178,27 +178,27 @@ router.route('/your-plea-has-been-submitted')
   });
 
 
-// Check your answers
-router.route('/check-your-answers')
+// Check your answers (guilty)
+router.route('/check-your-answers/guilty')
 
   .get(function(req, res, next) {
     data = {
       title: 'Check your answers',
       phase_banner: true
     }
-    res.render('check-your-answers/index', data);
+    res.render('check-your-answers/guilty/', data);
   });
 
 
-// Confirm plea and acceptance of penalty
-router.route('/confirm-plea-and-acceptance-of-penalty')
+// Check your answers (not guilty)
+router.route('/check-your-answers/not-guilty')
 
   .get(function(req, res, next) {
     data = {
-      title: 'Confirm plea and acceptance of penalty',
+      title: 'Check your answers',
       phase_banner: true
     }
-    res.render('confirm-plea-and-acceptance-of-penalty/index', data);
+    res.render('check-your-answers/not-guilty/', data);
   });
 
 
