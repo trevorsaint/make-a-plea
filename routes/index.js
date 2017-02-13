@@ -67,7 +67,7 @@ router.route('/your-plea')
       res.redirect('/check-your-answers/not-guilty');
     }
 
-  })
+  });
 
 
 // Pay your penalty
@@ -211,6 +211,10 @@ router.route('/declaration')
       phase_banner: true
     }
     res.render('declaration/index', data);
+  })
+
+  .post(function(req, res, next) {
+    res.redirect('/your-plea-has-been-submitted');
   });
 
 
