@@ -1,0 +1,140 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <div class="panel  panel-border-narrow">
+          <p>For this type of offence you&rsquo;ll usually have to pay a fine:</p>
+          <ul class="list  list-bullet">
+            <li>the court will decide your fine based on your finances and the seriousness of the offence</li>
+            <li>your details will be stored securely by the court</li>
+          </ul>
+        </div>
+
+        <h2 class="heading-large">Your income</h2>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">How often do you get paid?</h2>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">How often do you get paid?</legend>
+
+              <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-weekly">
+                <input type="radio" name="howOftenDoYouGetPaid" value="Weekly"> Weekly
+              </label>
+
+                <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-weekly">
+                  <label for="weekly-take-home-pay">
+                    <span class="form-label">Weekly take home pay (after tax)</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="weekly-take-home-pay" name="weeklyTakeHomePay" type="text">
+                  </div>
+                </div>
+
+              <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-fortnightly">
+                <input type="radio" name="howOftenDoYouGetPaid" value="Fortnightly"> Fortnightly
+              </label>
+
+                <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-fortnightly">
+                  <label for="fortnightly-take-home-pay">
+                    <span class="form-label">Fortnightly take home pay (after tax)</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="fortnightly-take-home-pay" name="fortnightlyTakeHomePay" type="text">
+                  </div>
+                </div>
+
+              <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-monthly">
+                <input type="radio" name="howOftenDoYouGetPaid" value="Monthly"> Monthly
+              </label>
+
+                <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-monthly">
+                  <label for="monthly-take-home-pay">
+                    <span class="form-label">Monthly take home pay (after tax)</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="monthly-take-home-pay" name="monthlyTakeHomePay" type="text">
+                  </div>
+                </div>
+
+            </fieldset>
+
+          </div>
+
+          <h2 class="heading-medium">Your partner&rsquo;s income (including any benefits)</h2>
+
+          <div class="form-group">
+            <label for="your-partners-income">
+              <span class="form-label">Give weekly amount after tax deducted (TBC following MC100 meeting)</span>
+            </label>
+            <div class="form-currency">
+              <input class="form-control  form-control-1-4" id="your-partners-income" name="yourPartnersIncome" type="text">
+            </div>
+          </div>
+
+          <h2 class="heading-medium">Your savings</h2>
+
+          <div class="form-group">
+            <label for="your-savings">
+              <span class="form-label">TBC following MC100 meeting</span>
+            </label>
+            <div class="form-currency">
+              <input class="form-control  form-control-1-4" id="your-savings" name="yourSavings" type="text">
+            </div>
+          </div>
+
+          <h2 class="heading-medium">Would paying a fine cause you serious financial problems?</h2>
+
+          <p>For example, you would become homeless</p>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend class="visually-hidden">Would paying a fine cause you serious financial problems?</legend>
+
+              <label class="block-label  selection-button-radio" data-target="would-paying-a-fine-case-serious-financial-problems-yes">
+                <input type="radio" name="wouldPayingAFineCauseSeriousFinancialProblems" value="Yes"> Yes<span class="visually-hidden">, paying a fine would cause me serious financial problems</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="wouldPayingAFineCauseSeriousFinancialProblems" value="No"> No<span class="visually-hidden">, paying a fine would not cause me serious financial problems</span>
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="would-paying-a-fine-case-serious-financial-problems-yes">
+                <label for="how-would-paying-a-fine-cause-you-financial-problems">
+                  <span class="form-label">How would paying a fine cause you financial problems?</span>
+                  <span class="form-hint">You may be able to pay in instalments if you provide a good reason</span>
+                </label>
+                <textarea class="form-control  form-control-3-4" id="how-would-paying-a-fine-cause-you-financial-problems" name="howWouldPayingAFineCuaseYouSeriousFinancialProblems" cols="60" rows="3"></textarea>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Save and continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

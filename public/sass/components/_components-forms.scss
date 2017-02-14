@@ -1,0 +1,36 @@
+/*
+Forms
+*/
+
+$module: "form";
+
+.#{$module} {
+
+  &-currency {
+    display: block;
+    position: relative;
+
+    .#{$module}-control {
+      padding-left: em(34);
+    }
+
+    &:before {
+      font-size: inherit;
+      color: inherit;
+      content: "\00a3";
+      display: inline-block;
+      font-weight: 600;
+      position: absolute;
+      text-align: center;
+      vertical-align: middle;
+      left: em(12); top: 50%;
+
+      // IE9 Support and above
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+  }
+
+}

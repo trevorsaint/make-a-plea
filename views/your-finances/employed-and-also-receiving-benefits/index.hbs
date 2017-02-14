@@ -33,10 +33,12 @@
               </label>
 
                 <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-weekly">
-                  <label for="other-status">
+                  <label for="weekly-take-home-pay">
                     <span class="form-label">Weekly take home pay (after tax)</span>
                   </label>
-                  <input class="form-control  form-control-1-3" id="weekly-take-home-pay" name="weeklyTakeHomePay" type="text">
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="weekly-take-home-pay" name="weeklyTakeHomePay" type="text">
+                  </div>
                 </div>
 
               <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-fortnightly">
@@ -44,10 +46,12 @@
               </label>
 
                 <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-fortnightly">
-                  <label for="other-status">
+                  <label for="fortnightly-take-home-pay">
                     <span class="form-label">Fortnightly take home pay (after tax)</span>
                   </label>
-                  <input class="form-control  form-control-1-3" id="fortnightly-take-home-pay" name="fortnightlyTakeHomePay" type="text">
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="fortnightly-take-home-pay" name="fortnightlyTakeHomePay" type="text">
+                  </div>
                 </div>
 
               <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-monthly">
@@ -55,14 +59,38 @@
               </label>
 
                 <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-monthly">
-                  <label for="other-status">
+                  <label for="monthly-take-home-pay">
                     <span class="form-label">Monthly take home pay (after tax)</span>
                   </label>
-                  <input class="form-control  form-control-1-3" id="monthly-take-home-pay" name="monthlyTakeHomePay" type="text">
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="monthly-take-home-pay" name="monthlyTakeHomePay" type="text">
+                  </div>
                 </div>
 
             </fieldset>
 
+          </div>
+
+          <h2 class="heading-medium">Your partner&rsquo;s income (including any benefits)</h2>
+
+          <div class="form-group">
+            <label for="your-partners-income">
+              <span class="form-label">Give weekly amount after tax deducted (TBC following MC100 meeting)</span>
+            </label>
+            <div class="form-currency">
+              <input class="form-control  form-control-1-4" id="your-partners-income" name="yourPartnersIncome" type="text">
+            </div>
+          </div>
+
+          <h2 class="heading-medium">Your savings</h2>
+
+          <div class="form-group">
+            <label for="your-savings">
+              <span class="form-label">TBC following MC100 meeting</span>
+            </label>
+            <div class="form-currency">
+              <input class="form-control  form-control-1-4" id="your-savings" name="yourSavings" type="text">
+            </div>
           </div>
 
           <h2 class="heading-medium">Would paying a fine cause you serious financial problems?</h2>

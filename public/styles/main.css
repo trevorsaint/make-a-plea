@@ -2108,5 +2108,31 @@ Buttons
 }
 
 /*
+Forms
+*/
+.form-currency {
+  display: block;
+  position: relative;
+}
+.form-currency .form-control {
+  padding-left: 1.78947em;
+}
+.form-currency:before {
+  font-size: inherit;
+  color: inherit;
+  content: "\00a3";
+  display: inline-block;
+  font-weight: 600;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  left: 0.63158em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/*
 Utilities - utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class.
 */
