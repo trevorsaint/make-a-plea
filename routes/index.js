@@ -271,6 +271,18 @@ router.route('/check-your-answers/not-guilty')
   });
 
 
+// Dependent children
+router.route('/dependent-children')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Dependent children',
+      phase_banner: true
+    }
+    res.render('dependent-children/', data);
+  });
+
+
 // Declaration
 router.route('/declaration')
 
