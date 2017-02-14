@@ -82,7 +82,7 @@ router.route('/pay-your-penalty')
   });
 
 
-// Your employment
+// Your employment status
 router.route('/your-employment-status')
 
   .get(function(req, res, next) {
@@ -91,6 +91,18 @@ router.route('/your-employment-status')
       phase_banner: true
     }
     res.render('your-employment-status/index', data);
+  });
+
+
+// Your employer
+router.route('/your-employer')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your employer',
+      phase_banner: true
+    }
+    res.render('your-employer/index', data);
   });
 
 

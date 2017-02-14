@@ -1,0 +1,135 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <div class="panel  panel-border-narrow">
+          <p>We&rsquo;ll only need to contact your employer if:</p>
+          <ul class="list  list-bullet">
+            <li>you don&rsquo;t pay your fine</li>
+            <li>we then need to deduct the money from your earnings</li>
+          </ul>
+        </div>
+
+        <h2 class="heading-medium">Do you give consent for us to take a fine out of your earnings?</h2>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend class="visually-hidden">Do you give consent for us to take a fine out of your earnings?</legend>
+
+              <label class="block-label  selection-button-radio" data-target="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings">
+                <input name="radio-inline-group" type="radio" value="Yes"> Yes
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="radio-inline-group" type="radio" value="No"> No
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings">
+
+                <div class="form-group">
+                  <label for="employer-name">
+                    <span class="form-label">Employer name</span>
+                  </label>
+                  <input class="form-control  form-control-2-3" id="employer-name" name="employerName" type="text">
+                </div>
+
+                <div class="form-group">
+
+                  <fieldset>
+
+                    <legend>
+                      <span class="form-label">Employer address</span>
+                    </legend>
+
+                    <div class="form-group  form-group-compound">
+                      <label class="visually-hidden" for="employer-address-line-1">Address line 1</label>
+                      <input class="form-control  form-control-2-3" id="employer-address-line-1" name="employerAddressLine1" type="text">
+                    </div>
+
+                    <div class="form-group  form-group-compound">
+                      <label class="visually-hidden" for="employer-address-line-2">Address line 2</label>
+                      <input class="form-control  form-control-2-3" id="employer-address-line-2" name="employerAddressLine2" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label class="visually-hidden" for="employer-address-line-3">Address line 3</label>
+                      <input class="form-control  form-control-2-3" id="employer-address-line-3" name="employerAddressLine3" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="employer-town-or-city">
+                        <span class="form-label">Town or city</span>
+                      </label>
+                      <input class="form-control" id="employer-town-or-city" name="employerTownOrCity" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="employer-country">
+                        <span class="form-label">Country (optional)</span>
+                      </label>
+                      <input class="form-control" id="employer-country" name="employerCountry" type="text">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="employer-postcode">
+                        <span class="form-label">Postcode</span>
+                      </label>
+                      <input class="form-control  form-control-1-4" id="employer-postcode" name="employerPostcode" type="text">
+                    </div>
+
+                  </fieldset>
+
+                </div>
+
+                <div class="form-group">
+                  <label for="employer-telephone-number">
+                    <span class="form-label">Employer telephone number</span>
+                  </label>
+                  <input class="form-control" id="employer-telephone-number" name="employerTelephoneNumber" type="tel">
+                </div>
+
+                <div class="form-group">
+                  <label for="employer-email-address">
+                    <span class="form-label">Employer email address (optional)</span>
+                  </label>
+                  <input class="form-control  form-control-2-3" id="employer-email-address" name="employerEmailAddress" type="email">
+                </div>
+
+                <div class="form-group">
+                  <label for="your-employee-reference-number">
+                    <span class="form-label">Your employee reference number (optional)</span>
+                  </label>
+                  <input class="form-control  form-control-2-3" id="your-employee-reference-number" name="yourEmployeeReferenceNumber" type="text">
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>
