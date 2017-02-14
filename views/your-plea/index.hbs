@@ -145,18 +145,18 @@
                   <fieldset>
 
                     <legend>
-                      <span class="form-label">Do you disagree with any evidence in any witness statements sent in your notice?</span>
+                      <span class="form-label">Do you agree with any evidence in any witness statements sent in your notice?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-disagree-with-any-evidence-in-any-witness-statement-sent-to-you">
-                      <input name="doYouDisagreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
-                    </label>
-
                     <label class="block-label  selection-button-radio">
-                      <input name="doYouDisagreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t disagree with the evidence in the witness statement sent to me</span>
+                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I agree with the evidence in the witness statement sent to me</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-disagree-with-any-evidence-in-any-witness-statement-sent-to-you">
+                    <label class="block-label  selection-button-radio" data-target="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
+                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
+                    </label>
+
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
                       <label for="enter-the-name-of-the-witness-and-what-you-disagree-with">
                         <span class="form-label">Enter the name of the witness and what you disagree with</span>
                       </label>
@@ -185,38 +185,42 @@
                     </label>
 
                     <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-your-own-witness">
-                      <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
-                        <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
-                      </label>
-                      <textarea class="form-control  form-control-3-4" id="enter-the-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
-                    </div>
 
-                  </fieldset>
+                      <div class="form-group">
+                        <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
+                          <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
+                        </label>
+                        <textarea class="form-control  form-control-3-4" id="enter-the-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
+                      </div>
 
-                </div>
+                      <div class="form-group">
 
-                <div class="form-group">
+                        <fieldset>
 
-                  <fieldset>
+                          <legend>
+                            <span class="form-label">Does your witness need an interpreter in court?</span>
+                          </legend>
 
-                    <legend>
-                      <span class="form-label">Does your witness need an interpreter in court?</span>
-                    </legend>
+                          <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court">
+                            <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, my witness needs an interpreter in court</span>
+                          </label>
 
-                    <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court">
-                      <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, my witness needs an interpreter in court</span>
-                    </label>
+                          <label class="block-label  selection-button-radio">
+                            <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, my witness does not need an interpreter in court</span>
+                          </label>
 
-                    <label class="block-label  selection-button-radio">
-                      <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, my witness does not need an interpreter in court</span>
-                    </label>
+                          <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court">
+                            <label for="your-witness-interpreter-language">
+                              <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
+                              <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
+                            </label>
+                            <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage">
+                          </div>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court">
-                      <label for="your-witness-interpreter-language">
-                        <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
-                        <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
-                      </label>
-                      <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage">
+                        </fieldset>
+
+                      </div>
+
                     </div>
 
                   </fieldset>
