@@ -110,9 +110,9 @@ router.route('/your-employment-status')
     var employment_status = req.body.yourEmploymentStatus;
 
     if (employment_status === 'Employed') {
-      res.redirect('/your-finances/employed');
+      res.redirect('/your-employer');
     } else if (employment_status === 'Employed and also receiving benefits') {
-      res.redirect('/your-finances/employed-and-also-receiving-benefits');
+      res.redirect('/your-employer');
     } else if (employment_status === 'Self employed') {
       res.redirect('/your-finances/self-employed');
     } else if (employment_status === 'Self employed and also receiving benefits') {
