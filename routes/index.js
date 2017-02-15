@@ -24,10 +24,9 @@ router.route('/your-case')
     }
     res.render('your-case/index', data);
   })
-
   .post(function(req, res, next) {
     res.redirect('/your-details');
-  })
+  });
 
 
 // Your details
@@ -40,10 +39,9 @@ router.route('/your-details')
     }
     res.render('your-details/index', data);
   })
-
   .post(function(req, res, next) {
     res.redirect('/your-plea');
-  })
+  });
 
 
 // Your plea
@@ -56,10 +54,10 @@ router.route('/your-plea')
     }
     res.render('your-plea/index', data);
   })
-
   .post(function(req, res, next) {
 
-    var how_do_you_plead = req.body.howDoYouPlead;
+    // Store how do you plead
+    var how_do_you_plead = req.session.howDoYouPlead = req.body.howDoYouPlead;
 
     if (how_do_you_plead === 'Guilty') {
       res.redirect('/check-your-answers/guilty');
@@ -91,7 +89,26 @@ router.route('/your-employer')
       phase_banner: true
     }
     res.render('your-employer/index', data);
-  });
+  })
+  .post(function(req, res, next) {
+
+    var employment_status = req.session.yourEmploymentStatus;
+
+    if (employment_status === 'Employed') {
+
+      res.redirect('/your-finances/employed');
+
+    } else if (employment_status === 'Employed and also receiving benefits') {
+
+      res.redirect('/your-finances/employed-and-also-receiving-benefits');
+
+    } else {
+
+      // Do nothing...
+
+    }
+
+  })
 
 
 // Your employment status
@@ -104,22 +121,30 @@ router.route('/your-employment-status')
     }
     res.render('your-employment-status/index', data);
   })
-
   .post(function(req, res, next) {
 
-    var employment_status = req.body.yourEmploymentStatus;
+    var employment_status = req.session.yourEmploymentStatus = req.body.yourEmploymentStatus;
 
     if (employment_status === 'Employed') {
+
       res.redirect('/your-employer');
+
     } else if (employment_status === 'Employed and also receiving benefits') {
+
       res.redirect('/your-employer');
+
     } else if (employment_status === 'Self employed') {
+
       res.redirect('/your-finances/self-employed');
+
     } else if (employment_status === 'Self employed and also receiving benefits') {
+
       res.redirect('/your-finances/self-employed-and-also-receiving-benefits');
+
     } else {
-      // do something else...
-      res.send('Something else was selected, redirect elsewhere...');
+
+      // Do nothing...
+
     }
 
   });
@@ -171,8 +196,6 @@ router.route('/your-finances/self-employed-and-also-receiving-benefits')
     }
     res.render('your-finances/self-employed-and-also-receiving-benefits/index', data);
   });
-
-
 
 
 // Your pension credit
@@ -293,7 +316,6 @@ router.route('/declaration')
     }
     res.render('declaration/index', data);
   })
-
   .post(function(req, res, next) {
     res.redirect('/your-plea-has-been-submitted');
   });
