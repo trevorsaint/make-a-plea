@@ -1,0 +1,83 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">Which benefits do you receive?</h2>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">Which benefits do you receive?</legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Contributory Employment and Support Allowance"> Contributory Employment and Support Allowance
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Income&ndash;related Employment and Support Allowance"> Income&ndash;related Employment and Support Allowance
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Income support"> Income support
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Universal Credit"> Universal Credit
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Other benefit"> Other<span class="visually-hidden"> benefits not listed</span>
+              </label>
+
+            </fieldset>
+
+          </div>
+
+          <h2 class="heading-medium">How often is your benefit paid?</h2>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">How often is your benefit paid?</legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid weekly"> <span class="visually-hidden">Benefit is paid </span>Weekly
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid fortnightly"> <span class="visually-hidden">Benefit is paid </span>Fortnightly
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid monthly"> <span class="visually-hidden">Benefit is paid </span>Monthly
+              </label>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button">Save and continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

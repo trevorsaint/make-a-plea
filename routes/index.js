@@ -60,7 +60,7 @@ router.route('/your-plea')
     var how_do_you_plead = req.session.howDoYouPlead = req.body.howDoYouPlead;
 
     if (how_do_you_plead === 'Guilty') {
-      res.redirect('/check-your-answers/guilty');
+      res.redirect('/your-employment-status');
     } else {
       res.redirect('/check-your-answers/not-guilty');
     }
@@ -141,6 +141,10 @@ router.route('/your-employment-status')
 
       res.redirect('/your-finances/self-employed-and-also-receiving-benefits');
 
+    } else if (employment_status === 'Other') {
+
+      res.redirect('/your-finances/other');
+
     } else {
 
       // Do nothing...
@@ -197,6 +201,17 @@ router.route('/your-finances/self-employed-and-also-receiving-benefits')
     res.render('your-finances/self-employed-and-also-receiving-benefits/index', data);
   });
 
+// Your finances (other)
+router.route('/your-finances/other')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your finances',
+      phase_banner: true
+    }
+    res.render('your-finances/other/index', data);
+  });
+
 
 // Your pension credit
 router.route('/your-pension-credit')
@@ -234,15 +249,37 @@ router.route('/your-expenses/other-expenses')
   });
 
 
-// Your benefits
-router.route('/your-benefits')
+// Your benefits (unemployed)
+router.route('/your-benefits/unemployed')
 
   .get(function(req, res, next) {
     data = {
       title: 'Your benefits',
       phase_banner: true
     }
-    res.render('your-benefits/index', data);
+    res.render('your-benefits/unemployed/index', data);
+  });
+
+// Your benefits (unemployed and receiving out of work benefits)
+router.route('/your-benefits/unemployed-and-receiving-out-of-work-benefits')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your benefits',
+      phase_banner: true
+    }
+    res.render('your-benefits/unemployed-and-receiving-out-of-work-benefits/index', data);
+  });
+
+// Your benefits (other)
+router.route('/your-benefits/other')
+
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your benefits',
+      phase_banner: true
+    }
+    res.render('your-benefits/other/index', data);
   });
 
 

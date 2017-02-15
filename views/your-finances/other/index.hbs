@@ -21,6 +21,14 @@
         <form class="form" method="post" novalidate>
 
           <div class="form-group">
+            <label for="whats-your-main-source-of-income">
+              <span class="form-label-bold">What&rsquo;s your main source of income?</span>
+              <span class="form-hint">For example, student loan, pension or investment</span>
+            </label>
+            <input class="form-control" id="whats-your-main-source-of-income" name="whatsYourMainSourceOfIncome" type="text">
+          </div>
+
+          <div class="form-group">
 
             <fieldset>
 
@@ -67,28 +75,32 @@
                   </div>
                 </div>
 
+                <label class="block-label  selection-button-radio">
+                  <input type="radio" name="howOftenDoYouGetPaid" value="Other"> Other
+                </label>
+
             </fieldset>
 
           </div>
 
           <div class="form-group">
-            <label for="your-partners-income">
-              <span class="form-label-bold">Your partner&rsquo;s income (including any benefits)</span>
-              <span class="form-hint">Give weekly amount after tax deducted (TBC following MC100 meeting)</span>
-            </label>
-            <div class="form-currency">
-              <input class="form-control  form-control-1-4" id="your-partners-income" name="yourPartnersIncome" type="text">
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label for="your-savings">
-              <span class="form-label-bold">Your savings</span>
-              <span class="form-hint">TBC following MC100 meeting</span>
-            </label>
-            <div class="form-currency">
-              <input class="form-control  form-control-1-4" id="your-savings" name="yourSavings" type="text">
-            </div>
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label-bold">Do you receive Pension Credit?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="doYourReceivePensionCredit" value="Yes"> Yes<span class="visually-hidden">, I receive Pension Credit</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="doYourReceivePensionCredit" value="No"> No<span class="visually-hidden">, I don&rsquo;t receive Pension Credit</span>
+              </label>
+
+            </fieldset>
+
           </div>
 
           <div class="form-group">
@@ -115,6 +127,26 @@
                 </label>
                 <textarea class="form-control  form-control-3-4" id="how-would-paying-a-fine-cause-you-financial-problems" name="howWouldPayingAFineCuaseYouSeriousFinancialProblems" cols="60" rows="3"></textarea>
               </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label-bold">Do you give consent for us to take a fine out of your benefits?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="doYouGiveConsentForUsToTakeAFineOutOfYourBenefits" value="Yes"> Yes<span class="visually-hidden">, I give consent for you to take a fine out of my benefits</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="doYouGiveConsentForUsToTakeAFineOutOfYourBenefits" value="No"> No<span class="visually-hidden">, I don&rsquo;t give consent for you to take a fine out of my benefits</span>
+              </label>
 
             </fieldset>
 

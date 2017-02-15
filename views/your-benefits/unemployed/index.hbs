@@ -1,0 +1,113 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">Which benefits do you receive?</h2>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">Which benefits do you receive?</legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Contributory Employment and Support Allowance"> Contributory Employment and Support Allowance
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Income&ndash;related Employment and Support Allowance"> Income&ndash;related Employment and Support Allowance
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Income support"> Income support
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Universal Credit"> Universal Credit
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="whichBenefitsDoYourReceive" value="Other benefit"> Other<span class="visually-hidden"> benefits not listed</span>
+              </label>
+
+            </fieldset>
+
+          </div>
+
+          <h2 class="heading-medium">How often is your benefit paid?</h2>
+
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend class="visually-hidden">How often is your benefit paid?</legend>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid weekly"> <span class="visually-hidden">Benefit is paid </span>Weekly
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid fortnightly"> <span class="visually-hidden">Benefit is paid </span>Fortnightly
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="howOftenIsYourBenefitPaid" value="Benefit is paid monthly"> <span class="visually-hidden">Benefit is paid </span>Monthly
+              </label>
+
+            </fieldset>
+
+          </div>
+
+          <h2 class="heading-medium">Would paying a fine cause you serious financial problems?</h2>
+
+          <p>For example, you would become homeless</p>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend class="visually-hidden">Would paying a fine cause you serious financial problems?</legend>
+
+              <label class="block-label  selection-button-radio" data-target="would-paying-a-fine-case-serious-financial-problems-yes">
+                <input type="radio" name="wouldPayingAFineCauseSeriousFinancialProblems" value="Yes"> Yes<span class="visually-hidden">, paying a fine would cause me serious financial problems</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input type="radio" name="wouldPayingAFineCauseSeriousFinancialProblems" value="No"> No<span class="visually-hidden">, paying a fine would not cause me serious financial problems</span>
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="would-paying-a-fine-case-serious-financial-problems-yes">
+                <label for="how-would-paying-a-fine-cause-you-financial-problems">
+                  <span class="form-label">How would paying a fine cause you financial problems?</span>
+                  <span class="form-hint">You may be able to pay in instalments if you provide a good reason</span>
+                </label>
+                <textarea class="form-control  form-control-3-4" id="how-would-paying-a-fine-cause-you-financial-problems" name="howWouldPayingAFineCuaseYouSeriousFinancialProblems" cols="60" rows="3"></textarea>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button">Save and continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>
