@@ -4,7 +4,6 @@ var router = express.Router();
 
 // Home
 router.route('/')
-
   .get(function(req, res, next) {
     data = {
       title: 'Make a plea for an offence',
@@ -16,7 +15,6 @@ router.route('/')
 
 // Your case
 router.route('/your-case')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your case',
@@ -31,7 +29,6 @@ router.route('/your-case')
 
 // Your details
 router.route('/your-details')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your details',
@@ -46,7 +43,6 @@ router.route('/your-details')
 
 // Your plea
 router.route('/your-plea')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your plea',
@@ -70,7 +66,6 @@ router.route('/your-plea')
 
 // Pay your penalty
 router.route('/pay-your-penalty')
-
   .get(function(req, res, next) {
     data = {
       title: 'Pay your penalty',
@@ -82,7 +77,6 @@ router.route('/pay-your-penalty')
 
 // Your employer
 router.route('/your-employer')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your employer',
@@ -95,25 +89,18 @@ router.route('/your-employer')
     var employment_status = req.session.yourEmploymentStatus;
 
     if (employment_status === 'Employed') {
-
       res.redirect('/your-finances/employed');
-
     } else if (employment_status === 'Employed and also receiving benefits') {
-
       res.redirect('/your-finances/employed-and-also-receiving-benefits');
-
     } else {
-
       // Do nothing...
-
     }
 
-  })
+  });
 
 
 // Your employment status
 router.route('/your-employment-status')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your employment status',
@@ -126,29 +113,17 @@ router.route('/your-employment-status')
     var employment_status = req.session.yourEmploymentStatus = req.body.yourEmploymentStatus;
 
     if (employment_status === 'Employed') {
-
       res.redirect('/your-employer');
-
     } else if (employment_status === 'Employed and also receiving benefits') {
-
       res.redirect('/your-employer');
-
     } else if (employment_status === 'Self employed') {
-
       res.redirect('/your-finances/self-employed');
-
     } else if (employment_status === 'Self employed and also receiving benefits') {
-
       res.redirect('/your-finances/self-employed-and-also-receiving-benefits');
-
     } else if (employment_status === 'Other') {
-
       res.redirect('/your-finances/other');
-
     } else {
-
       // Do nothing...
-
     }
 
   });
@@ -156,19 +131,28 @@ router.route('/your-employment-status')
 
 // Your finances (employed)
 router.route('/your-finances/employed')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
       phase_banner: true
     }
     res.render('your-finances/employed/index', data);
+  })
+  .post(function(req, res, next) {
+
+    var would_paying_a_fine_cause_serious_financial_problems = req.session.wouldPayingAFineCauseSeriousFinancialProblems = req.body.wouldPayingAFineCauseSeriousFinancialProblems;
+
+    if (would_paying_a_fine_cause_serious_financial_problems === 'Yes') {
+      res.redirect('/your-expenses');
+    } else {
+      res.redirect('/check-your-answers/guilty');
+    }
+
   });
 
 
 // Your finances (employed and also receiving benefits)
 router.route('/your-finances/employed-and-also-receiving-benefits')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
@@ -180,7 +164,6 @@ router.route('/your-finances/employed-and-also-receiving-benefits')
 
 // Your finances (self employed)
 router.route('/your-finances/self-employed')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
@@ -192,7 +175,6 @@ router.route('/your-finances/self-employed')
 
 // Your finances (self employed and also receiving benefits)
 router.route('/your-finances/self-employed-and-also-receiving-benefits')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
@@ -201,9 +183,9 @@ router.route('/your-finances/self-employed-and-also-receiving-benefits')
     res.render('your-finances/self-employed-and-also-receiving-benefits/index', data);
   });
 
+
 // Your finances (other)
 router.route('/your-finances/other')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
@@ -215,7 +197,6 @@ router.route('/your-finances/other')
 
 // Your pension credit
 router.route('/your-pension-credit')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your pension credit',
@@ -227,31 +208,34 @@ router.route('/your-pension-credit')
 
 // Your expenses
 router.route('/your-expenses')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your expenses',
       phase_banner: true
     }
     res.render('your-expenses/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/your-expenses/other-expenses');
   });
 
 
 // Other expenses
 router.route('/your-expenses/other-expenses')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your expenses',
       phase_banner: true
     }
     res.render('your-expenses/other-expenses/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/check-your-answers/guilty');
   });
 
 
 // Your benefits (unemployed)
 router.route('/your-benefits/unemployed')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your benefits',
@@ -260,9 +244,9 @@ router.route('/your-benefits/unemployed')
     res.render('your-benefits/unemployed/index', data);
   });
 
+
 // Your benefits (unemployed and receiving out of work benefits)
 router.route('/your-benefits/unemployed-and-receiving-out-of-work-benefits')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your benefits',
@@ -271,9 +255,9 @@ router.route('/your-benefits/unemployed-and-receiving-out-of-work-benefits')
     res.render('your-benefits/unemployed-and-receiving-out-of-work-benefits/index', data);
   });
 
+
 // Your benefits (other)
 router.route('/your-benefits/other')
-
   .get(function(req, res, next) {
     data = {
       title: 'Your benefits',
@@ -285,7 +269,6 @@ router.route('/your-benefits/other')
 
 // Helping you plead online
 router.route('/helping-you-plead-online')
-
   .get(function(req, res, next) {
     data = {
       title: 'Helping you plead online',
@@ -296,20 +279,27 @@ router.route('/helping-you-plead-online')
 
 
 // Your plea has been submitted
-router.route('/your-plea-has-been-submitted')
-
+router.route('/your-plea-has-been-submitted/v1')
   .get(function(req, res, next) {
     data = {
       title: 'Your plea has been submitted',
       phase_banner: true
     }
-    res.render('your-plea-has-been-submitted/index', data);
+    res.render('your-plea-has-been-submitted/v1/index', data);
+  });
+
+router.route('/your-plea-has-been-submitted/v2')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your plea has been submitted',
+      phase_banner: true
+    }
+    res.render('your-plea-has-been-submitted/v2/index', data);
   });
 
 
 // Check your answers (guilty)
 router.route('/check-your-answers/guilty')
-
   .get(function(req, res, next) {
     data = {
       title: 'Check your answers',
@@ -321,7 +311,6 @@ router.route('/check-your-answers/guilty')
 
 // Check your answers (not guilty)
 router.route('/check-your-answers/not-guilty')
-
   .get(function(req, res, next) {
     data = {
       title: 'Check your answers',
@@ -333,7 +322,6 @@ router.route('/check-your-answers/not-guilty')
 
 // Dependent children
 router.route('/dependent-children')
-
   .get(function(req, res, next) {
     data = {
       title: 'Dependent children',
@@ -345,7 +333,6 @@ router.route('/dependent-children')
 
 // Declaration
 router.route('/declaration')
-
   .get(function(req, res, next) {
     data = {
       title: 'Declaration',
@@ -355,6 +342,28 @@ router.route('/declaration')
   })
   .post(function(req, res, next) {
     res.redirect('/your-plea-has-been-submitted');
+  });
+
+
+// Thank you
+router.route('/thank-you')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Thank you',
+      phase_banner: true
+    }
+    res.render('thank-you', data);
+  });
+
+
+// Thank you
+router.route('/pay-court-fine-online')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Pay court fine online',
+      phase_banner: true
+    }
+    res.render('pay-court-fine-online', data);
   });
 
 

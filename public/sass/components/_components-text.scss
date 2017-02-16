@@ -1,0 +1,13 @@
+/*
+Text
+*/
+
+$module: "text";
+
+.#{$module} {
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  
+}
