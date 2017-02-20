@@ -55,11 +55,8 @@ router.route('/your-plea')
     // Store how do you plead
     var how_do_you_plead = req.session.howDoYouPlead = req.body.howDoYouPlead;
 
-    if (how_do_you_plead === 'Guilty') {
-      res.redirect('/your-employment-status');
-    } else {
-      res.redirect('/check-your-answers/not-guilty');
-    }
+    // Redirect to your employment status
+    res.redirect('/your-employment-status');
 
   });
 
@@ -120,6 +117,10 @@ router.route('/your-employment-status')
       res.redirect('/your-finances/self-employed');
     } else if (employment_status === 'Self employed and also receiving benefits') {
       res.redirect('/your-finances/self-employed-and-also-receiving-benefits');
+    } else if (employment_status === 'Unemployed') {
+      res.redirect('/your-benefits/unemployed');
+    } else if (employment_status === 'Unemployed and receiving out of work benefits') {
+      res.redirect('/your-benefits/unemployed-and-receiving-out-of-work-benefits');
     } else if (employment_status === 'Other') {
       res.redirect('/your-finances/other');
     } else {
@@ -159,6 +160,9 @@ router.route('/your-finances/employed-and-also-receiving-benefits')
       phase_banner: true
     }
     res.render('your-finances/employed-and-also-receiving-benefits/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/your-benefits/employed-and-also-receiving-benefits');
   });
 
 
@@ -170,6 +174,9 @@ router.route('/your-finances/self-employed')
       phase_banner: true
     }
     res.render('your-finances/self-employed/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/dependent-children');
   });
 
 
@@ -181,6 +188,9 @@ router.route('/your-finances/self-employed-and-also-receiving-benefits')
       phase_banner: true
     }
     res.render('your-finances/self-employed-and-also-receiving-benefits/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/your-benefits/self-employed-and-also-receiving-benefits');
   });
 
 
@@ -242,7 +252,24 @@ router.route('/your-benefits/unemployed')
       phase_banner: true
     }
     res.render('your-benefits/unemployed/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/dependent-children');
   });
+
+
+  // Your benefits (employed and also receiving benefits)
+  router.route('/your-benefits/employed-and-also-receiving-benefits')
+    .get(function(req, res, next) {
+      data = {
+        title: 'Your benefits',
+        phase_banner: true
+      }
+      res.render('your-benefits/employed-and-also-receiving-benefits/index', data);
+    })
+    .post(function(req, res, next) {
+      res.redirect('/dependent-children');
+    });
 
 
 // Your benefits (unemployed and receiving out of work benefits)
@@ -253,6 +280,23 @@ router.route('/your-benefits/unemployed-and-receiving-out-of-work-benefits')
       phase_banner: true
     }
     res.render('your-benefits/unemployed-and-receiving-out-of-work-benefits/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/dependent-children');
+  });
+
+
+// Your benefits (self-employed and also receiving benefits)
+router.route('/your-benefits/self-employed-and-also-receiving-benefits')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your benefits',
+      phase_banner: true
+    }
+    res.render('your-benefits/self-employed-and-also-receiving-benefits/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/dependent-children');
   });
 
 
@@ -264,6 +308,9 @@ router.route('/your-benefits/other')
       phase_banner: true
     }
     res.render('your-benefits/other/index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/dependent-children');
   });
 
 
@@ -287,6 +334,7 @@ router.route('/your-plea-has-been-submitted/v1')
     }
     res.render('your-plea-has-been-submitted/v1/index', data);
   });
+
 
 router.route('/your-plea-has-been-submitted/v2')
   .get(function(req, res, next) {
@@ -328,6 +376,9 @@ router.route('/dependent-children')
       phase_banner: true
     }
     res.render('dependent-children/', data);
+  })
+  .post(function(req, res, next) {
+    // do something
   });
 
 
