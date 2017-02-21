@@ -69,7 +69,7 @@
                     <div class="form-group  form-group-compound">
 
                       <label class="block-label  selection-button-radio" data-target="online-and-by-post-no-need-to-attend-court">
-                        <input type="radio" name="howWouldYouLikeToCompleteYourCase" value="Online and by post &ndash; no need to attend court"> Online and by post &ndash; no need to attend court
+                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Online and by post &ndash; no need to attend court"> Online and by post &ndash; no need to attend court
                       </label>
 
                       <div class="panel  panel-border-narrow  js-hidden" id="online-and-by-post-no-need-to-attend-court">
@@ -81,7 +81,7 @@
                     <div class="form-group">
 
                       <label class="block-label  selection-button-radio" data-target="attend-court-to-plead-guilty">
-                        <input type="radio" name="howWouldYouLikeToCompleteYourCase" value="Attend court to plead guilty"> Attend court to plead guilty
+                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Attend court to plead guilty"> Attend court to plead guilty
                       </label>
 
                       <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
@@ -89,7 +89,7 @@
                           <span class="form-label">Provide advance information for magistrates (optional)</span>
                           <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. You can explain why you committed the offence or give background details, for example.</span>
                         </label>
-                        <textarea class="form-control  form-control-3-4" id="provide-advance-information-for-magistrates" name="provideAdvanceInformationForMagistrates" rows="3" cols="60"></textarea>
+                        <textarea class="form-control  form-control-3-4" id="provide-advance-information-for-magistrates" name="provideAdvanceInformationForMagistrates" cols="60" rows="3"></textarea>
                       </div>
 
                     </div>
@@ -135,7 +135,7 @@
                         <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter</span>?</span>
                         <span class="form-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
                       </label>
-                      <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage">
+                      <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage" type="text">
                     </div>
 
                   </fieldset>
@@ -181,11 +181,11 @@
                     </legend>
 
                     <label class="block-label  selection-button-radio" data-target="do-you-want-to-call-your-own-witness">
-                      <input type="radio" name="doYouWantToCallYourOwnWitness" value="Yes"> Yes<span class="visually-hidden">, I want to call my own witness</span>
+                      <input name="doYouWantToCallYourOwnWitness" type="radio" value="Yes"> Yes<span class="visually-hidden">, I want to call my own witness</span>
                     </label>
 
                     <label class="block-label  selection-button-radio">
-                      <input type="radio" name="doYouWantToCallYourOwnWitness" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call my own witness</span>
+                      <input name="doYouWantToCallYourOwnWitness" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call my own witness</span>
                     </label>
 
                     <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-your-own-witness">
@@ -218,7 +218,7 @@
                               <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
                               <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
                             </label>
-                            <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage">
+                            <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage" type="text">
                           </div>
 
                         </fieldset>
