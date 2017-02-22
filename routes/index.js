@@ -10,6 +10,9 @@ router.route('/')
       phase_banner: false
     }
     res.render('index', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/your-case');
   });
 
 

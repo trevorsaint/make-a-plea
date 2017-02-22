@@ -16,13 +16,33 @@
           <li>an official representative of the company charged with the offence</li>
         </ul>
 
-        <span>To start your plea, select who sent you a notice:</span>
-        <ul class="list  list-bullet">
-          <li><a href="/">the police (traffic offence)</a></li>
-          <li><a href="/">Transport for London</a></li>
-        </ul>
+        <form class="form" method="post" novalidate>
 
-        <p><a class="button  button-start" href="/your-case">Start now</a></p>
+          <div class="form-group">
+
+            <fieldset>
+
+              <legend>
+                <span class="form-label-bold">Who sent you a notice?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio">
+                <input name="whoSentYouANotice" type="radio" value="The police (traffic offence)"> The police (traffic offence)
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="whoSentYouANotice" type="radio" value="Transport for London"> Transport for London
+              </label>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group">
+            <button class="button  button-start" type="submit">Start now</button>
+          </div>
+
+        </form>
 
         <h2 class="heading-medium">Before you start</h2>
 
