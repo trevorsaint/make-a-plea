@@ -10,13 +10,23 @@
 
         <form class="form" method="post" novalidate>
 
-          <div class="form-group">
+          <div class="form-group  form-group-compound">
             <label for="case-or-unique-reference-number">
               <span class="form-label-bold">Case or Unique Reference Number</span>
               <span class="form-hint">Where to find this on your notice</span>
             </label>
             <input class="form-control" id="case-or-unique-reference-number" name="caseOrUniqueReferenceNumber" type="text">
           </div>
+
+          <details class="details">
+
+            <summary><span class="summary">Where to find this on your notice</span></summary>
+
+            <div class="panel panel-border-narrow">
+              <p>[image to go here]</p>
+            </div>
+
+          </details>
 
           <div class="form-group">
             <label for="postcode-as-shown-on-your-notice">
