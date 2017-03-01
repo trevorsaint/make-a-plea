@@ -1,0 +1,177 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">Are you employed or self&ndash;employed?</h2>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend class="visually-hidden">Are you employed or self&ndash;employed?</legend>
+
+              <label class="block-label selection-button-radio" data-target="are-you-employed">
+                <input name="areYouEmployed" type="radio" value="Yes, I am employed"> Yes<span class="visually-hidden">, I am employed</span>
+              </label>
+
+              <label class="block-label selection-button-radio">
+                <input name="areYouEmployed" type="radio" value="No, I am not employed"> No<span class="visually-hidden">, I am not employed</span>
+              </label>
+
+            </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="are-you-employed">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">How often do you get paid?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-weekly">
+                    <input name="howOftenDoYouGetPaid" type="radio" value="Weekly"> <span class="visually-hidden">I get paid </span>Weekly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-weekly">
+                    <label for="my-weekly-amount">
+                      <span class="form-label"><span class="visually-hidden">My weekly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="my-weekly-amount" name="myWeeklyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-fortnightly">
+                    <input name="howOftenDoYouGetPaid" type="radio" value="Fortnightly"> <span class="visually-hidden">I get paid </span>Fortnightly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-fortnightly">
+                    <label for="my-fortnightly-amount">
+                      <span class="form-label"><span class="visually-hidden">My fortnightly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="my-fortnightly-amount" name="myFortnightlyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-monthly">
+                    <input name="howOftenDoYouGetPaid" type="radio" value="Monthly"> <span class="visually-hidden">I get paid </span>Monthly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-monthly">
+                    <label for="my-monthly-amount">
+                      <span class="form-label"><span class="visually-hidden">My monthly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="my-monthly-amount" name="myMonthlyAmount" type="text">
+                    </div>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <h2 class="heading-medium">Do you have a partner who is employed or self&ndash;employed?</h2>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend class="visually-hidden">Do you have a partner who is employed or self&ndash;employed?</legend>
+
+              <label class="block-label selection-button-radio" data-target="do-you-have-a-partner-who-is-employed">
+                <input name="doYouHaveAPartnerWhoIsEmployed" type="radio" value="Yes, I am employed"> Yes<span class="visually-hidden">, I have a partner who is employed</span>
+              </label>
+
+              <label class="block-label selection-button-radio">
+                <input name="doYouHaveAPartnerWhoIsEmployed" type="radio" value="No, I am not employed"> No<span class="visually-hidden">, I don&rsquo;t have a partner who is employed</span>
+              </label>
+
+            </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="do-you-have-a-partner-who-is-employed">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">How often do they get paid?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-weekly">
+                    <input name="howOftenDoTheyGetPaid" type="radio" value="Weekly"> <span class="visually-hidden">They get paid </span>Weekly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-weekly">
+                    <label for="weekly-earnings">
+                      <span class="form-label"><span class="visually-hidden">My partners weekly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="weekly-earnings" name="weeklyEarnings" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-fortnightly">
+                    <input name="howOftenDoTheyGetPaid" type="radio" value="Fortnightly"> <span class="visually-hidden">They get paid </span>Fortnightly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-fortnightly">
+                    <label for="fortnightly-earnings">
+                      <span class="form-label"><span class="visually-hidden">My partners fortnightly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="fortnightly-earnings" name="fortnightlyEarnings" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-monthly">
+                    <input name="howOftenDoTheyGetPaid" type="radio" value="Monthly"> <span class="visually-hidden">They get paid </span>Monthly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-monthly">
+                    <label for="monthly-earnings">
+                      <span class="form-label"><span class="visually-hidden">My partners monthly </span>amount (after tax)</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="monthly-earnings" name="monthlyEarnings" type="text">
+                    </div>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

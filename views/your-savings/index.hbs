@@ -1,0 +1,62 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <h2 class="heading-medium">Do you have any savings or investments?</h2>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="visually-hidden">Do you have any savings or investments?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="do-you-have-any-savings-or-investments">
+                <input name="doYouHaveAnySavingsOrInvestments" type="radio" value="Yes"> Yes<span class="visually-hidden">, I have savings</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="doYouHaveAnySavingsOrInvestments" type="radio" value="No"> No<span class="visually-hidden">, I do not have savings</span>
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="do-you-have-any-savings-or-investments">
+
+                <div class="form-group">
+                  <label for="total-amount-of-savings">
+                    <span class="form-label">Total amount<span class="visually-hidden"> of savings</span></span>
+                  </label>
+                  <span class="form-currency">
+                    <input class="form-control  form-control-1-4" id="total-amount-of-savings" name="totalAmountOfSavings" type="text">
+                  </span>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

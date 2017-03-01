@@ -75,6 +75,35 @@ router.route('/pay-your-penalty')
   });
 
 
+
+// Your finances
+router.route('/your-finances')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your finances',
+      phase_banner: true
+    }
+    res.render('your-finances/index', data);
+  })
+  .post(function(req, res, next) {
+    // do something
+  });
+
+
+// Your employment
+router.route('/your-employment')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your employment',
+      phase_banner: true
+    }
+    res.render('your-employment/index', data);
+  })
+  .post(function(req, res, next) {
+    // do something
+  });
+
+
 // Your employer
 router.route('/your-employer')
   .get(function(req, res, next) {
@@ -85,127 +114,26 @@ router.route('/your-employer')
     res.render('your-employer/index', data);
   })
   .post(function(req, res, next) {
-
-    var employment_status = req.session.yourEmploymentStatus;
-
-    if (employment_status === 'Employed') {
-      res.redirect('/your-finances/employed');
-    } else if (employment_status === 'Employed and also receiving benefits') {
-      res.redirect('/your-finances/employed-and-also-receiving-benefits');
-    } else {
-      // Do nothing...
-    }
-
+    // do something
   });
 
 
-// Your employment status
-router.route('/your-employment-status')
+// Your savings
+router.route('/your-savings')
   .get(function(req, res, next) {
     data = {
-      title: 'Your employment status',
+      title: 'Your savings',
       phase_banner: true
     }
-    res.render('your-employment-status/index', data);
+    res.render('your-savings/index', data);
   })
   .post(function(req, res, next) {
-
-    var employment_status = req.session.yourEmploymentStatus = req.body.yourEmploymentStatus;
-
-    if (employment_status === 'Employed') {
-      res.redirect('/your-employer');
-    } else if (employment_status === 'Employed and also receiving benefits') {
-      res.redirect('/your-employer');
-    } else if (employment_status === 'Self employed') {
-      res.redirect('/your-finances/self-employed');
-    } else if (employment_status === 'Self employed and also receiving benefits') {
-      res.redirect('/your-finances/self-employed-and-also-receiving-benefits');
-    } else if (employment_status === 'Unemployed') {
-      res.redirect('/your-benefits/unemployed');
-    } else if (employment_status === 'Unemployed and receiving out of work benefits') {
-      res.redirect('/your-benefits/unemployed-and-receiving-out-of-work-benefits');
-    } else if (employment_status === 'Other') {
-      res.redirect('/your-finances/other');
-    } else {
-      // Do nothing...
-    }
-
+    // do something
   });
 
 
-// Your finances (employed)
-router.route('/your-finances/employed')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your finances',
-      phase_banner: true
-    }
-    res.render('your-finances/employed/index', data);
-  })
-  .post(function(req, res, next) {
-
-    var would_paying_a_fine_cause_serious_financial_problems = req.session.wouldPayingAFineCauseSeriousFinancialProblems = req.body.wouldPayingAFineCauseSeriousFinancialProblems;
-
-    if (would_paying_a_fine_cause_serious_financial_problems === 'Yes') {
-      res.redirect('/your-expenses');
-    } else {
-      res.redirect('/check-your-answers/guilty');
-    }
-
-  });
 
 
-// Your finances (employed and also receiving benefits)
-router.route('/your-finances/employed-and-also-receiving-benefits')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your finances',
-      phase_banner: true
-    }
-    res.render('your-finances/employed-and-also-receiving-benefits/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/your-benefits/employed-and-also-receiving-benefits');
-  });
-
-
-// Your finances (self employed)
-router.route('/your-finances/self-employed')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your finances',
-      phase_banner: true
-    }
-    res.render('your-finances/self-employed/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/dependent-children');
-  });
-
-
-// Your finances (self employed and also receiving benefits)
-router.route('/your-finances/self-employed-and-also-receiving-benefits')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your finances',
-      phase_banner: true
-    }
-    res.render('your-finances/self-employed-and-also-receiving-benefits/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/your-benefits/self-employed-and-also-receiving-benefits');
-  });
-
-
-// Your finances (other)
-router.route('/your-finances/other')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your finances',
-      phase_banner: true
-    }
-    res.render('your-finances/other/index', data);
-  });
 
 
 // Your pension credit
