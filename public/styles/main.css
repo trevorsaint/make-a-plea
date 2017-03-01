@@ -2034,6 +2034,7 @@ Related
 */
 .related {
   border-top: 0.52632em solid #005ea5;
+  clear: both;
   margin-top: 1.57895em;
   padding-top: 0.26316em;
 }
