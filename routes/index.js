@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 
+// RELEASE 1
+
+
 // Home
 router.route('/')
   .get(function(req, res, next) {
@@ -111,7 +114,7 @@ router.route('/your-employer')
     res.render('your-employer/index', data);
   })
   .post(function(req, res, next) {
-    // do something
+    res.redirect('/benefits-and-state-pension');
   });
 
 
@@ -125,18 +128,7 @@ router.route('/benefits-and-state-pension')
     res.render('benefits-and-state-pension/index', data);
   })
   .post(function(req, res, next) {
-    // do something
-  });
-
-
-// Pay your penalty
-router.route('/pay-your-penalty')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Pay your penalty',
-      phase_banner: true
-    }
-    res.render('pay-your-penalty/index', data);
+    res.redirect('/your-savings');
   });
 
 
@@ -150,7 +142,7 @@ router.route('/your-savings')
     res.render('your-savings/index', data);
   })
   .post(function(req, res, next) {
-    // do something
+    res.redirect('/your-outgoings');
   });
 
 
@@ -164,174 +156,7 @@ router.route('/your-outgoings')
     res.render('your-outgoings/index', data);
   })
   .post(function(req, res, next) {
-    // do something
-  });
-
-
-
-
-
-
-// Your pension credit
-router.route('/your-pension-credit')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your pension credit',
-      phase_banner: true
-    }
-    res.render('your-pension-credit/index', data);
-  });
-
-
-// Your expenses
-router.route('/your-expenses')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your expenses',
-      phase_banner: true
-    }
-    res.render('your-expenses/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/your-expenses/other-expenses');
-  });
-
-
-// Other expenses
-router.route('/your-expenses/other-expenses')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your expenses',
-      phase_banner: true
-    }
-    res.render('your-expenses/other-expenses/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/check-your-answers/guilty');
-  });
-
-
-// Your benefits (unemployed)
-router.route('/your-benefits/unemployed')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your benefits',
-      phase_banner: true
-    }
-    res.render('your-benefits/unemployed/index', data);
-  })
-  .post(function(req, res, next) {
     res.redirect('/dependent-children');
-  });
-
-
-  // Your benefits (employed and also receiving benefits)
-  router.route('/your-benefits/employed-and-also-receiving-benefits')
-    .get(function(req, res, next) {
-      data = {
-        title: 'Your benefits',
-        phase_banner: true
-      }
-      res.render('your-benefits/employed-and-also-receiving-benefits/index', data);
-    })
-    .post(function(req, res, next) {
-      res.redirect('/dependent-children');
-    });
-
-
-// Your benefits (unemployed and receiving out of work benefits)
-router.route('/your-benefits/unemployed-and-receiving-out-of-work-benefits')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your benefits',
-      phase_banner: true
-    }
-    res.render('your-benefits/unemployed-and-receiving-out-of-work-benefits/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/dependent-children');
-  });
-
-
-// Your benefits (self-employed and also receiving benefits)
-router.route('/your-benefits/self-employed-and-also-receiving-benefits')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your benefits',
-      phase_banner: true
-    }
-    res.render('your-benefits/self-employed-and-also-receiving-benefits/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/dependent-children');
-  });
-
-
-// Your benefits (other)
-router.route('/your-benefits/other')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your benefits',
-      phase_banner: true
-    }
-    res.render('your-benefits/other/index', data);
-  })
-  .post(function(req, res, next) {
-    res.redirect('/dependent-children');
-  });
-
-
-// Helping you plead online
-router.route('/helping-you-plead-online')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Helping you plead online',
-      phase_banner: true
-    }
-    res.render('helping-you-plead-online/index', data);
-  });
-
-
-// Your plea has been submitted
-router.route('/your-plea-has-been-submitted/v1')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your plea has been submitted',
-      phase_banner: true
-    }
-    res.render('your-plea-has-been-submitted/v1/index', data);
-  });
-
-
-router.route('/your-plea-has-been-submitted/v2')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Your plea has been submitted',
-      phase_banner: true
-    }
-    res.render('your-plea-has-been-submitted/v2/index', data);
-  });
-
-
-// Check your answers (guilty)
-router.route('/check-your-answers/guilty')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Check your answers',
-      phase_banner: true
-    }
-    res.render('check-your-answers/guilty/', data);
-  });
-
-
-// Check your answers (not guilty)
-router.route('/check-your-answers/not-guilty')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Check your answers',
-      phase_banner: true
-    }
-    res.render('check-your-answers/not-guilty/', data);
   });
 
 
@@ -345,7 +170,18 @@ router.route('/dependent-children')
     res.render('dependent-children/', data);
   })
   .post(function(req, res, next) {
-    // do something
+    res.redirect('/check-your-answers');
+  });
+
+
+// Check your answers (not guilty)
+router.route('/check-your-answers')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Check your answers',
+      phase_banner: true
+    }
+    res.render('check-your-answers/', data);
   });
 
 
@@ -363,6 +199,17 @@ router.route('/declaration')
   });
 
 
+// Your plea has been submitted
+router.route('/your-plea-has-been-submitted/')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your plea has been submitted',
+      phase_banner: true
+    }
+    res.render('your-plea-has-been-submitted/index', data);
+  });
+
+
 // Thank you
 router.route('/thank-you')
   .get(function(req, res, next) {
@@ -374,14 +221,36 @@ router.route('/thank-you')
   });
 
 
-// Thank you
-router.route('/pay-court-fine-online')
+// Helping you plead online
+router.route('/helping-you-plead-online')
   .get(function(req, res, next) {
     data = {
-      title: 'Pay court fine online',
+      title: 'Helping you plead online',
       phase_banner: true
     }
-    res.render('pay-court-fine-online', data);
+    res.render('helping-you-plead-online/index', data);
+  });
+
+
+// Legal advice and help
+router.route('/legal-advice-and-help')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Legal advice and help',
+      phase_banner: true
+    }
+    res.render('legal-advice-and-help/index', data);
+  });
+
+
+// Legal advice and help
+router.route('/help-with-the-court-process')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Help with the court process',
+      phase_banner: true
+    }
+    res.render('help-with-the-court-process/index', data);
   });
 
 
