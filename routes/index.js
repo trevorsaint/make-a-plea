@@ -58,22 +58,10 @@ router.route('/your-plea')
     // Store how do you plead
     var how_do_you_plead = req.session.howDoYouPlead = req.body.howDoYouPlead;
 
-    // Redirect to your employment status
-    res.redirect('/your-employment-status');
+    // Redirect to your finances
+    res.redirect('/your-finances');
 
   });
-
-
-// Pay your penalty
-router.route('/pay-your-penalty')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Pay your penalty',
-      phase_banner: true
-    }
-    res.render('pay-your-penalty/index', data);
-  });
-
 
 
 // Your finances
@@ -100,7 +88,16 @@ router.route('/your-employment')
     res.render('your-employment/index', data);
   })
   .post(function(req, res, next) {
-    // do something
+
+    // Store your employment
+    var are_you_employed = req.session.areYouEmployed = req.body.areYouEmployed;
+
+    if (are_you_employed === 'Yes') {
+      res.redirect('/your-employer');
+    } else {
+      res.redirect('/benefits-and-state-pension');
+    }
+
   });
 
 
@@ -115,6 +112,31 @@ router.route('/your-employer')
   })
   .post(function(req, res, next) {
     // do something
+  });
+
+
+// Benefits and state pension
+router.route('/benefits-and-state-pension')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Benefits and State Pension',
+      phase_banner: true
+    }
+    res.render('benefits-and-state-pension/index', data);
+  })
+  .post(function(req, res, next) {
+    // do something
+  });
+
+
+// Pay your penalty
+router.route('/pay-your-penalty')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Pay your penalty',
+      phase_banner: true
+    }
+    res.render('pay-your-penalty/index', data);
   });
 
 

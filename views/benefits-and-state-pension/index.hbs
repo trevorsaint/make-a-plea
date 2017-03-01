@@ -1,0 +1,276 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">Benefits</h2>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label">Do you receive any working&ndash;age benefits?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="do-you-receive-any-working-age-benefits">
+                <input name="doYouReceiveAnyWorkingAgeBenefits" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive working&ndash;age benefits</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="doYouReceiveAnyWorkingAgeBenefits" type="radio" value="No"> No<span class="visually-hidden">, I do not receive any working&ndash;age benefits</span>
+              </label>
+
+            </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-any-working-age-benefits">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">How often<span class="visually-hidden"> do you receive working&ndash;age benefits</span>?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio" data-target="benefits-weekly">
+                    <input name="benefitsFrequency" type="radio" value="Weekly"> <span class="visually-hidden">I get benefits paid </span>Weekly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="benefits-weekly">
+                    <label for="benefits-weekly-amount">
+                      <span class="form-label"><span class="visually-hidden">Weekly benefits</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="benefits-weekly-amount" name="benefitsWeeklyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="benefits-fortnightly">
+                    <input name="benefitsFrequency" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get benefits paid </span>Every 2 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="benefits-fortnightly">
+                    <label for="benefits-fortnightly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 2 weeks benefits</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="benefits-fortnightly-amount" name="benefitsFortnightlyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="benefits-monthly">
+                    <input name="benefitsFrequency" type="radio" value="Every 4 weeks"> <span class="visually-hidden">I get benefits paid </span>Every 4 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="benefits-monthly">
+                    <label for="benefits-monthly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 4 weeks benefits</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="benefits-monthly-amount" name="benefitsMonthlyAmount" type="text">
+                    </div>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+              <div class="form-group">
+
+                <fieldset class="inline">
+
+                  <legend>
+                    <span class="form-label-bold">Do your benefits include either Income Support, Employment Support Allowance or Universal Credit?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio">
+                    <input name="doYourBenefitsInclude" type="radio" value="Yes"> Yes
+                  </label>
+
+                  <label class="block-label  selection-button-radio">
+                    <input name="doYourBenefitsInclude" type="radio" value="No"> No
+                  </label>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <h2 class="heading-medium">State Pension</h2>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label">Do you receive the State Pension?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="do-you-receive-state-pension">
+                <input name="doYouReceiveStatePension" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive the State Pension</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="doYouReceiveStatePension" type="radio" value="No"> No<span class="visually-hidden">, I do not receive the State Pension</span>
+              </label>
+
+            </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-state-pension">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">How often<span class="visually-hidden"> do you receive the State Pension</span>?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio" data-target="state-pension-weekly">
+                    <input name="statePensionFrequency" type="radio" value="Weekly"> <span class="visually-hidden">I get the State Pension </span>Weekly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="state-pension-weekly">
+                    <label for="state-pension-weekly-amount">
+                      <span class="form-label"><span class="visually-hidden">Weekly State Pension</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="state-pension-weekly-amount" name="statePensionWeeklyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="state-pension-fortnightly">
+                    <input name="statePensionFrequency" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get the State Pension </span>Every 2 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="state-pension-fortnightly">
+                    <label for="state-pension-fortnightly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 2 weeks State Pension</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="state-pension-fortnightly-amount" name="statePensionFortnightlyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="state-pension-monthly">
+                    <input name="statePensionFrequency" type="radio" value="Every 4 weeks"> <span class="visually-hidden">I get the State Pension </span>Every 4 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="state-pension-monthly">
+                    <label for="state-pension-monthly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 4 weeks State Pension</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="state-pension-monthly-amount" name="statePensionMonthlyAmount" type="text">
+                    </div>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="form-label">Do you get Pension Credit?</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="do-you-receive-pension-credit">
+                <input name="doYouReceivePensionCredit" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive Pension Credit</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="doYouReceivePensionCredit" type="radio" value="No"> No<span class="visually-hidden">, I do not receive Pension Credit</span>
+              </label>
+
+            </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-pension-credit">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">How often<span class="visually-hidden"> do you receive Pension Credit</span>?</span>
+                  </legend>
+
+                  <label class="block-label  selection-button-radio" data-target="pension-credit-weekly">
+                    <input name="pensionCreditFrequency" type="radio" value="Weekly"> <span class="visually-hidden">I get Pension Credit </span>Weekly
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-weekly">
+                    <label for="pension-credit-weekly-amount">
+                      <span class="form-label"><span class="visually-hidden">Weekly Pension Credit</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="pension-credit-weekly-amount" name="pensionCreditWeeklyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="pension-credit-fortnightly">
+                    <input name="pensionCreditFrequency" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 2 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-fortnightly">
+                    <label for="pension-credit-fortnightly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 2 weeks Pension Credit</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="pension-credit-fortnightly-amount" name="pensionCreditFortnightlyAmount" type="text">
+                    </div>
+                  </div>
+
+                  <label class="block-label  selection-button-radio" data-target="pension-credit-monthly">
+                    <input name="pensionCreditFrequency" type="radio" value="Every 4 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 4 weeks
+                  </label>
+
+                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-monthly">
+                    <label for="pension-credit-monthly-amount">
+                      <span class="form-label"><span class="visually-hidden">Every 4 weeks Pension Credit</span> Amount</span>
+                    </label>
+                    <div class="form-currency">
+                      <input class="form-control  form-control-1-4" id="pension-credit-monthly-amount" name="pensionCreditMonthlyAmount" type="text">
+                    </div>
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>
