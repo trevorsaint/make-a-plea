@@ -132,6 +132,20 @@ router.route('/your-savings')
   });
 
 
+// Your outgoings
+router.route('/your-outgoings')
+  .get(function(req, res, next) {
+    data = {
+      title: 'Your outgoings',
+      phase_banner: true
+    }
+    res.render('your-outgoings/index', data);
+  })
+  .post(function(req, res, next) {
+    // do something
+  });
+
+
 
 
 

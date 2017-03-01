@@ -1,0 +1,140 @@
+
+    <a class="link-back" href="/">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <form class="form" method="post" novalidate>
+
+          <h2 class="heading-medium">Would you like to give details of your monthly bills?</h2>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="visually-hidden">Would you like to give details of your monthly bills?</span>
+                <span class="form-hint">Magistrates take your outgoings into account, when deciding how long you have to pay a fine.</span>
+              </legend>
+
+              <label class="block-label  selection-button-radio" data-target="would-you-like-to-give-details-of-your-monthly-bills">
+                <input name="yourOutgoings" type="radio" value="Yes"> Yes<span class="visually-hidden">, I would like to give details of my monthly bills</span>
+              </label>
+
+              <label class="block-label  selection-button-radio">
+                <input name="yourOutgoings" type="radio" value="No"> No<span class="visually-hidden">, I would not like to give details of my monthly bills</span>
+              </label>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="would-you-like-to-give-details-of-your-monthly-bills">
+
+                <p>What are your monthly bills for the following?</p>
+
+                <div class="form-group">
+                  <label for="outgoings-accomodation">
+                    <span class="form-label-bold">Accomodation</span>
+                    <span class="form-hint">For example, rent, mortgage or lodgings</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-accomodation" name="outgoingsAccomodation" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-council-tax">
+                    <span class="form-label-bold">Council tax</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-council-tax" name="outgoingsCouncilTax" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-insurance">
+                    <span class="form-label-bold">Insurance</span>
+                    <span class="form-hint">For example, home, life, car</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-insurance" name="outgoingsInsurance" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-utility-bills">
+                    <span class="form-label-bold">Utility bills</span>
+                    <span class="form-hint">For example, gas, water, electricity</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-utility-bills" name="outgoingsUtilityBills" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-travel-expenses">
+                    <span class="form-label-bold">Travel expenses</span>
+                    <span class="form-hint">For example, fuel, car, public transport</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-travel-expenses" name="outgoingsTravelExpenses" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-child-maintenance">
+                    <span class="form-label-bold">Child maintenance</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-child-maintenance" name="outgoingsChildMaintenance" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-county-court-orders">
+                    <span class="form-label-bold">County court orders</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-county-court-orders" name="outgoingsCountyCourtOrders" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="outgoings-court-fines">
+                    <span class="form-label-bold">Court fines</span>
+                  </label>
+                  <div class="form-currency">
+                    <input class="form-control  form-control-1-4" id="outgoings-court-fines" name="outgoingsCourtFines" type="text">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="any-other-significant-outgoings-not-listed">
+                    <span class="form-label-bold">Any other significant outgoings not listed?</span>
+                    <span class="form-hint">List any other outgoings or information you believe the court should know about.</span>
+                  </label>
+                  <textarea class="form-control  form-control-3-4" id="any-other-significant-outgoings-not-listed" name="anyOtherSignificantOutgoingsNotListed" cols="60" rows="3"></textarea>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="/">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>
