@@ -228,6 +228,9 @@ router.route('/thank-you')
       phase_banner: true
     }
     res.render('thank-you', data);
+  })
+  .post(function(req, res, next) {
+    res.redirect('/');
   });
 
 
