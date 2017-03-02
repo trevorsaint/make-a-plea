@@ -15,7 +15,17 @@ router.route('/')
     res.render('index', data);
   })
   .post(function(req, res, next) {
-    res.redirect('/your-case');
+
+    var who_sent_your_notice = req.session.whoSentYouANotice = req.body.whoSentYouANotice;
+
+    if (who_sent_your_notice === 'The police') {
+      res.redirect('https://www.makeaplea.service.gov.uk/plea/enter_urn');
+    } else if (who_sent_your_notice === 'Transport for London') {
+      res.redirect('/your-case');
+    } else {
+      // validate
+    }
+
   });
 
 
