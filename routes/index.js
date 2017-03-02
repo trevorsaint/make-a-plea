@@ -21,7 +21,7 @@ router.route('/')
     if (who_sent_your_notice === 'The police') {
       res.redirect('https://www.makeaplea.service.gov.uk/plea/enter_urn');
     } else if (who_sent_your_notice === 'Transport for London') {
-      res.redirect('/your-case');
+      res.redirect('/find-your-case');
     } else {
       // validate
     }
@@ -29,14 +29,14 @@ router.route('/')
   });
 
 
-// Your case
-router.route('/your-case')
+// Find your case
+router.route('/find-your-case')
   .get(function(req, res, next) {
     data = {
-      title: 'Your case',
+      title: 'Find your case',
       phase_banner: true
     }
-    res.render('your-case/index', data);
+    res.render('find-your-case/index', data);
   })
   .post(function(req, res, next) {
     res.redirect('/your-details');
