@@ -2102,6 +2102,14 @@ Typography
 }
 
 /*
+Notice
+*/
+.notice-gutter-large {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*
 Buttons
 */
 .button-actions {

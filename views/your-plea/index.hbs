@@ -11,7 +11,7 @@
         <div class="panel  panel-border-wide" role="note" aria-label="Information">
           <p>This is your chance to respond. Please note:</p>
           <ul class="list  list-bullet">
-            <li>all evidence in the notice sent to you</li>
+            <li>all evidence is the notice sent to you</li>
             <li>if you plead guilty, we may reduce your fine</li>
           </ul>
         </div>
@@ -63,25 +63,21 @@
               <!-- Guilty -->
               <div class="panel  panel-border-narrow  js-hidden" id="plead-guilty">
 
-                <h4 class="heading-medium">How would you like to complete your case?</h4>
+                <p>You&rsquo;re declaring you committed the offence &ndash; you may get a penalty.</p>
 
                 <div class="form-group">
 
                   <fieldset class="inline">
 
                     <legend>
-                      <span class="visually-hidden">How would you like to complete your case?</span>
+                      <span class="form-label-bold">How would you like to complete your case?</span>
                     </legend>
 
                     <div class="form-group  form-group-compound">
 
-                      <label class="block-label  selection-button-radio" data-target="online-and-by-post-no-need-to-attend-court">
-                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Online and by post &ndash; no need to attend court"> Online and by post &ndash; no need to attend court
+                      <label class="block-label  selection-button-radio">
+                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Online &ndash; no need to attend court"> Online &ndash; no need to attend court
                       </label>
-
-                      <div class="panel  panel-border-narrow  js-hidden" id="online-and-by-post-no-need-to-attend-court">
-                        <p>We&rsquo;ll contact you about the outcome of your case</p>
-                      </div>
 
                     </div>
 
@@ -93,8 +89,8 @@
 
                       <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
                         <label for="provide-advance-information-for-magistrates">
-                          <span class="form-label">Provide advance information for magistrates (optional)</span>
-                          <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. You can explain why you committed the offence or give background details, for example.</span>
+                          <span class="form-label-bold">Provide advance information for magistrates (optional)</span>
+                          <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details.</span>
                         </label>
                         <textarea class="form-control  form-control-3-4" id="provide-advance-information-for-magistrates" name="provideAdvanceInformationForMagistrates" cols="60" rows="3"></textarea>
                       </div>
@@ -110,9 +106,7 @@
               <!-- Not guilty -->
               <div class="panel  panel-border-narrow  js-hidden" id="plead-not-guilty">
 
-                <h3 class="heading-medium">You&rsquo;ll need to attend court</h3>
-
-                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence so you&rsquo;ll need to presentyour evidence in court.</p>
+                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence so you&rsquo;ll need to present your evidence in court.</p>
 
                 <div class="form-group">
                   <label for="why-do-you-believe-you-are-not-guilty">
@@ -156,18 +150,18 @@
                   <fieldset>
 
                     <legend>
-                      <span class="form-label-bold">Do you agree with any evidence in any witness statements sent in your notice?</span>
+                      <span class="form-label-bold">Do you agree with any evidence in witness statements sent in your notice?</span>
                     </legend>
 
                     <label class="block-label  selection-button-radio">
-                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I agree with the evidence in the witness statement sent to me</span>
+                      <input name="doYouAgreeWithAnyEvidenceInWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I agree with the evidence in the witness statement sent to me</span>
                     </label>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
-                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
+                    <label class="block-label  selection-button-radio" data-target="do-you-agree-with-any-evidence-in-witness-statement-sent-to-you">
+                      <input name="doYouAgreeWithAnyEvidenceInWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
                     </label>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
+                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-agree-with-any-evidence-in-witness-statement-sent-to-you">
                       <label for="enter-the-name-of-the-witness-and-what-you-disagree-with">
                         <span class="form-label">Enter the name of the witness and what you disagree with</span>
                       </label>
@@ -199,9 +193,9 @@
 
                       <div class="form-group">
                         <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
-                          <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
+                          <span class="form-label">Enter name, address and date of birth of any witness you want to call</span>
                         </label>
-                        <textarea class="form-control  form-control-3-4" id="enter-the-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
+                        <textarea class="form-control  form-control-3-4" id="enter-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
                       </div>
 
                       <div class="form-group">
