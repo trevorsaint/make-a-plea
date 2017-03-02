@@ -221,14 +221,14 @@ router.route('/thank-you')
   });
 
 
-// Helping you plead online
-router.route('/helping-you-plead-online')
+// Get help with your plea
+router.route('/get-help-with-your-plea')
   .get(function(req, res, next) {
     data = {
-      title: 'Helping you plead online',
+      title: 'Get help with your plea',
       phase_banner: true
     }
-    res.render('helping-you-plead-online/index', data);
+    res.render('get-help-with-your-plea/index', data);
   });
 
 
