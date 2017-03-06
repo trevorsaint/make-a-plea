@@ -234,14 +234,14 @@ router.route('/thank-you')
   });
 
 
-// Get help with your plea
-router.route('/get-help-with-your-plea')
+// Help and advice
+router.route('/help-and-advice')
   .get(function(req, res, next) {
     data = {
-      title: 'Get help with your plea',
+      title: 'Help and advice',
       phase_banner: true
     }
-    res.render('get-help-with-your-plea/index', data);
+    res.render('help-and-advice/index', data);
   });
 
 
