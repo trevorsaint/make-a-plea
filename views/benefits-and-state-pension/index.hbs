@@ -17,20 +17,20 @@
             <fieldset class="inline">
 
               <legend>
-                <span class="form-label">Do you receive any working&ndash;age benefits?</span>
+                <span class="form-label">Do you receive benefits?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="do-you-receive-any-working-age-benefits">
-                <input name="doYouReceiveAnyWorkingAgeBenefits" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive working&ndash;age benefits</span>
+              <label class="block-label  selection-button-radio" data-target="receive-benefits">
+                <input name="receiveBenefits" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive benefits</span>
               </label>
 
               <label class="block-label  selection-button-radio">
-                <input name="doYouReceiveAnyWorkingAgeBenefits" type="radio" value="No"> No<span class="visually-hidden">, I do not receive any working&ndash;age benefits</span>
+                <input name="receiveBenefits" type="radio" value="No"> No<span class="visually-hidden">, I do not receive benefits</span>
               </label>
 
             </fieldset>
 
-            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-any-working-age-benefits">
+            <div class="panel  panel-border-narrow  js-hidden" id="receive-benefits">
 
               <div class="form-group">
 
@@ -85,7 +85,7 @@
 
                   <div class="panel  panel-border-narrow  js-hidden" id="benefits-other">
                     <label for="benefits-other-amount">
-                      <span class="form-label"><span class="visually-hidden">Total benefits</span> Amount</span>
+                      <span class="form-label">Enter approximate weekly amount</span>
                     </label>
                     <div class="form-currency">
                       <input class="form-control  form-control-1-4" id="benefits-other-amount" name="benefitsOtherAmount" type="number">
@@ -130,17 +130,17 @@
                 <span class="form-label">Do you receive the State Pension?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="do-you-receive-state-pension">
-                <input name="doYouReceiveStatePension" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive the State Pension</span>
+              <label class="block-label  selection-button-radio" data-target="receive-state-pension">
+                <input name="receiveStatePension" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive the State Pension</span>
               </label>
 
               <label class="block-label  selection-button-radio">
-                <input name="doYouReceiveStatePension" type="radio" value="No"> No<span class="visually-hidden">, I do not receive the State Pension</span>
+                <input name="receiveStatePension" type="radio" value="No"> No<span class="visually-hidden">, I do not receive the State Pension</span>
               </label>
 
             </fieldset>
 
-            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-state-pension">
+            <div class="panel  panel-border-narrow  js-hidden" id="receive-state-pension">
 
               <div class="form-group">
 
@@ -193,78 +193,78 @@
 
               </div>
 
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-            <fieldset class="inline">
-
-              <legend>
-                <span class="form-label">Do you get Pension Credit?</span>
-              </legend>
-
-              <label class="block-label  selection-button-radio" data-target="do-you-receive-pension-credit">
-                <input name="doYouReceivePensionCredit" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive Pension Credit</span>
-              </label>
-
-              <label class="block-label  selection-button-radio">
-                <input name="doYouReceivePensionCredit" type="radio" value="No"> No<span class="visually-hidden">, I do not receive Pension Credit</span>
-              </label>
-
-            </fieldset>
-
-            <div class="panel  panel-border-narrow  js-hidden" id="do-you-receive-pension-credit">
-
               <div class="form-group">
 
-                <fieldset>
+                <fieldset class="inline">
 
                   <legend>
-                    <span class="form-label-bold">How often<span class="visually-hidden"> do you receive Pension Credit</span>?</span>
+                    <span class="form-label-bold">Do you get Pension Credit?</span>
                   </legend>
 
-                  <label class="block-label  selection-button-radio" data-target="pension-credit-weekly">
-                    <input name="pensionCreditFrequency" type="radio" value="Weekly"> <span class="visually-hidden">I get Pension Credit </span>Weekly
+                  <label class="block-label  selection-button-radio" data-target="receive-pension-credit">
+                    <input name="receivePensionCredit" type="radio" value="Yes"> Yes<span class="visually-hidden">, I receive Pension Credit</span>
                   </label>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-weekly">
-                    <label for="pension-credit-weekly-amount">
-                      <span class="form-label"><span class="visually-hidden">Weekly Pension Credit</span> Amount</span>
-                    </label>
-                    <div class="form-currency">
-                      <input class="form-control  form-control-1-4" id="pension-credit-weekly-amount" name="pensionCreditWeeklyAmount" type="number">
-                    </div>
-                  </div>
-
-                  <label class="block-label  selection-button-radio" data-target="pension-credit-fortnightly">
-                    <input name="pensionCreditFrequency" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 2 weeks
+                  <label class="block-label  selection-button-radio">
+                    <input name="receivePensionCredit" type="radio" value="No"> No<span class="visually-hidden">, I do not receive Pension Credit</span>
                   </label>
-
-                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-fortnightly">
-                    <label for="pension-credit-fortnightly-amount">
-                      <span class="form-label"><span class="visually-hidden">Every 2 weeks Pension Credit</span> Amount</span>
-                    </label>
-                    <div class="form-currency">
-                      <input class="form-control  form-control-1-4" id="pension-credit-fortnightly-amount" name="pensionCreditFortnightlyAmount" type="number">
-                    </div>
-                  </div>
-
-                  <label class="block-label  selection-button-radio" data-target="pension-credit-monthly">
-                    <input name="pensionCreditFrequency" type="radio" value="Every 4 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 4 weeks
-                  </label>
-
-                  <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-monthly">
-                    <label for="pension-credit-monthly-amount">
-                      <span class="form-label"><span class="visually-hidden">Every 4 weeks Pension Credit</span> Amount</span>
-                    </label>
-                    <div class="form-currency">
-                      <input class="form-control  form-control-1-4" id="pension-credit-monthly-amount" name="pensionCreditMonthlyAmount" type="number">
-                    </div>
-                  </div>
 
                 </fieldset>
+
+                <div class="panel  panel-border-narrow  js-hidden" id="receive-pension-credit">
+
+                  <div class="form-group">
+
+                    <fieldset>
+
+                      <legend>
+                        <span class="form-label-bold">How often<span class="visually-hidden"> do you receive Pension Credit</span>?</span>
+                      </legend>
+
+                      <label class="block-label  selection-button-radio" data-target="pension-credit-weekly">
+                        <input name="pensionCreditFrequency" type="radio" value="Weekly"> <span class="visually-hidden">I get Pension Credit </span>Weekly
+                      </label>
+
+                      <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-weekly">
+                        <label for="pension-credit-weekly-amount">
+                          <span class="form-label"><span class="visually-hidden">Weekly Pension Credit</span> Amount</span>
+                        </label>
+                        <div class="form-currency">
+                          <input class="form-control  form-control-1-4" id="pension-credit-weekly-amount" name="pensionCreditWeeklyAmount" type="number">
+                        </div>
+                      </div>
+
+                      <label class="block-label  selection-button-radio" data-target="pension-credit-fortnightly">
+                        <input name="pensionCreditFrequency" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 2 weeks
+                      </label>
+
+                      <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-fortnightly">
+                        <label for="pension-credit-fortnightly-amount">
+                          <span class="form-label"><span class="visually-hidden">Every 2 weeks Pension Credit</span> Amount</span>
+                        </label>
+                        <div class="form-currency">
+                          <input class="form-control  form-control-1-4" id="pension-credit-fortnightly-amount" name="pensionCreditFortnightlyAmount" type="number">
+                        </div>
+                      </div>
+
+                      <label class="block-label  selection-button-radio" data-target="pension-credit-monthly">
+                        <input name="pensionCreditFrequency" type="radio" value="Every 4 weeks"> <span class="visually-hidden">I get Pension Credit </span>Every 4 weeks
+                      </label>
+
+                      <div class="panel  panel-border-narrow  js-hidden" id="pension-credit-monthly">
+                        <label for="pension-credit-monthly-amount">
+                          <span class="form-label"><span class="visually-hidden">Every 4 weeks Pension Credit</span> Amount</span>
+                        </label>
+                        <div class="form-currency">
+                          <input class="form-control  form-control-1-4" id="pension-credit-monthly-amount" name="pensionCreditMonthlyAmount" type="number">
+                        </div>
+                      </div>
+
+                    </fieldset>
+
+                  </div>
+
+                </div>
 
               </div>
 
