@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/your-details">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -33,7 +33,7 @@
           </div>
 
           <button class="link link-button" type="button" data-target="text-1" aria-controls="text-1">Show more</button>
-          
+
         </div>
 
         <hr class="divider  divider-gutter-large" aria-hidden="true">
@@ -83,8 +83,8 @@
 
                         <div class="form-group">
                           <label for="attend-court-no-magistrates">
-                            <span class="form-label-bold">Provide advance information for magistrates (optional)</span>
-                            <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details.</span>
+                            <span class="form-label-bold">Information for magistrates (optional)</span>
+                            <span class="form-hint">They&rsquo;ll take what you say into account when considering a fine &ndash; for example, you can explain why you committed the offence or give background details</span>
                           </label>
                           <textarea class="form-control  form-control-3-4" id="attend-court-no-magistrates" name="attendCourtNoMagistrates" cols="60" rows="3"></textarea>
                         </div>
@@ -104,7 +104,7 @@
                         <div class="form-group">
                           <label for="attend-court-yes-magistrates">
                             <span class="form-label-bold">Provide advance information for magistrates (optional)</span>
-                            <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details.</span>
+                            <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details</span>
                           </label>
                           <textarea class="form-control  form-control-3-4" id="attend-court-yes-magistrates" name="attendCourtYesMagistrates" cols="60" rows="3"></textarea>
                         </div>
@@ -286,7 +286,7 @@
             <button class="button" type="submit">Continue</button>
           </div>
 
-          <p><a href="/your-details">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 

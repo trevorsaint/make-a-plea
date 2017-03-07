@@ -34,7 +34,8 @@ router.route('/find-your-case')
   .get(function(req, res, next) {
     data = {
       title: 'Find your case',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/'
     }
     res.render('find-your-case/index', data);
   })
@@ -48,7 +49,8 @@ router.route('/your-details')
   .get(function(req, res, next) {
     data = {
       title: 'Your details',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/find-your-case'
     }
     res.render('your-details/index', data);
   })
@@ -62,7 +64,8 @@ router.route('/your-plea')
   .get(function(req, res, next) {
     data = {
       title: 'Your plea',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-details'
     }
     res.render('your-plea/index', data);
   })
@@ -82,7 +85,8 @@ router.route('/your-finances')
   .get(function(req, res, next) {
     data = {
       title: 'Your finances',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-plea'
     }
     res.render('your-finances/index', data);
   })
@@ -96,7 +100,8 @@ router.route('/your-employment')
   .get(function(req, res, next) {
     data = {
       title: 'Your employment',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-finances'
     }
     res.render('your-employment/index', data);
   })
@@ -119,7 +124,8 @@ router.route('/your-employer')
   .get(function(req, res, next) {
     data = {
       title: 'Your employer',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-employment'
     }
     res.render('your-employer/index', data);
   })
@@ -130,12 +136,24 @@ router.route('/your-employer')
 
 // Benefits and state pension
 router.route('/benefits-and-state-pension')
+
   .get(function(req, res, next) {
+
+    // redirection based on employment
+    if (req.session.areYouEmployed === 'Yes') {
+      var back_link = '/your-employer'
+    } else {
+      var back_link = '/your-employment'
+    }
+
     data = {
       title: 'Benefits and State Pension',
-      phase_banner: true
+      phase_banner: true,
+      back_link: back_link
     }
+
     res.render('benefits-and-state-pension/index', data);
+
   })
   .post(function(req, res, next) {
     res.redirect('/your-savings');
@@ -147,7 +165,8 @@ router.route('/your-savings')
   .get(function(req, res, next) {
     data = {
       title: 'Your savings',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/benefits-and-state-pension'
     }
     res.render('your-savings/index', data);
   })
@@ -161,7 +180,8 @@ router.route('/your-outgoings')
   .get(function(req, res, next) {
     data = {
       title: 'Your outgoings',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-savings'
     }
     res.render('your-outgoings/index', data);
   })
