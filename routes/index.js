@@ -3,9 +3,10 @@ var router = express.Router();
 
 
 // RELEASE 1
+// =========
 
 
-// Home
+// Landing
 router.route('/')
   .get(function(req, res, next) {
     data = {
@@ -136,7 +137,6 @@ router.route('/your-employer')
 
 // Benefits and state pension
 router.route('/benefits-and-state-pension')
-
   .get(function(req, res, next) {
 
     // redirection based on employment
@@ -195,7 +195,8 @@ router.route('/dependent-children')
   .get(function(req, res, next) {
     data = {
       title: 'Dependent children',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/your-outgoings'
     }
     res.render('dependent-children/', data);
   })
@@ -204,12 +205,13 @@ router.route('/dependent-children')
   });
 
 
-// Check your answers (not guilty)
+// Check your answers
 router.route('/check-your-answers')
   .get(function(req, res, next) {
     data = {
       title: 'Check your answers',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/dependent-children'
     }
     res.render('check-your-answers/', data);
   });
@@ -220,7 +222,8 @@ router.route('/declaration')
   .get(function(req, res, next) {
     data = {
       title: 'Declaration',
-      phase_banner: true
+      phase_banner: true,
+      back_link: '/check-your-answers'
     }
     res.render('declaration/index', data);
   })
@@ -230,7 +233,7 @@ router.route('/declaration')
 
 
 // Your plea has been submitted
-router.route('/your-plea-has-been-submitted/')
+router.route('/your-plea-has-been-submitted')
   .get(function(req, res, next) {
     data = {
       title: 'Your plea has been submitted',
@@ -262,28 +265,6 @@ router.route('/help-and-advice')
       phase_banner: true
     }
     res.render('help-and-advice/index', data);
-  });
-
-
-// Legal advice and help
-router.route('/legal-advice-and-help')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Legal advice and help',
-      phase_banner: true
-    }
-    res.render('legal-advice-and-help/index', data);
-  });
-
-
-// Legal advice and help
-router.route('/help-with-the-court-process')
-  .get(function(req, res, next) {
-    data = {
-      title: 'Help with the court process',
-      phase_banner: true
-    }
-    res.render('help-with-the-court-process/index', data);
   });
 
 
