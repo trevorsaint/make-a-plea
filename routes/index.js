@@ -97,14 +97,14 @@ router.route('/your-finances')
 
 
 // Your employment
-router.route('/your-employment')
+router.route('/employment')
   .get(function(req, res, next) {
     data = {
-      title: 'Your employment',
+      title: 'Employment',
       phase_banner: true,
       back_link: '/your-finances'
     }
-    res.render('your-employment/index', data);
+    res.render('employment/index', data);
   })
   .post(function(req, res, next) {
 
@@ -126,7 +126,7 @@ router.route('/your-employer')
     data = {
       title: 'Your employer',
       phase_banner: true,
-      back_link: '/your-employment'
+      back_link: '/employment'
     }
     res.render('your-employer/index', data);
   })
@@ -143,7 +143,7 @@ router.route('/benefits-and-state-pension')
     if (req.session.areYouEmployed === 'Yes') {
       var back_link = '/your-employer'
     } else {
-      var back_link = '/your-employment'
+      var back_link = '/employment'
     }
 
     data = {
