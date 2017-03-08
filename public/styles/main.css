@@ -2006,23 +2006,22 @@ Dividers
 }
 
 /*
-Summary
+Check answers
 */
-.summary {
+.check-answers {
   position: relative;
+  margin-bottom: 2.10526em;
 }
-.summary-title {
-  float: left;
+.check-answers th {
+  font-weight: 400;
+  width: 40%;
 }
-.summary-body {
-  overflow: hidden;
-  text-align: right;
+.check-answers th,
+.check-answers td {
+  vertical-align: top;
 }
-.summary-title, .summary-body {
-  padding-top: 0.52632em;
-  padding-bottom: 0.52632em;
-}
-.summary-action {
+.check-answers-action {
+  font-weight: bold;
   margin: 0;
   position: absolute;
   right: 0;
