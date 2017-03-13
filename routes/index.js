@@ -6,7 +6,7 @@ var router = express.Router();
 // =========
 
 
-// Landing
+// landing
 router.route('/')
   .get(function(req, res, next) {
     data = {
@@ -17,7 +17,7 @@ router.route('/')
   })
   .post(function(req, res, next) {
 
-    var who_sent_your_notice = req.session.whoSentYouANotice = req.body.whoSentYouANotice;
+    who_sent_your_notice = req.session.whoSentYouANotice = req.body.whoSentYouANotice;
 
     if (who_sent_your_notice === 'The police') {
       res.redirect('https://www.makeaplea.service.gov.uk/plea/enter_urn');
@@ -30,7 +30,7 @@ router.route('/')
   });
 
 
-// Find your case
+// find your case
 router.route('/find-your-case')
   .get(function(req, res, next) {
     data = {
@@ -45,7 +45,7 @@ router.route('/find-your-case')
   });
 
 
-// Your details
+// your details
 router.route('/your-details')
   .get(function(req, res, next) {
     data = {
@@ -60,7 +60,7 @@ router.route('/your-details')
   });
 
 
-// Your plea
+// your plea
 router.route('/your-plea')
   .get(function(req, res, next) {
     data = {
@@ -72,16 +72,18 @@ router.route('/your-plea')
   })
   .post(function(req, res, next) {
 
-    // Store how do you plead
     var how_do_you_plead = req.session.howDoYouPlead = req.body.howDoYouPlead;
 
-    // Redirect to your finances
-    res.redirect('/your-finances');
+    if (how_do_you_plead === 'Guilty') {
+      res.redirect('/your-finances');
+    } else {
+      res.redirect('/check-your-answers');
+    }
 
   });
 
 
-// Your finances
+// your finances
 router.route('/your-finances')
   .get(function(req, res, next) {
     data = {
@@ -96,7 +98,7 @@ router.route('/your-finances')
   });
 
 
-// Your employment
+// your employment
 router.route('/employment')
   .get(function(req, res, next) {
     data = {
@@ -108,8 +110,7 @@ router.route('/employment')
   })
   .post(function(req, res, next) {
 
-    // Store your employment
-    var are_you_employed = req.session.areYouEmployed = req.body.areYouEmployed;
+    are_you_employed = req.session.areYouEmployed = req.body.areYouEmployed;
 
     if (are_you_employed === 'Yes') {
       res.redirect('/your-employer');
@@ -120,7 +121,7 @@ router.route('/employment')
   });
 
 
-// Your employer
+// your employer
 router.route('/your-employer')
   .get(function(req, res, next) {
     data = {
@@ -135,11 +136,10 @@ router.route('/your-employer')
   });
 
 
-// Benefits and state pension
+// benefits and state pension
 router.route('/benefits-and-state-pension')
   .get(function(req, res, next) {
 
-    // redirection based on employment
     if (req.session.areYouEmployed === 'Yes') {
       var back_link = '/your-employer'
     } else {
@@ -160,7 +160,7 @@ router.route('/benefits-and-state-pension')
   });
 
 
-// Your savings
+// your savings
 router.route('/your-savings')
   .get(function(req, res, next) {
     data = {
@@ -175,7 +175,7 @@ router.route('/your-savings')
   });
 
 
-// Your outgoings
+// your outgoings
 router.route('/your-outgoings')
   .get(function(req, res, next) {
     data = {
@@ -190,7 +190,7 @@ router.route('/your-outgoings')
   });
 
 
-// Dependent children
+// dependent children
 router.route('/dependent-children')
   .get(function(req, res, next) {
     data = {
@@ -205,19 +205,29 @@ router.route('/dependent-children')
   });
 
 
-// Check your answers
+// check your answers
 router.route('/check-your-answers')
   .get(function(req, res, next) {
+
+    if (req.session.howDoYouPlead === 'Guilty') {
+      var how_do_you_plead = 'Guilty'
+    } else {
+      var how_do_you_plead = 'Not guilty'
+    }
+
     data = {
       title: 'Check your answers',
       phase_banner: true,
+      how_do_you_plead: how_do_you_plead,
       back_link: '/dependent-children'
     }
+
     res.render('check-your-answers/', data);
+
   });
 
 
-// Declaration
+// declaration
 router.route('/declaration')
   .get(function(req, res, next) {
     data = {
@@ -232,7 +242,7 @@ router.route('/declaration')
   });
 
 
-// Your plea has been submitted
+// your plea has been submitted
 router.route('/your-plea-has-been-submitted')
   .get(function(req, res, next) {
     data = {
@@ -243,7 +253,7 @@ router.route('/your-plea-has-been-submitted')
   });
 
 
-// Thank you
+// thank you
 router.route('/thank-you')
   .get(function(req, res, next) {
     data = {
@@ -257,7 +267,7 @@ router.route('/thank-you')
   });
 
 
-// Help and advice
+// help and advice
 router.route('/help-and-advice')
   .get(function(req, res, next) {
     data = {

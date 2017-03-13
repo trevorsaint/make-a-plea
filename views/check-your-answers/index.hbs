@@ -61,6 +61,8 @@
     </div>
 
 
+    {{#contains how_do_you_plead "Guilty"}}
+
     <div class="check-answers">
 
       <h2 class="heading-medium">Your plea</h2>
@@ -70,8 +72,6 @@
           <th>Plea</th>
           <td>Guilty</td>
         </tr>
-
-        <!-- if guilty -->
         <tr>
           <th>How to complete case</th>
           <td>Attend court to plead guilty</td>
@@ -80,16 +80,6 @@
           <th>Information for magistrates</th>
           <td>I&rsquo;d accidentally picked up my partner&rsquo;s oyster card instead of mine for a few days in a row. It was a genuine mistake.</td>
         </tr>
-        <!-- end -->
-
-        <!-- if not guilty -->
-        <tr>
-          <th>Why do you think you&rsquo;re not guilty?</th>
-          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-        </tr>
-        <!-- end -->
-
-        <!-- if attending court -->
         <tr>
           <th>Interpreter needed?</th>
           <td>Yes (Welsh)</td>
@@ -102,14 +92,11 @@
           <th>Interpreter needed for witness?</th>
           <td>Yes (Welsh)</td>
         </tr>
-        <!-- end -->
-
       </table>
 
       <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
 
     </div>
-
 
     <div class="check-answers">
 
@@ -235,6 +222,41 @@
       </div>
 
     </div>
+
+    {{else}}
+
+    <div class="check-answers">
+
+      <h2 class="heading-medium">Your plea</h2>
+
+      <table class="table">
+        <tr>
+          <th>Plea</th>
+          <td>Not guilty</td>
+        </tr>
+        <tr>
+          <th>Why do you think you&rsquo;re not guilty?</th>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+        <tr>
+          <th>Witnesses</th>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed for witness?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
+
+    </div>
+
+    {{/contains}}
 
 
     <div class="button-actions">

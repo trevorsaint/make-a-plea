@@ -37,8 +37,8 @@ app.use(validator());
  */
 
 app.use(session({
-  secret: '9876543210',
-  resave: false,
+  secret: '123456789',
+  resave: true,
   saveUninitialized: true
 }));
 
