@@ -12,7 +12,7 @@
 
           <h2 class="heading-medium">Check your name and address</h2>
 
-          <div class="panel  panel-border-wide">
+          <div class="panel  panel-border-wide" role="note" aria-label="Information">
             <p>
               <b>Mr Mike Mouse</b><br>
               38A Baker Street<br>
@@ -29,15 +29,17 @@
 
             <div class="form-group">
 
-              <label class="block-label  selection-button-radio">
-                <input name="areTheseDetailsCorrect" type="radio" value="Yes"> Yes<span class="visually-hidden">, these details are correct</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="details-correct-yes" name="detailsCorrect" type="radio" value="Yes">
+                <label for="details-correct-yes">Yes<span class="visually-hidden">, these details are correct</span></label>
+              </div>
 
-              <label class="block-label  selection-button-radio" data-target="are-these-details-correct">
-                <input name="areTheseDetailsCorrect" type="radio" value="No"> No<span class="visually-hidden">, these details are incorrect</span>
-              </label>
+              <div class="multiple-choice" data-target="details-correct">
+                <input id="details-correct-no" name="detailsCorrect" type="radio" value="No">
+                <label for="details-correct-no">No<span class="visually-hidden">, these details are incorrect</span></label>
+              </div>
 
-              <div class="panel  panel-border-narrow  js-hidden" id="are-these-details-correct">
+              <div class="panel  panel-border-narrow  js-hidden" id="details-correct">
 
                 <div class="form-group  form-group-related">
                   <label for="first-name">
@@ -167,13 +169,15 @@
 
               <div class="form-group">
 
-                <label class="block-label  selection-button-radio" data-target="ni-number">
-                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="Yes"> Yes<span class="visually-hidden">, I have a National Insurance number</span>
-                </label>
+                <div class="multiple-choice" data-target="ni-number">
+                  <input id="ni-number-yes" name="niNumber" type="radio" value="Yes">
+                  <label for="ni-number-yes">Yes<span class="visually-hidden">, I have a National Insurance number</span></label>
+                </div>
 
-                <label class="block-label  selection-button-radio">
-                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="No"> No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span>
-                </label>
+                <div class="multiple-choice">
+                  <input id="ni-number-no" name="niNumber" type="radio" value="No">
+                  <label for="ni-number-no">No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span></label>
+                </div>
 
                 <div class="panel  panel-border-narrow  js-hidden" id="ni-number">
                   <label for="national-insurance-number">

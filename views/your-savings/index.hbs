@@ -20,22 +20,24 @@
                 <span class="visually-hidden">Do you have any savings or investments?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="do-you-have-any-savings-or-investments">
-                <input name="doYouHaveAnySavingsOrInvestments" type="radio" value="Yes"> Yes<span class="visually-hidden">, I have savings</span>
-              </label>
+              <div class="multiple-choice" data-target="savings-or-investments">
+                <input id="savings-or-investments-yes" name="savingsOrInvestments" type="radio" value="Yes">
+                <label for="savings-or-investments-yes">Yes<span class="visually-hidden">, I have savings</span></label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="doYouHaveAnySavingsOrInvestments" type="radio" value="No"> No<span class="visually-hidden">, I do not have savings</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="savings-or-investments-no" name="savingsOrInvestments" type="radio" value="No">
+                <label for="savings-or-investments-no">No<span class="visually-hidden">, I do not have savings</span></label>
+              </div>
 
-              <div class="panel  panel-border-narrow  js-hidden" id="do-you-have-any-savings-or-investments">
+              <div class="panel  panel-border-narrow  js-hidden" id="savings-or-investments">
 
                 <div class="form-group">
-                  <label for="total-amount-of-savings">
+                  <label for="amount-of-savings-or-investments">
                     <span class="form-label">Total amount<span class="visually-hidden"> of savings</span></span>
                   </label>
                   <span class="form-currency">
-                    <input class="form-control  form-control-1-4" id="total-amount-of-savings" name="totalAmountOfSavings" type="number">
+                    <input class="form-control  form-control-1-4" id="amount-of-savings-or-investments" name="amountOfSavingsOrInvestments" type="number">
                   </span>
                 </div>
 

@@ -5,8 +5,8 @@ Check answers
 $module: "check-answers";
 
 .#{$module} {
-  position: relative;
   margin-bottom: em(40);
+  position: relative;
 
   th {
     font-weight: 400;
@@ -19,7 +19,7 @@ $module: "check-answers";
   }
 
   &-action {
-    font-weight: bold;
+    font-weight: 700;
     margin: 0;
     position: absolute; right: 0; top: 0;
   }

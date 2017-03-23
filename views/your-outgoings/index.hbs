@@ -20,15 +20,17 @@
 
               <legend class="visually-hidden">Would you like to give details of your monthly bills?</legend>
 
-              <label class="block-label  selection-button-radio" data-target="would-you-like-to-give-details-of-your-monthly-bills">
-                <input name="yourOutgoings" type="radio" value="Yes"> Yes<span class="visually-hidden">, I would like to give details of my monthly bills</span>
-              </label>
+              <div class="multiple-choice" data-target="monthly-bills">
+                <input id="outgoings-yes" name="outgoings" type="radio" value="Yes">
+                <label for="outgoings-yes">Yes<span class="visually-hidden">, I would like to give details of my monthly bills</span></label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="yourOutgoings" type="radio" value="No"> No<span class="visually-hidden">, I would not like to give details of my monthly bills</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="outgoings-no" name="outgoings" type="radio" value="No">
+                <label for="outgoings-no">No<span class="visually-hidden">, I would not like to give details of my monthly bills</span></label>
+              </div>
 
-              <div class="panel  panel-border-narrow  js-hidden" id="would-you-like-to-give-details-of-your-monthly-bills">
+              <div class="panel  panel-border-narrow  js-hidden" id="monthly-bills">
 
                 <p>What are your monthly bills for the following?</p>
 

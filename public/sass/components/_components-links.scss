@@ -1,5 +1,7 @@
 /*
 Buttons
+
+This is used for the show more link on the Your plea page
 */
 
 $module: "link";
@@ -10,15 +12,14 @@ $module: "link";
     background: rgba(0,0,0,0);
     border: 0 none;
     cursor: pointer;
-    padding: 0;
     font-size: inherit;
+    padding: 0;
 
     &:focus {
       outline: 3px solid $focus-colour;
     }
 
   }
-
 
   &-button::-moz-focus-inner {
     border: 0;

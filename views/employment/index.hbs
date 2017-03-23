@@ -18,17 +18,19 @@
 
               <legend class="visually-hidden">Are you employed or self&ndash;employed?</legend>
 
-              <label class="block-label selection-button-radio" data-target="are-you-employed">
-                <input name="areYouEmployed" type="radio" value="Yes"> Yes<span class="visually-hidden">, I am employed</span>
-              </label>
+              <div class="multiple-choice" data-target="employed">
+                <input id="employed-yes" name="areYouEmployed" type="radio" value="Yes">
+                <label for="employed-yes">Yes<span class="visually-hidden">, I am employed</span></label>
+              </div>
 
-              <label class="block-label selection-button-radio">
-                <input name="areYouEmployed" type="radio" value="No"> No<span class="visually-hidden">, I am not employed</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="employed-no" name="areYouEmployed" type="radio" value="No">
+                <label for="employed-no">No<span class="visually-hidden">, I am not employed</span></label>
+              </div>
 
             </fieldset>
 
-            <div class="panel  panel-border-narrow  js-hidden" id="are-you-employed">
+            <div class="panel  panel-border-narrow  js-hidden" id="employed">
 
               <div class="form-group">
 
@@ -38,11 +40,12 @@
                     <span class="form-label-bold">How often do you get paid?</span>
                   </legend>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-weekly">
-                    <input name="howOftenDoYouGetPaid" type="radio" value="Weekly"> <span class="visually-hidden">I get paid </span>Weekly
-                  </label>
+                  <div class="multiple-choice" data-target="paid-weekly">
+                    <input id="pay-weekly" name="paid" type="radio" value="Weekly">
+                    <label for="pay-weekly"><span class="visually-hidden">I get paid </span>Weekly</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-weekly">
+                  <div class="panel  panel-border-narrow  js-hidden" id="paid-weekly">
                     <label for="my-weekly-amount">
                       <span class="form-label"><span class="visually-hidden">My weekly </span>Amount (after tax deducted)</span>
                     </label>
@@ -51,11 +54,12 @@
                     </div>
                   </div>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-every-2-weeks">
-                    <input name="howOftenDoYouGetPaid" type="radio" value="Every 2 weeks"> <span class="visually-hidden">I get paid </span>Every 2 weeks
-                  </label>
+                  <div class="multiple-choice" data-target="paid-every-2-weeks">
+                    <input id="pay-every-2-weeks" name="paid" type="radio" value="Every 2 weeks">
+                    <label for="pay-every-2-weeks"><span class="visually-hidden">I get paid </span>Every 2 weeks</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-every-2-weeks">
+                  <div class="panel  panel-border-narrow  js-hidden" id="paid-every-2-weeks">
                     <label for="my-every-2-weeks-amount">
                       <span class="form-label"><span class="visually-hidden">My every 2 weeks </span>Amount (after tax deducted)</span>
                     </label>
@@ -64,11 +68,12 @@
                     </div>
                   </div>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-you-get-paid-monthly">
-                    <input name="howOftenDoYouGetPaid" type="radio" value="Monthly"> <span class="visually-hidden">I get paid </span>Monthly
-                  </label>
+                  <div class="multiple-choice" data-target="paid-monthly">
+                    <input id="pay-monthly" name="paid" type="radio" value="Monthly">
+                    <label for="pay-monthly"><span class="visually-hidden">I get paid </span>Monthly</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-you-get-paid-monthly">
+                  <div class="panel  panel-border-narrow  js-hidden" id="paid-monthly">
                     <label for="my-monthly-amount">
                       <span class="form-label"><span class="visually-hidden">My monthly </span>Amount (after tax deducted)</span>
                     </label>
@@ -93,17 +98,19 @@
 
               <legend class="visually-hidden">Do you have a partner who is employed or self&ndash;employed?</legend>
 
-              <label class="block-label selection-button-radio" data-target="do-you-have-a-partner-who-is-employed">
-                <input name="doYouHaveAPartnerWhoIsEmployed" type="radio" value="Yes, I am employed"> Yes<span class="visually-hidden">, I have a partner who is employed</span>
-              </label>
+              <div class="multiple-choice" data-target="partner-employed">
+                <input id="partner-employed-yes" name="partnerEmployed" type="radio" value="Yes, I have a partner who is employed">
+                <label for="partner-employed-yes">Yes<span class="visually-hidden">, I have a partner who is employed</span></label>
+              </div>
 
-              <label class="block-label selection-button-radio">
-                <input name="doYouHaveAPartnerWhoIsEmployed" type="radio" value="No, I am not employed"> No<span class="visually-hidden">, I don&rsquo;t have a partner who is employed</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="partner-employed-no" name="partnerEmployed" type="radio" value="No, I don&rsquo;t have a partner who is employed">
+                <label for="partner-employed-no">No<span class="visually-hidden">, I don&rsquo;t have a partner who is employed</span></label>
+              </div>
 
             </fieldset>
 
-            <div class="panel  panel-border-narrow  js-hidden" id="do-you-have-a-partner-who-is-employed">
+            <div class="panel  panel-border-narrow  js-hidden" id="partner-employed">
 
               <div class="form-group">
 
@@ -113,11 +120,12 @@
                     <span class="form-label-bold">How often do they get paid?</span>
                   </legend>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-weekly">
-                    <input name="howOftenDoTheyGetPaid" type="radio" value="Weekly"> <span class="visually-hidden">They get paid </span>Weekly
-                  </label>
+                  <div class="multiple-choice" data-target="partner-paid-weekly">
+                    <input id="partner-pay-weekly" name="partnerPaid" type="radio" value="Weekly">
+                    <label for="partner-pay-weekly"><span class="visually-hidden">They get paid </span>Weekly</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-weekly">
+                  <div class="panel  panel-border-narrow  js-hidden" id="partner-paid-weekly">
                     <label for="weekly-earnings">
                       <span class="form-label"><span class="visually-hidden">My partners weekly </span>Amount (after tax deducted)</span>
                     </label>
@@ -126,11 +134,12 @@
                     </div>
                   </div>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-every-2-weeks">
-                    <input name="howOftenDoTheyGetPaid" type="radio" value="Every 2 weeks"> <span class="visually-hidden">They get paid </span>Every 2 weeks
-                  </label>
+                  <div class="multiple-choice" data-target="partner-paid-every-2-weeks">
+                    <input id="partner-pay-every-2-weeks" name="partnerPaid" type="radio" value="Every 2 weeks">
+                    <label for="partner-pay-every-2-weeks"><span class="visually-hidden">They get paid </span>Every 2 weeks</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-every-2-weeks">
+                  <div class="panel  panel-border-narrow  js-hidden" id="partner-paid-every-2-weeks">
                     <label for="every-2-weeks-earnings">
                       <span class="form-label"><span class="visually-hidden">My partners every 2 weeks </span>Amount (after tax deducted)</span>
                     </label>
@@ -139,11 +148,12 @@
                     </div>
                   </div>
 
-                  <label class="block-label  selection-button-radio" data-target="how-often-do-they-get-paid-monthly">
-                    <input name="howOftenDoTheyGetPaid" type="radio" value="Monthly"> <span class="visually-hidden">They get paid </span>Monthly
-                  </label>
+                  <div class="multiple-choice" data-target="partner-paid-monthly">
+                    <input id="partner-pay-monthly" name="partnerPaid" type="radio" value="Monthly">
+                    <label for="partner-pay-monthly"><span class="visually-hidden">They get paid </span>Monthly</label>
+                  </div>
 
-                  <div class="panel  panel-border-narrow  js-hidden" id="how-often-do-they-get-paid-monthly">
+                  <div class="panel  panel-border-narrow  js-hidden" id="partner-paid-monthly">
                     <label for="monthly-earnings">
                       <span class="form-label"><span class="visually-hidden">My partners monthly </span>Amount (after tax deducted)</span>
                     </label>

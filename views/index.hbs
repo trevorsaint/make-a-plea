@@ -9,6 +9,7 @@
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
         <p>Use this service to plead guilty or not guilty online.</p>
+        
         <p>You must be either:</p>
 
         <ul class="list  list-bullet">
@@ -26,13 +27,15 @@
 
               <legend class="visually-hidden">Who sent you a notice?</legend>
 
-              <label class="block-label  selection-button-radio">
-                <input name="whoSentYouANotice" type="radio" value="The police"> The police (traffic offence)
-              </label>
+              <div class="multiple-choice">
+                <input id="the-police" name="sentNotice" type="radio" value="The police">
+                <label for="the-police">The police (traffic offence)</label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="whoSentYouANotice" type="radio" value="Transport for London"> Transport for London
-              </label>
+              <div class="multiple-choice">
+                <input id="transport-for-london" name="sentNotice" type="radio" value="Transport for London">
+                <label for="transport-for-london">Transport for London</label>
+              </div>
 
             </fieldset>
 
