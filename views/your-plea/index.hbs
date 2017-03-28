@@ -87,9 +87,9 @@
                         <div class="form-group">
                           <label for="attend-court-no-magistrates">
                             <span class="form-label-bold">Information for magistrates (optional)</span>
-                            <span class="form-hint">They&rsquo;ll take what you say into account when considering a fine &ndash; for example, you can explain why you committed the offence or give background details</span>
+                            <span class="form-hint" id="attend-court-no-magistrates-hint">They&rsquo;ll take what you say into account when considering a fine &ndash; for example, you can explain why you committed the offence or give background details</span>
                           </label>
-                          <textarea class="form-control  form-control-3-4" id="attend-court-no-magistrates" name="attendCourtNoMagistrates" cols="60" rows="3"></textarea>
+                          <textarea class="form-control  form-control-3-4" id="attend-court-no-magistrates" name="attendCourtNoMagistrates" cols="60" rows="3" aria-describedby="attend-court-no-magistrates-hint"></textarea>
                         </div>
 
                       </div>
@@ -108,9 +108,9 @@
                         <div class="form-group">
                           <label for="attend-court-yes-magistrates">
                             <span class="form-label-bold">Provide advance information for magistrates (optional)</span>
-                            <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details</span>
+                            <span class="form-hint" id="attend-court-yes-magistrates-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details</span>
                           </label>
-                          <textarea class="form-control  form-control-3-4" id="attend-court-yes-magistrates" name="attendCourtYesMagistrates" cols="60" rows="3"></textarea>
+                          <textarea class="form-control  form-control-3-4" id="attend-court-yes-magistrates" name="attendCourtYesMagistrates" cols="60" rows="3" aria-describedby="attend-court-yes-magistrates-hint"></textarea>
                         </div>
 
                         <div class="form-group">
@@ -134,9 +134,9 @@
                             <div class="panel  panel-border-narrow  js-hidden" id="guilty-interpreter">
                               <label for="guilty-interpreter-language">
                                 <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter (guilty)</span>?</span>
-                                <span class="form-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
+                                <span class="form-hint" id="guilty-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
                               </label>
-                              <input class="form-control" id="guilty-interpreter-language" name="guiltyInterpreterLanguage" type="text">
+                              <input class="form-control" id="guilty-interpreter-language" name="guiltyInterpreterLanguage" type="text" aria-describedby="guilty-interpreter-language-hint">
                             </div>
 
                           </fieldset>
@@ -186,9 +186,9 @@
                     <div class="panel  panel-border-narrow  js-hidden" id="not-guilty-interpreter">
                       <label for="not-guilty-interpreter-language">
                         <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter (not guilty)</span>?</span>
-                        <span class="form-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
+                        <span class="form-hint" id="not-guilty-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
                       </label>
-                      <input class="form-control" id="not-guilty-interpreter-language" name="notGuiltyInterpreterLanguage" type="text">
+                      <input class="form-control" id="not-guilty-interpreter-language" name="notGuiltyInterpreterLanguage" type="text" aria-describedby="not-guilty-interpreter-language">
                     </div>
 
                   </fieldset>
@@ -275,9 +275,9 @@
                           <div class="panel  panel-border-narrow  js-hidden" id="own-witness-interpreter">
                             <label for="own-witness-interpreter-language">
                               <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
-                              <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
+                              <span class="form-hint" id="own-witness-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
                             </label>
-                            <input class="form-control" id="own-witness-interpreter-language" name="ownWitnessInterpreterLanguage" type="text">
+                            <input class="form-control" id="own-witness-interpreter-language" name="ownWitnessInterpreterLanguage" type="text" aria-describedby="own-witness-interpreter-language-hint">
                           </div>
 
                         </fieldset>
