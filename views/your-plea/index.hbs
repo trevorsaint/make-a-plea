@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/your-details">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -8,10 +8,10 @@
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
-        <div class="panel  panel-border-narrow">
+        <div class="panel  panel-border-wide" role="note" aria-label="Information">
           <p>This is your chance to respond. Please note:</p>
           <ul class="list  list-bullet">
-            <li>all evidence in the notice sent to you</li>
+            <li>all evidence is in the notice sent to you</li>
             <li>if you plead guilty, we may reduce your fine</li>
           </ul>
         </div>
@@ -52,51 +52,97 @@
                 <span class="visually-hidden">How do you plead?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="plead-guilty">
-                <input type="radio" name="howDoYouPlead" value="Guilty"><span class="visually-hidden"> I plead</span> Guilty
-              </label>
+              <div class="multiple-choice" data-target="plead-guilty">
+                <input id="guilty" name="howDoYouPlead" type="radio" value="Guilty">
+                <label for="guilty"><span class="visually-hidden"> I plead</span> Guilty</label>
+              </div>
 
-              <label class="block-label  selection-button-radio" data-target="plead-not-guilty">
-                <input type="radio" name="howDoYouPlead" value="Not guilty"><span class="visually-hidden"> I plead</span> Not guilty
-              </label>
+              <div class="multiple-choice" data-target="plead-not-guilty">
+                <input id="not-guilty" name="howDoYouPlead" type="radio" value="Not guilty">
+                <label for="not-guilty"><span class="visually-hidden"> I plead</span> Not guilty</label>
+              </div>
 
               <!-- Guilty -->
               <div class="panel  panel-border-narrow  js-hidden" id="plead-guilty">
 
-                <h4 class="heading-medium">How would you like to complete your case?</h4>
+                <p>You&rsquo;re declaring you committed the offence &ndash; you may get a penalty.</p>
 
                 <div class="form-group">
 
                   <fieldset class="inline">
 
                     <legend>
-                      <span class="visually-hidden">How would you like to complete your case?</span>
+                      <span class="form-label-bold">How would you like to complete your case?</span>
                     </legend>
 
                     <div class="form-group  form-group-compound">
 
-                      <label class="block-label  selection-button-radio" data-target="online-and-by-post-no-need-to-attend-court">
-                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Online and by post &ndash; no need to attend court"> Online and by post &ndash; no need to attend court
-                      </label>
+                      <div class="multiple-choice" data-target="attend-court-no">
+                        <input id="complete-case-online" name="completeYourCase" type="radio" value="Online &ndash; no need to attend court">
+                        <label for="complete-case-online">Online &ndash; no need to attend court</label>
+                      </div>
 
-                      <div class="panel  panel-border-narrow  js-hidden" id="online-and-by-post-no-need-to-attend-court">
-                        <p>We&rsquo;ll contact you about the outcome of your case</p>
+                      <div class="panel  panel-border-narrow  js-hidden" id="attend-court-no">
+
+                        <div class="form-group">
+                          <label for="attend-court-no-magistrates">
+                            <span class="form-label-bold">Information for magistrates (optional)</span>
+                            <span class="form-hint" id="attend-court-no-magistrates-hint">They&rsquo;ll take what you say into account when considering a fine &ndash; for example, you can explain why you committed the offence or give background details</span>
+                          </label>
+                          <textarea class="form-control  form-control-3-4" id="attend-court-no-magistrates" name="attendCourtNoMagistrates" cols="60" rows="3" aria-describedby="attend-court-no-magistrates-hint"></textarea>
+                        </div>
+
                       </div>
 
                     </div>
 
                     <div class="form-group">
 
-                      <label class="block-label  selection-button-radio" data-target="attend-court-to-plead-guilty">
-                        <input name="howWouldYouLikeToCompleteYourCase" type="radio" value="Attend court to plead guilty"> Attend court to plead guilty
-                      </label>
+                      <div class="multiple-choice" data-target="attend-court-yes">
+                        <input id="complete-case-court" name="completeYourCase" type="radio" value="Attend court to plead guilty">
+                        <label for="complete-case-court">Attend court to plead guilty</label>
+                      </div>
 
-                      <div class="panel  panel-border-narrow  js-hidden" id="attend-court-to-plead-guilty">
-                        <label for="provide-advance-information-for-magistrates">
-                          <span class="form-label">Provide advance information for magistrates (optional)</span>
-                          <span class="form-hint">They&rsquo;ll take what you say into account when considering your case. You can explain why you committed the offence or give background details, for example.</span>
-                        </label>
-                        <textarea class="form-control  form-control-3-4" id="provide-advance-information-for-magistrates" name="provideAdvanceInformationForMagistrates" cols="60" rows="3"></textarea>
+                      <div class="panel  panel-border-narrow  js-hidden" id="attend-court-yes">
+
+                        <div class="form-group">
+                          <label for="attend-court-yes-magistrates">
+                            <span class="form-label-bold">Provide advance information for magistrates (optional)</span>
+                            <span class="form-hint" id="attend-court-yes-magistrates-hint">They&rsquo;ll take what you say into account when considering your case. For example, you can explain why you committed the offence or give background details</span>
+                          </label>
+                          <textarea class="form-control  form-control-3-4" id="attend-court-yes-magistrates" name="attendCourtYesMagistrates" cols="60" rows="3" aria-describedby="attend-court-yes-magistrates-hint"></textarea>
+                        </div>
+
+                        <div class="form-group">
+
+                          <fieldset>
+
+                            <legend>
+                              <span class="form-label-bold">Do you need an interpreter in court?</span>
+                            </legend>
+
+                            <div class="multiple-choice" data-target="guilty-interpreter">
+                              <input id="guilty-interpreter-yes" name="guiltyInterpreter" type="radio" value="Yes">
+                              <label for="guilty-interpreter-yes">Yes<span class="visually-hidden">, I need an interpreter in court (guilty)</span></label>
+                            </div>
+
+                            <div class="multiple-choice">
+                              <input id="guilty-interpreter-no" name="guiltyInterpreter" type="radio" value="No">
+                              <label for="guilty-interpreter-no">No<span class="visually-hidden">, I don&rsquo;t need an interpreter in court (guilty)</span></label>
+                            </div>
+
+                            <div class="panel  panel-border-narrow  js-hidden" id="guilty-interpreter">
+                              <label for="guilty-interpreter-language">
+                                <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter (guilty)</span>?</span>
+                                <span class="form-hint" id="guilty-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
+                              </label>
+                              <input class="form-control" id="guilty-interpreter-language" name="guiltyInterpreterLanguage" type="text" aria-describedby="guilty-interpreter-language-hint">
+                            </div>
+
+                          </fieldset>
+
+                        </div>
+
                       </div>
 
                     </div>
@@ -110,15 +156,13 @@
               <!-- Not guilty -->
               <div class="panel  panel-border-narrow  js-hidden" id="plead-not-guilty">
 
-                <h3 class="heading-medium">You&rsquo;ll need to attend court</h3>
-
-                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence so you&rsquo;ll need to presentyour evidence in court.</p>
+                <p>You&rsquo;re declaring you didn&rsquo;t commit the offence so you&rsquo;ll need to present your evidence in court.</p>
 
                 <div class="form-group">
-                  <label for="why-do-you-believe-you-are-not-guilty">
+                  <label for="why-not-guilty">
                     <span class="form-label-bold">Why do you believe you&rsquo;re not guilty?</span>
                   </label>
-                  <textarea class="form-control  form-control-3-4" id="why-do-you-believe-you-are-not-guilty" name="whyDoYouBelieveYouAreNotGuilty" cols="60" rows="3"></textarea>
+                  <textarea class="form-control  form-control-3-4" id="why-not-guilty" name="whyNotGuilty" cols="60" rows="3"></textarea>
                 </div>
 
                 <div class="form-group">
@@ -129,20 +173,22 @@
                       <span class="form-label-bold">Do you need an interpreter in court?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-need-an-interpreter-in-court">
-                      <input name="doYouNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, I need an interpreter in court</span>
-                    </label>
+                    <div class="multiple-choice" data-target="not-guilty-interpreter">
+                      <input id="not-guilty-interpreter-yes" name="notGuiltyInterpreter" type="radio" value="Yes">
+                      <label for="not-guilty-interpreter-yes">Yes<span class="visually-hidden">, I need an interpreter in court (not guilty)</span></label>
+                    </div>
 
-                    <label class="block-label  selection-button-radio">
-                      <input name="doYouNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t need an interpreter in court</span>
-                    </label>
+                    <div class="multiple-choice">
+                      <input id="not-guilty-interpreter-no" name="notGuiltyInterpreter" type="radio" value="No">
+                      <label for="not-guilty-interpreter-no">No<span class="visually-hidden">, I don&rsquo;t need an interpreter in court (not guilty)</span></label>
+                    </div>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-need-an-interpreter-in-court">
-                      <label for="interpreter-in-court-language">
-                        <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter</span>?</span>
-                        <span class="form-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
+                    <div class="panel  panel-border-narrow  js-hidden" id="not-guilty-interpreter">
+                      <label for="not-guilty-interpreter-language">
+                        <span class="form-label">Which language<Span class="visuallyhidden"> for your interpreter (not guilty)</span>?</span>
+                        <span class="form-hint" id="not-guilty-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your interpreter</span></span>
                       </label>
-                      <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage" type="text">
+                      <input class="form-control" id="not-guilty-interpreter-language" name="notGuiltyInterpreterLanguage" type="text" aria-describedby="not-guilty-interpreter-language">
                     </div>
 
                   </fieldset>
@@ -156,22 +202,24 @@
                   <fieldset>
 
                     <legend>
-                      <span class="form-label-bold">Do you agree with any evidence in any witness statements sent in your notice?</span>
+                      <span class="form-label-bold">Do you agree with any evidence in witness statements sent in your notice?</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio">
-                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="Yes"> Yes<span class="visually-hidden">, I agree with the evidence in the witness statement sent to me</span>
-                    </label>
+                    <div class="multiple-choice">
+                      <input id="disagree-evidence-yes" name="agreeEvidence" type="radio" value="Yes">
+                      <label for="disagree-evidence-yes">Yes<span class="visually-hidden">, I agree with the evidence in the witness statement sent to me</span></label>
+                    </div>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
-                      <input name="doYouAgreeWithAnyEvidenceInAnyWitnessStatementSentToYou" type="radio" value="No"> No<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span>
-                    </label>
+                    <div class="multiple-choice" data-target="disagree-evidence">
+                      <input id="disagree-evidence-no" name="agreeEvidence" type="radio" value="No">
+                      <label for="disagree-evidence-no">No<span class="visually-hidden">, I disagree with the evidence in the witness statement sent to me</span></label>
+                    </div>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-agree-with-any-evidence-in-any-witness-statement-sent-to-you">
-                      <label for="enter-the-name-of-the-witness-and-what-you-disagree-with">
+                    <div class="panel  panel-border-narrow  js-hidden" id="disagree-evidence">
+                      <label for="disagree-details">
                         <span class="form-label">Enter the name of the witness and what you disagree with</span>
                       </label>
-                      <textarea class="form-control  form-control-3-4" id="enter-the-name-of-the-witness-and-what-you-disagree-with" name="enterTheNameOfTheWitnessAndWhatYouDisagreeWith" cols="60" rows="3"></textarea>
+                      <textarea class="form-control  form-control-3-4" id="disagree-details" name="disagreeDetails" cols="60" rows="3"></textarea>
                     </div>
 
                   </fieldset>
@@ -187,21 +235,23 @@
                       <span class="form-hint">Someone who can give evidence in court supporting your case</span>
                     </legend>
 
-                    <label class="block-label  selection-button-radio" data-target="do-you-want-to-call-your-own-witness">
-                      <input name="doYouWantToCallYourOwnWitness" type="radio" value="Yes"> Yes<span class="visually-hidden">, I want to call my own witness</span>
-                    </label>
+                    <div class="multiple-choice" data-target="call-own-witness">
+                      <input id="call-own-witness-yes" name="callOwnWitness" type="radio" value="Yes">
+                      <label for="call-own-witness-yes">Yes<span class="visually-hidden">, I want to call my own witness</span></label>
+                    </div>
 
-                    <label class="block-label  selection-button-radio">
-                      <input name="doYouWantToCallYourOwnWitness" type="radio" value="No"> No<span class="visually-hidden">, I don&rsquo;t want to call my own witness</span>
-                    </label>
+                    <div class="multiple-choice">
+                      <input id="call-own-witness-no" name="callOwnWitness" type="radio" value="No">
+                      <label for="call-own-witness-no">No<span class="visually-hidden">, I don&rsquo;t want to call my own witness</span></label>
+                    </div>
 
-                    <div class="panel  panel-border-narrow  js-hidden" id="do-you-want-to-call-your-own-witness">
+                    <div class="panel  panel-border-narrow  js-hidden" id="call-own-witness">
 
                       <div class="form-group">
-                        <label for="enter-the-name-address-and-date-of-birth-of-any-witness">
-                          <span class="form-label">Enter the name, address and date of birth of any witness you want to call to support your case</span>
+                        <label for="own-witness-details">
+                          <span class="form-label">Enter name, address and date of birth of any witness you want to call</span>
                         </label>
-                        <textarea class="form-control  form-control-3-4" id="enter-the-name-address-and-date-of-birth-of-any-witness" name="enterTheNameAddressAndDateOfBirthOfAnyWitness" cols="60" rows="3"></textarea>
+                        <textarea class="form-control  form-control-3-4" id="own-witness-details" name="ownWitnessDetails" cols="60" rows="3"></textarea>
                       </div>
 
                       <div class="form-group">
@@ -212,20 +262,22 @@
                             <span class="form-label">Does your witness need an interpreter in court?</span>
                           </legend>
 
-                          <label class="block-label  selection-button-radio" data-target="does-your-witness-need-an-interpreter-in-court">
-                            <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="Yes"> Yes<span class="visually-hidden">, my witness needs an interpreter in court</span>
-                          </label>
+                          <div class="multiple-choice" data-target="own-witness-interpreter">
+                            <input id="own-witness-interpreter-yes" name="ownWitnessInterpreter" type="radio" value="Yes">
+                            <label for="own-witness-interpreter-yes">Yes<span class="visually-hidden">, my witness needs an interpreter in court</span></label>
+                          </div>
 
-                          <label class="block-label  selection-button-radio">
-                            <input name="doesYourWitnessNeedAnInterpreterInCourt" type="radio" value="No"> No<span class="visually-hidden">, my witness does not need an interpreter in court</span>
-                          </label>
+                          <div class="multiple-choice">
+                            <input id="own-witness-interpreter-no" name="ownWitnessInterpreter" type="radio" value="No">
+                            <label for="own-witness-interpreter-no">No<span class="visually-hidden">, my witness does not need an interpreter in court</span></label>
+                          </div>
 
-                          <div class="panel  panel-border-narrow  js-hidden" id="does-your-witness-need-an-interpreter-in-court">
-                            <label for="your-witness-interpreter-language">
+                          <div class="panel  panel-border-narrow  js-hidden" id="own-witness-interpreter">
+                            <label for="own-witness-interpreter-language">
                               <span class="form-label">Which language<Span class="visuallyhidden"> for your witness interpreter</span>?</span>
-                              <span class="form-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
+                              <span class="form-hint" id="own-witness-interpreter-language-hint">You can include sign language<span class="visually-hidden"> for your witness interpreter</span></span>
                             </label>
-                            <input class="form-control" id="your-witness-interpreter-language" name="yourWitnessInterpreterLanguage" type="text">
+                            <input class="form-control" id="own-witness-interpreter-language" name="ownWitnessInterpreterLanguage" type="text" aria-describedby="own-witness-interpreter-language-hint">
                           </div>
 
                         </fieldset>
@@ -248,7 +300,7 @@
             <button class="button" type="submit">Continue</button>
           </div>
 
-          <p><a href="/your-details">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 

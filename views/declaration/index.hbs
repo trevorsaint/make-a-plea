@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/check-your-answers/guilty">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -8,7 +8,7 @@
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
-        <p class="leadin">I confirm that:</p>
+        <p>I confirm that:</p>
 
         <ul class="list  list-bullet">
           <li>I&rsquo;ve read and understand the charges against me</li>
@@ -17,24 +17,27 @@
           <!-- show this bullet if consent to deduct from earnings or benefits <li>you may take any penalty from my earnings or benefits if I don&rsquo;t pay</li>-->
         </ul>
 
-        <p class="notice  text">
+        <p class="notice  notice-gutter-large">
           <i class="icon  icon-important"><span class="visually-hidden">Warning</span></i>
-          <strong>You may be prosecuted if you make a false statement or deliberately don&rsquo;t declare all relevant facts</strong>
+          <strong>You may be prosecuted if you make a false statement or deliberately don&rsquo;t declare all relevant facts.</strong>
         </p>
 
         <form class="form" method="post" novalidate>
 
           <div class="form-group">
-            <label class="block-label  selection-button-checkbox">
-              <input name="confirmDeclaration" type="checkbox" value="I confirm, I have read and understand the charges against me"> I confirm<span class="visually-hidden">, I have read and understand the charges against me</span>
-            </label>
+
+            <div class="multiple-choice">
+              <input id="confirm" name="confirm" type="checkbox" value="I confirm, I have read and understand the charges against me">
+              <label for="confirm">I confirm<span class="visually-hidden">, I have read and understand the charges against me</span></label>
+            </div>
+
           </div>
 
           <div class="form-group  form-group-related">
             <button class="button" type="submit">Submit</button>
           </div>
 
-          <p><a href="/check-your-answers/guilty">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 

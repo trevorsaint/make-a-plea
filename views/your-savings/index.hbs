@@ -1,0 +1,64 @@
+
+    <a class="link-back" href="{{back_link}}">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <h2 class="heading-medium">Do you have any savings or investments?</h2>
+
+        <form class="form" method="post" novalidate>
+
+          <div class="form-group">
+
+            <fieldset class="inline">
+
+              <legend>
+                <span class="visually-hidden">Do you have any savings or investments?</span>
+              </legend>
+
+              <div class="multiple-choice" data-target="savings-or-investments">
+                <input id="savings-or-investments-yes" name="savingsOrInvestments" type="radio" value="Yes">
+                <label for="savings-or-investments-yes">Yes<span class="visually-hidden">, I have savings</span></label>
+              </div>
+
+              <div class="multiple-choice">
+                <input id="savings-or-investments-no" name="savingsOrInvestments" type="radio" value="No">
+                <label for="savings-or-investments-no">No<span class="visually-hidden">, I do not have savings</span></label>
+              </div>
+
+              <div class="panel  panel-border-narrow  js-hidden" id="savings-or-investments">
+
+                <div class="form-group">
+                  <label for="amount-of-savings-or-investments">
+                    <span class="form-label">Total amount<span class="visually-hidden"> of savings</span></span>
+                  </label>
+                  <span class="form-currency">
+                    <input class="form-control  form-control-1-4" id="amount-of-savings-or-investments" name="amountOfSavingsOrInvestments" type="number">
+                  </span>
+                </div>
+
+              </div>
+
+            </fieldset>
+
+          </div>
+
+          <div class="form-group  form-group-related">
+            <button class="button" type="submit">Continue</button>
+          </div>
+
+          <p><a href="{{back_link}}">Back</a></p>
+
+        </form>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>

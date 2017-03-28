@@ -6,6 +6,12 @@ $module: "form";
 
 .#{$module} {
 
+  // control for qty controls
+  .#{$module}-control-qty {
+    margin-right: em(5);
+  }
+
+  // currency controls
   &-currency {
     display: block;
     position: relative;

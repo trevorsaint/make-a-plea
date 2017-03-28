@@ -1,0 +1,267 @@
+
+    <a class="link-back" href="{{back_link}}">Back</a>
+
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">{{{title}}}</h1>
+
+        <div class="panel  panel-border-wide" role="note" aria-label="Information">
+          <p>Make sure all the information you&rsquo;ve given is correct. If it&rsquo;s false or misleading, you may be:</p>
+          <ul class="list  list-bullet">
+            <li>fined &pound;2,500</li>
+            <li>sent to prison for 3 months</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="column-one-third">
+        {{>related}}
+      </div>
+
+    </div>
+
+
+    <div class="check-answers">
+
+      <h2 class="heading-medium">Your details</h2>
+
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <td>Mike Mouse</td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td>38A Baker Street<br>London<br>W1 7SX</td>
+        </tr>
+        <tr>
+          <th>Contact number</th>
+          <td>0772 330 5063</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>mike.mouse@gmail.com</td>
+        </tr>
+        <tr>
+          <th>Date of birth</th>
+          <td>18 May 1987</td>
+        </tr>
+        <tr>
+          <th>National Insurance number</th>
+          <td>QQ 12 34 56 C</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/your-details">Change<span class="visually-hidden"> answers for &ldquo;Your details&rdquo;.</span></a></p>
+
+    </div>
+
+
+    {{#contains how_do_you_plead "Guilty"}}
+
+    <div class="check-answers">
+
+      <h2 class="heading-medium">Your plea</h2>
+
+      <table class="table">
+        <tr>
+          <th>Plea</th>
+          <td>Guilty</td>
+        </tr>
+        <tr>
+          <th>How to complete case</th>
+          <td>Attend court to plead guilty</td>
+        </tr>
+        <tr>
+          <th>Information for magistrates</th>
+          <td>I&rsquo;d accidentally picked up my partner&rsquo;s oyster card instead of mine for a few days in a row. It was a genuine mistake.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+        <tr>
+          <th>Witnesses</th>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed for witness?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
+
+    </div>
+
+    <div class="check-answers">
+
+      <h2 class="heading-medium">Your finances</h2>
+
+      <div class="check-answers">
+
+        <h3 class="bold-small">Employment</h3>
+
+        <table class="table">
+          <tr>
+            <th>You&rsquo;re paid</th>
+            <td>Weekly &ndash; &pound;1,000 (after tax deducted)</td>
+          </tr>
+          <tr>
+            <th>Consent given to take fine from earnings</th>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th>Your employer</th>
+            <td>(if provided)</td>
+          </tr>
+          <tr>
+            <th>Partner paid</th>
+            <td>Every 2 weeks &ndash; &pound;1,500 (after tax deducted)</td>
+          </tr>
+        </table>
+
+        <p class="check-answers-action"><a href="/employment">Change<span class="visually-hidden"> answers for &ldquo;Employment&rdquo;.</span></a></p>
+
+      </div>
+
+      <div class="check-answers">
+
+        <h3 class="bold-small">Benefits and State Pension</h3>
+
+        <table class="table">
+          <tr>
+            <th>Benefits paid</th>
+            <td>Every 4 weeks &ndash; &pound;1,000</td>
+          </tr>
+          <tr>
+            <th>Consent given to take fine from benefits</th>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <th>State Pension paid</th>
+            <td>Every 2 weeks &ndash; &pound;2,500</td>
+          </tr>
+          <tr>
+            <th>Pension Credit paid</th>
+            <td>Every 4 weeks &ndash; &pound;1,000</td>
+          </tr>
+        </table>
+
+        <p class="check-answers-action"><a href="/benefits-and-state-pension">Change<span class="visually-hidden"> answers for &ldquo;Benefits and State Pension&rdquo;.</span></a></p>
+
+      </div>
+
+      <div class="check-answers">
+
+        <h3 class="bold-small">Your savings</h3>
+
+        <table class="table">
+          <tr>
+            <th>Total amount</th>
+            <td>&pound;9,000</td>
+          </tr>
+        </table>
+
+        <p class="check-answers-action"><a href="/your-savings">Change<span class="visually-hidden"> answers for &ldquo;Your savings&rdquo;.</span></a></p>
+
+      </div>
+
+      <div class="check-answers">
+
+        <h3 class="bold-small">Your outgoings</h3>
+
+        <table class="table">
+          <tr>
+            <th>Monthly amount</th>
+            <td>&pound;2,450</td>
+          </tr>
+        </table>
+
+        <p class="check-answers-action"><a href="/your-outgoings">Change<span class="visually-hidden"> answers for &ldquo;Your outgoings&rdquo;.</span></a></p>
+
+      </div>
+
+      <div class="check-answers">
+
+        <h3 class="bold-small">Dependent children</h3>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Ages</th>
+              <td>How many?</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Under 5 years</th>
+              <td>1</td>
+            </tr>
+            <tr>
+              <th>5 to 10 years</th>
+              <td>2</td>
+            </tr>
+            <tr>
+              <th>11 to 15 years</th>
+              <td>&ndash;</td>
+            </tr>
+            <tr>
+              <th>16 to 18 years</th>
+              <td>&ndash;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="check-answers-action"><a href="/dependent-children">Change<span class="visually-hidden"> answers for &ldquo;Dependent children&rdquo;.</span></a></p>
+
+      </div>
+
+    </div>
+
+    {{else}}
+
+    <div class="check-answers">
+
+      <h2 class="heading-medium">Your plea</h2>
+
+      <table class="table">
+        <tr>
+          <th>Plea</th>
+          <td>Not guilty</td>
+        </tr>
+        <tr>
+          <th>Why do you think you&rsquo;re not guilty?</th>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+        <tr>
+          <th>Witnesses</th>
+          <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+        </tr>
+        <tr>
+          <th>Interpreter needed for witness?</th>
+          <td>Yes (Welsh)</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
+
+    </div>
+
+    {{/contains}}
+
+
+    <div class="button-actions">
+      <p><a class="button" href="/declaration" role="button">Confirm and continue</a></p>
+    </div>
+
+
+    <p><a href="{{back_link}}">Back</a></p>

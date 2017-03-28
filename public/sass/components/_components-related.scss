@@ -6,7 +6,8 @@ $module: "related";
 
 .#{$module} {
   border-top: em(10) solid $govuk-blue;
-  margin-top: em(30);
+  clear: both;
+  margin-top: em(40);
   padding-top: em(5);
 
   &-heading {

@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -7,14 +7,6 @@
       <div class="column-two-thirds">
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
-
-        <div class="panel  panel-border-narrow">
-          <p>We&rsquo;ll only need to contact your employer if:</p>
-          <ul class="list  list-bullet">
-            <li>you don&rsquo;t pay your fine</li>
-            <li>we then need to deduct the money from your earnings</li>
-          </ul>
-        </div>
 
         <h2 class="heading-medium">Do you give consent for us to take a fine out of your earnings?</h2>
 
@@ -28,15 +20,17 @@
                 <span class="visually-hidden">Do you give consent for us to take a fine out of your earnings?</span>
               </legend>
 
-              <label class="block-label  selection-button-radio" data-target="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings">
-                <input name="radio-inline-group" type="radio" value="Yes"> Yes
-              </label>
+              <div class="multiple-choice" data-target="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings-yes">
+                <input id="consent-yes" name="doYouGiveConsentForUsToTakeAFineOutOfYourEarnings" type="radio" value="Yes">
+                <label for="consent-yes">Yes</label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="radio-inline-group" type="radio" value="No"> No
-              </label>
+              <div class="multiple-choice" data-target="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings-no">
+                <input id="consent-no" name="doYouGiveConsentForUsToTakeAFineOutOfYourEarnings" type="radio" value="No">
+                <label for="consent-no">No</label>
+              </div>
 
-              <div class="panel  panel-border-narrow  js-hidden" id="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings">
+              <div class="panel  panel-border-narrow  js-hidden" id="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings-yes">
 
                 <div class="form-group">
                   <label for="employer-name">
@@ -76,10 +70,10 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="employer-country">
-                        <span class="form-label">Country (optional)</span>
+                      <label for="employer-county">
+                        <span class="form-label">County (optional)</span>
                       </label>
-                      <input class="form-control" id="employer-country" name="employerCountry" type="text">
+                      <input class="form-control" id="employer-county" name="employerCounty" type="text">
                     </div>
 
                     <div class="form-group">
@@ -116,6 +110,10 @@
 
               </div>
 
+              <div class="panel  panel-border-narrow  js-hidden" id="do-you-give-consent-for-us-to-take-a-fine-out-of-your-earnings-no">
+                <p>In certain circumstances, we can take a fine without your consent.</p>
+              </div>
+
             </fieldset>
 
           </div>
@@ -124,7 +122,7 @@
             <button class="button" type="submit">Continue</button>
           </div>
 
-          <p><a href="/">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 

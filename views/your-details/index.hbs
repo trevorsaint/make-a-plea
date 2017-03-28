@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/your-case">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -12,7 +12,7 @@
 
           <h2 class="heading-medium">Check your name and address</h2>
 
-          <div class="panel  panel-border-narrow">
+          <div class="panel  panel-border-wide" role="note" aria-label="Information">
             <p>
               <b>Mr Mike Mouse</b><br>
               38A Baker Street<br>
@@ -29,21 +29,30 @@
 
             <div class="form-group">
 
-              <label class="block-label  selection-button-radio">
-                <input name="areTheseDetailsCorrect" type="radio" value="Yes"> Yes<span class="visually-hidden">, these details are correct</span>
-              </label>
+              <div class="multiple-choice">
+                <input id="details-correct-yes" name="detailsCorrect" type="radio" value="Yes">
+                <label for="details-correct-yes">Yes<span class="visually-hidden">, these details are correct</span></label>
+              </div>
 
-              <label class="block-label  selection-button-radio" data-target="are-these-details-correct">
-                <input name="areTheseDetailsCorrect" type="radio" value="No"> No<span class="visually-hidden">, these details are incorrect</span>
-              </label>
+              <div class="multiple-choice" data-target="details-correct">
+                <input id="details-correct-no" name="detailsCorrect" type="radio" value="No">
+                <label for="details-correct-no">No<span class="visually-hidden">, these details are incorrect</span></label>
+              </div>
 
-              <div class="panel  panel-border-narrow  js-hidden" id="are-these-details-correct">
+              <div class="panel  panel-border-narrow  js-hidden" id="details-correct">
+
+                <div class="form-group  form-group-related">
+                  <label for="first-name">
+                    <span class="form-label">First name</span>
+                  </label>
+                  <input class="form-control  form-control-2-3" id="first-name" name="firstName" type="text">
+                </div>
 
                 <div class="form-group">
-                  <label for="full-name">
-                    <span class="form-label">Full name</span>
+                  <label for="last-name">
+                    <span class="form-label">Last name</span>
                   </label>
-                  <input class="form-control  form-control-2-3" id="full-name" name="fullName" type="text">
+                  <input class="form-control  form-control-2-3" id="last-name" name="lastName" type="text">
                 </div>
 
                 <div class="form-group">
@@ -77,10 +86,10 @@
                     </div>
 
                     <div class="form-group">
-                      <label for="country">
-                        <span class="form-label">Country (optional)</span>
+                      <label for="county">
+                        <span class="form-label">County (optional)</span>
                       </label>
-                      <input class="form-control" id="country" name="country" type="text">
+                      <input class="form-control" id="county" name="county" type="text">
                     </div>
 
                     <div class="form-group">
@@ -105,17 +114,17 @@
           <div class="form-group">
             <label for="contact-number">
               <span class="form-label-bold">Contact number (landline or mobile)</span>
-              <span class="form-hint">The court may need to contact you so they can resolve your case quickly.</span>
+              <span class="form-hint" id="contact-number-hint">The court may need to contact you so they can resolve your case quickly</span>
             </label>
-            <input class="form-control" id="contact-number" name="contactNumber" type="tel">
+            <input class="form-control" id="contact-number" name="contactNumber" type="tel" aria-describedby="contact-number-hint">
           </div>
 
           <div class="form-group">
             <label for="email-address">
               <span class="form-label-bold">Email address</span>
-              <span class="form-hint">We&rsquo;ll automatically email you a copy of your plea.</span>
+              <span class="form-hint" id="email-address-hint">We&rsquo;ll automatically email you a copy of your plea</span>
             </label>
-            <input class="form-control  form-control-2-3" id="email-address" name="emailAddress" type="email">
+            <input class="form-control  form-control-2-3" id="email-address" name="emailAddress" type="email" aria-describedby="email-address-hint">
           </div>
 
           <div class="form-group">
@@ -124,14 +133,14 @@
 
               <legend>
                 <span class="form-label-bold">Your date of birth</span>
-                <span class="form-hint">For example, 18 5 1987</span>
+                <span class="form-hint" id="dob-hint">For example, 18 5 1987</span>
               </legend>
 
               <div class="form-date">
 
                 <div class="form-group  form-group-day">
                   <label class="form-label" for="dob-day">Day</label>
-                  <input class="form-control" id="dob-day" name="dob-day" type="number">
+                  <input class="form-control" id="dob-day" name="dob-day" type="number" aria-describedby="dob-hint">
                 </div>
 
                 <div class="form-group  form-group-month">
@@ -160,20 +169,22 @@
 
               <div class="form-group">
 
-                <label class="block-label  selection-button-radio" data-target="national-insurance-number">
-                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="Yes"> Yes<span class="visually-hidden">, I have a National Insurance number</span>
-                </label>
+                <div class="multiple-choice" data-target="ni-number">
+                  <input id="ni-number-yes" name="niNumber" type="radio" value="Yes">
+                  <label for="ni-number-yes">Yes<span class="visually-hidden">, I have a National Insurance number</span></label>
+                </div>
 
-                <label class="block-label  selection-button-radio">
-                  <input type="radio" name="doYouHaveANationalInsuranceNumber" value="No"> No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span>
-                </label>
+                <div class="multiple-choice">
+                  <input id="ni-number-no" name="niNumber" type="radio" value="No">
+                  <label for="ni-number-no">No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span></label>
+                </div>
 
-                <div class="panel  panel-border-narrow  js-hidden" id="national-insurance-number">
+                <div class="panel  panel-border-narrow  js-hidden" id="ni-number">
                   <label for="national-insurance-number">
                     <span class="form-label">National Insurance number</span>
-                    <span class="form-hint">It&rsquo;s on your National Insurance card, benefit letter, payslip or P60. <br> For example, V0 12 34 56 D</span>
+                    <span class="form-hint" id="national-insurance-number-hint">It&rsquo;s on your National Insurance card, benefit letter, payslip or P60. <br> For example, V0 12 34 56 D</span>
                   </label>
-                  <input class="form-control" id="national-insurance-number" name="nationalInsuranceNumber" type="text">
+                  <input class="form-control" id="national-insurance-number" name="nationalInsuranceNumber" type="text" aria-describedby="national-insurance-number-hint">
                 </div>
 
               </div>
@@ -186,7 +197,7 @@
             <button class="button" type="submit">Continue</button>
           </div>
 
-          <p><a href="/your-case">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 

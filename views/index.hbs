@@ -8,13 +8,16 @@
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
-        <p class="lede">Use this service to plead guilty or not guilty online.</p>
+        <p>Use this service to plead guilty or not guilty online.</p>
+        
+        <p>You must be either:</p>
 
-        <span>You must be either:</span>
         <ul class="list  list-bullet">
           <li>the person charged with the offence</li>
           <li>an official representative of the company charged with the offence</li>
         </ul>
+
+        <h2 class="heading-medium">Who sent you a notice?</h2>
 
         <form class="form" method="post" novalidate>
 
@@ -22,17 +25,17 @@
 
             <fieldset>
 
-              <legend>
-                <span class="form-label-bold">Who sent you a notice?</span>
-              </legend>
+              <legend class="visually-hidden">Who sent you a notice?</legend>
 
-              <label class="block-label  selection-button-radio">
-                <input name="whoSentYouANotice" type="radio" value="The police (traffic offence)"> The police (traffic offence)
-              </label>
+              <div class="multiple-choice">
+                <input id="the-police" name="sentNotice" type="radio" value="The police">
+                <label for="the-police">The police (traffic offence)</label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="whoSentYouANotice" type="radio" value="Transport for London"> Transport for London
-              </label>
+              <div class="multiple-choice">
+                <input id="transport-for-london" name="sentNotice" type="radio" value="Transport for London">
+                <label for="transport-for-london">Transport for London</label>
+              </div>
 
             </fieldset>
 
@@ -46,7 +49,7 @@
 
         <h2 class="heading-medium">Before you start</h2>
 
-        <span>To use this service you need:</span>
+        <p>To use this service you need:</p>
 
         <ul class="list  list-bullet">
           <li>the Single Justice Procedure notice sent to you</li>

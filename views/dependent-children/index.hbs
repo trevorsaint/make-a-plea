@@ -1,5 +1,5 @@
 
-    <a class="link-back" href="/">Back</a>
+    <a class="link-back" href="{{back_link}}">Back</a>
 
 
     <div class="grid-row">
@@ -8,7 +8,7 @@
 
         <h1 class="heading-xlarge">{{{title}}}</h1>
 
-        <div class="panel  panel-border-narrow">
+        <div class="panel  panel-border-wide" role="note" aria-label="Information">
           <p>A dependent child lives at home with you and must be both:</p>
           <ul class="list  list-bullet">
             <li>under 18</li>
@@ -26,48 +26,45 @@
 
               <legend class="visually-hidden">Do you have any dependent children?</legend>
 
-              <label class="block-label  selection-button-radio" data-target="do-you-have-any-dependent-children">
-                <input name="doYouHaveAnyDependentChildren" type="radio" value="Yes"> Yes<Span class="visually-hidden">, I have dependent children</span>
-              </label>
+              <div class="multiple-choice" data-target="dependent-children">
+                <input id="dependent-children-yes" name="dependentChildren" type="radio" value="Yes">
+                <label for="dependent-children-yes">Yes<Span class="visually-hidden">, I have dependent children</span></label>
+              </div>
 
-              <label class="block-label  selection-button-radio">
-                <input name="doYouHaveAnyDependentChildren" type="radio" value="No"> No<Span class="visually-hidden">, I don&rsquo;t have dependent children</span>
-              </label>
-
-              <div class="panel  panel-border-narrow  js-hidden" id="do-you-have-any-dependent-children">
-
-                <fieldset>
-
-                  <legend>
-                    <span class="form-label-bold">How many children do you have?</span>
-                    <span class="form-hint">Enter amount of children in each age category</span>
-                  </legend>
-
-                </fieldset>
-
-                <div class="form-group  form-group-related">
-                  <input class="form-control  form-control-1-8" id="children-under-5" name="childrenUnder5" maxlength="2">
-                  <label>under 5</label>
-                </div>
-
-                <div class="form-group  form-group-related">
-                  <input class="form-control  form-control-1-8" id="children-under-5-to-10" name="childrenUnder5to10">
-                  <label>ages 5 to 10</label>
-                </div>
-
-                <div class="form-group  form-group-related">
-                  <input class="form-control  form-control-1-8" id="children-under-11-to-15" name="childrenUnder11to15">
-                  <label>ages 11 to 15</label>
-                </div>
-
-                <div class="form-group">
-                  <input class="form-control  form-control-1-8" id="children-under-16-to-18" name="childrenUnder15to18">
-                  <label>ages 16 to 18</label>
-                </div>
-
+              <div class="multiple-choice">
+                <input id="dependent-children-no" name="dependentChildren" type="radio" value="No">
+                <label for="dependent-children-no">No<Span class="visually-hidden">, I don&rsquo;t have dependent children</span></label>
               </div>
 
             </fieldset>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="dependent-children">
+
+              <fieldset>
+
+                <legend>
+                  <span class="form-label-bold">How many<span class="visually-hidden"> children do you have</span>?</span>
+                </legend>
+
+                <div class="form-group  form-group-compound">
+                  <label><input class="form-control  form-control-qty  form-control-1-8" name="childrenUnder5" type="number"> <span class="visually-hidden">Children </span>Under 5 years</label>
+                </div>
+
+                <div class="form-group  form-group-compound">
+                  <label><input class="form-control  form-control-qty  form-control-1-8" name="childrenUnder5to10" type="number"> <span class="visually-hidden">Children </span>5 to 10 years</label>
+                </div>
+
+                <div class="form-group  form-group-compound">
+                  <label><input class="form-control  form-control-qty  form-control-1-8" name="childrenUnder11to15" type="number"> <span class="visually-hidden">Children </span>11 to 15 years</label>
+                </div>
+
+                <div class="form-group">
+                  <label><input class="form-control  form-control-qty  form-control-1-8" name="childrenUnder16to18" type="number"> <span class="visually-hidden">Children </span>16 to 18 years</label>
+                </div>
+
+              </fieldset>
+
+            </div>
 
           </div>
 
@@ -75,7 +72,7 @@
             <button class="button" type="submit">Continue</button>
           </div>
 
-          <p><a href="/">Back</a></p>
+          <p><a href="{{back_link}}">Back</a></p>
 
         </form>
 
