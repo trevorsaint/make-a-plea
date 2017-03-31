@@ -3,7 +3,10 @@
   "description": "A service for make a plea",
   "version": "1.0.3",
   "private": "true",
-  "repository": "trevorsaint/make-a-plea",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "license": "MIT",
   "main": "app.js",
   "keywords": [
@@ -20,6 +23,7 @@
   "dependencies": {
     "body-parser": "1.14.1",
     "express": "4.14.0",
+    "express-form": "^0.12.6",
     "express-handlebars": "3.0.0",
     "express-session": "^1.14.1",
     "express-validator": "^3.1.2",
@@ -39,10 +43,6 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-express-server": "^0.5.3",
     "helper-moment": "^0.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
   },
   "scripts": {
     "start": "node app.js"

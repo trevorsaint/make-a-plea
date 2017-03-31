@@ -1,5 +1,7 @@
 var express = require("express");
-var router = express.Router();
+var form    = require("express-form");
+var field   = form.field;
+var router  = express.Router();
 
 
 // RELEASE 1
