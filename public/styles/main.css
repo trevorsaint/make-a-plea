@@ -1244,22 +1244,11 @@ table td {
 table th {
   font-weight: 700;
 }
-table th.numeric {
+table .numeric {
   text-align: right;
 }
 table td.numeric {
   font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
-  font-weight: 400;
-  text-transform: none;
-  font-size: 14px;
-  line-height: 1.14286;
-  text-align: right;
-}
-@media (min-width: 641px) {
-  table td.numeric {
-    font-size: 16px;
-    line-height: 1.25;
-  }
 }
 
 .table-font-xsmall th {
@@ -1576,17 +1565,12 @@ textarea.form-control {
   float: none;
   clear: left;
   position: relative;
-  padding: 8px 10px 9px 50px;
+  padding: 0 0 0 38px;
   margin-bottom: 10px;
-  cursor: pointer;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
 }
 @media (min-width: 641px) {
   .multiple-choice {
     float: left;
-    padding-top: 7px;
-    padding-bottom: 7px;
   }
 }
 .multiple-choice input {
@@ -1604,6 +1588,17 @@ textarea.form-control {
 }
 .multiple-choice label {
   cursor: pointer;
+  padding: 8px 10px 9px 12px;
+  display: block;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+@media (min-width: 641px) {
+  .multiple-choice label {
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
 }
 .multiple-choice [type=radio] + label::before {
   content: "";
