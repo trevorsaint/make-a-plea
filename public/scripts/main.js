@@ -17,12 +17,12 @@ function text() {
 
       if ($($target).hasClass('js-hidden')) {
 
-        $this.text('Show less').attr('aria-expanded', true);
+        $this.text('Show less (click to collapse)').attr('aria-expanded', true);
         $($target).removeClass('js-hidden').attr('aria-hidden', false);
 
       } else {
 
-        $this.text('Show more').attr('aria-expanded', false);
+        $this.text('Show more (click to expand)').attr('aria-expanded', false);
         $($target).addClass('js-hidden').attr('aria-hidden', true);
 
       }
